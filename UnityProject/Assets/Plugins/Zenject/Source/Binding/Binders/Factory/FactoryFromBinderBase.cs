@@ -147,7 +147,7 @@ namespace Zenject
             ProviderFunc =
                 (container) => new AddToExistingGameObjectComponentProvider(
                     gameObject, container, ContractType,
-                    new List<TypeValuePair>(), BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
+                    BindInfo.Arguments, BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
 
             return this;
         }
@@ -161,7 +161,7 @@ namespace Zenject
             ProviderFunc =
                 (container) => new AddToExistingGameObjectComponentProviderGetter(
                     gameObjectGetter, container, ContractType,
-                    new List<TypeValuePair>(), BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
+                    BindInfo.Arguments, BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
 
             return this;
         }
@@ -176,7 +176,7 @@ namespace Zenject
             ProviderFunc =
                 (container) => new AddToNewGameObjectComponentProvider(
                     container, ContractType,
-                    new List<TypeValuePair>(), gameObjectInfo, BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
+                    BindInfo.Arguments, gameObjectInfo, BindInfo.ConcreteIdentifier, BindInfo.InstantiatedCallback);
 
             return new NameTransformScopeConcreteIdArgConditionCopyNonLazyBinder(BindInfo, gameObjectInfo);
         }
@@ -194,7 +194,7 @@ namespace Zenject
                     ContractType,
                     new PrefabInstantiator(
                         container, gameObjectInfo,
-                        ContractType, new [] { ContractType }, new List<TypeValuePair>(),
+                        ContractType, new [] { ContractType }, BindInfo.Arguments,
                         new PrefabProvider(prefab), BindInfo.InstantiatedCallback));
 
             return new NameTransformScopeConcreteIdArgConditionCopyNonLazyBinder(BindInfo, gameObjectInfo);
@@ -212,7 +212,7 @@ namespace Zenject
                     ContractType,
                     new PrefabInstantiator(
                         container, gameObjectInfo,
-                        ContractType, new [] { ContractType }, new List<TypeValuePair>(),
+                        ContractType, new [] { ContractType }, BindInfo.Arguments,
                         new PrefabProvider(prefab),
                         BindInfo.InstantiatedCallback), true);
 
@@ -231,7 +231,7 @@ namespace Zenject
                     ContractType,
                     new PrefabInstantiator(
                         container, gameObjectInfo,
-                        ContractType, new [] { ContractType }, new List<TypeValuePair>(),
+                        ContractType, new [] { ContractType }, BindInfo.Arguments,
                         new PrefabProviderResource(resourcePath), BindInfo.InstantiatedCallback), true);
 
             return new NameTransformScopeConcreteIdArgConditionCopyNonLazyBinder(BindInfo, gameObjectInfo);
@@ -250,7 +250,7 @@ namespace Zenject
                     ContractType,
                     new PrefabInstantiator(
                         container, gameObjectInfo,
-                        ContractType, new [] { ContractType }, new List<TypeValuePair>(),
+                        ContractType, new [] { ContractType }, BindInfo.Arguments,
                         new PrefabProviderResource(resourcePath),
                         BindInfo.InstantiatedCallback));
 
@@ -264,7 +264,7 @@ namespace Zenject
 
             ProviderFunc =
                 (container) => new ScriptableObjectResourceProvider(
-                    resourcePath, ContractType, container, new List<TypeValuePair>(),
+                    resourcePath, ContractType, container, BindInfo.Arguments,
                     true, null, BindInfo.InstantiatedCallback);
 
             return this;
@@ -277,7 +277,7 @@ namespace Zenject
 
             ProviderFunc =
                 (container) => new ScriptableObjectResourceProvider(
-                    resourcePath, ContractType, container, new List<TypeValuePair>(),
+                    resourcePath, ContractType, container, BindInfo.Arguments,
                     false, null, BindInfo.InstantiatedCallback);
 
             return this;
