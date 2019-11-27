@@ -112,7 +112,7 @@ namespace Zenject
 #if UNITY_2019_1_OR_NEWER
                 // TODO - Is there a way to check this using GetPrefabAssetType in 2019+?
 #else
-#if UNITY_2018_3
+#if UNITY_2018_4_OR_NEWER
                 Assert.That(PrefabUtility.GetPrefabAssetType(installer.gameObject) == PrefabAssetType.NotAPrefab,
 #else
                 Assert.That(PrefabUtility.GetPrefabType(installer.gameObject) != PrefabType.Prefab,
