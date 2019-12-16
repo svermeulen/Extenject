@@ -321,6 +321,21 @@ namespace Zenject
             {
                 decoratorContext.InstallDecoratorSceneBindings();
             }
+            
+            foreach (var binding in Resources.FindObjectsOfTypeAll<ZenjectBinding>())
+            {
+                var parent = binding.transform.parent;
+                if (parent == null)
+                    continue;
+
+                var siblingContext = binding.GetComponent<GameObjectContext>();
+                var parentContext = parent.GetComponentInParent<Context>();
+
+                if (siblingContext != null && parentContext != null && binding.UseParentContext)
+                {
+                    binding.ParentContext = parentContext;
+                }
+            }
 
             InstallSceneBindings(injectableMonoBehaviours);
 
