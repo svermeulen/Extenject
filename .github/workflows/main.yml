@@ -11,6 +11,7 @@ on:
 jobs:
   Zenject-usage:
     runs-on: [windows]
+    name: Zenject-usage
     steps:
       - name: Setup MSBuild.exe
         uses: warrenbuckley/Setup-MSBuild@v1
