@@ -43,7 +43,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download math result for job 1
+      - name: Download Zenject-usage
         uses: actions/download-artifact@v1
         with:
           name: Zenject-usage
