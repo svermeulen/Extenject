@@ -23,10 +23,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v1
-        with:
-          python-version: "3.8"
+#      - name: Set up Python ${{ matrix.python-version }}
+#        uses: actions/setup-python@v1
+#        with:
+#          python-version: "3.8"
 
       - name: Install filter-repo
         run: pip3 install git-filter-repo
@@ -49,11 +49,11 @@ jobs:
           name: Test results (editor mode)
           path: Tests/editmode-results.xml
 
-      - name: Generate Solution
-        uses: MirrorNG/unity-runner@master
-        with:
-          # Arguments to pass to unity
-          args: -buildTarget StandaloneWindows64 -customBuildName MirrorNG -customBuildPath ./build/StandaloneWindows64 -projectPath . -executeMethod  UnityEditor.SyncVS.SyncSolution -quit
+#      - name: Generate Solution
+#        uses: MirrorNG/unity-runner@master
+#        with:
+#          # Arguments to pass to unity
+#          args: -buildTarget StandaloneWindows64 -customBuildName MirrorNG -customBuildPath ./build/StandaloneWindows64 -projectPath . -executeMethod  UnityEditor.SyncVS.SyncSolution -quit
   
 #      - name: SonarQube analysis
 #        uses: MirrorNG/unity-sonarscanner@master
