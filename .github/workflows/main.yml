@@ -28,8 +28,8 @@ jobs:
 #        with:
 #          python-version: "3.8"
 
-      - name: Install filter-repo
-        run: pip3 install git-filter-repo
+#      - name: Install filter-repo
+#        run: pip3 install git-filter-repo
 
       - name: Activate license
         uses: MirrorNG/unity-runner@master
@@ -40,7 +40,7 @@ jobs:
       - name: Run editor Tests
         uses: MirrorNG/unity-runner@master
         with:
-          args: -runTests -testPlatform editmode -testResults Tests/editmode-results.xml -enableCodeCoverage -coverageResultsPath Tests
+          args: -projectPath UnityProject -runTests -testPlatform editmode -testResults Tests/editmode-results.xml -enableCodeCoverage -coverageResultsPath Tests
         
       # Upload artifacts
       - name: Publish test results
