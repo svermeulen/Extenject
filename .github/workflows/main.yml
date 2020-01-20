@@ -9,10 +9,26 @@ on:
       - '*.md'
   
 jobs:
-
-  testRunnerInAllModes:
+  Zenject-usage:
+    runs-on: [windows]
+    steps:
+      - name: Setup MSBuild.exe
+        uses: warrenbuckley/Setup-MSBuild@v1
+        
+      - name: MSBuild
+        working-directory: AssemblyBuild\Zenject-usage
+        run: msbuild Zenject-usage.sln
+        
+      - name: Upload dll
+        uses: actions/upload-artifact@v1
+        with:
+          name: Zenject-usage.dll
+          path: AssemblyBuild\Zenject-usage\Zenject-usage.dll
+        
+  buildUnity:
     name: Unity test
     runs-on: ubuntu-latest
+    needs: Zenject-usage
     env:
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
     steps:
@@ -23,6 +39,8 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Zenject-usage
+        
 #      - name: Set up Python ${{ matrix.python-version }}
 #        uses: actions/setup-python@v1
 #        with:
