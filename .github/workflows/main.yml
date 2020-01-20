@@ -26,8 +26,8 @@ jobs:
       - name: Upload dll
         uses: actions/upload-artifact@v1
         with:
-          name: Zenject-usage.dll
-          path: AssemblyBuild\Zenject-usage\Zenject-usage.dll
+          name: Zenject-usage
+          path: AssemblyBuild\Zenject-usage\bin\Debug\
         
   buildUnity:
     name: Unity test
@@ -43,6 +43,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Download math result for job 1
+        uses: actions/download-artifact@v1
+        with:
+          name: Zenject-usage
         
 #      - name: Set up Python ${{ matrix.python-version }}
 #        uses: actions/setup-python@v1
