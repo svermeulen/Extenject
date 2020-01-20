@@ -20,11 +20,11 @@ jobs:
         working-directory: AssemblyBuild\Zenject-usage
         run: msbuild Zenject-usage.sln
         
-      - name: Upload dll
-        uses: actions/upload-artifact@v1
-        with:
-          name: Zenject-usage.dll
-          path: AssemblyBuild\Zenject-usage\Zenject-usage.dll
+#      - name: Upload dll
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: Zenject-usage.dll
+#          path: AssemblyBuild\Zenject-usage\Zenject-usage.dll
         
   buildUnity:
     name: Unity test
