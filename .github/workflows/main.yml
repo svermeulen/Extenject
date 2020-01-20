@@ -16,9 +16,9 @@ jobs:
       - name: Setup MSBuild.exe
         uses: warrenbuckley/Setup-MSBuild@v1
         
-      - name: MSBuild
-        working-directory: AssemblyBuild\Zenject-usage
-        run: msbuild Zenject-usage.sln
+#      - name: MSBuild
+#        working-directory: AssemblyBuild\Zenject-usage
+#        run: msbuild Zenject-usage.sln
         
 #      - name: Upload dll
 #        uses: actions/upload-artifact@v1
