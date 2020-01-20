@@ -1,0 +1,80 @@
+name: CI
+
+on: 
+  push:
+    branches: 
+      - master
+    paths-ignore:
+      - 'doc/**'
+      - '*.md'
+  
+jobs:
+
+  testRunnerInAllModes:
+    name: Unity test
+    runs-on: ubuntu-latest
+    env:
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+    steps:
+  
+      # Checkout repository (required to test local actions)
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.8"
+
+      - name: Install filter-repo
+        run: pip3 install git-filter-repo
+
+      - name: Activate license
+        uses: MirrorNG/unity-runner@master
+        with:
+          entrypoint: /activate.sh
+          
+      # Configure test runner
+      - name: Run editor Tests
+        uses: MirrorNG/unity-runner@master
+        with:
+          args: -runTests -testPlatform editmode -testResults Tests/editmode-results.xml -enableCodeCoverage -coverageResultsPath Tests
+        
+      # Upload artifacts
+      - name: Publish test results
+        uses: actions/upload-artifact@v1
+        with:
+          name: Test results (editor mode)
+          path: Tests/editmode-results.xml
+
+      - name: Generate Solution
+        uses: MirrorNG/unity-runner@master
+        with:
+          # Arguments to pass to unity
+          args: -buildTarget StandaloneWindows64 -customBuildName MirrorNG -customBuildPath ./build/StandaloneWindows64 -projectPath . -executeMethod  UnityEditor.SyncVS.SyncSolution -quit
+  
+      - name: SonarQube analysis
+        uses: MirrorNG/unity-sonarscanner@master
+        with:
+          buildCommand: /opt/Unity/Editor/Data/NetCore/Sdk-2.2.107/dotnet build workspace.sln
+          projectKey: MirrorNG_MirrorNG
+          projectName: MirrorNG
+          sonarOrganisation: mirrorng
+          beginArguments: /d:sonar.verbose="true" /d:sonar.cs.nunit.reportsPaths=Tests/editmode-results.xml /d:sonar.cs.opencover.reportsPaths=Tests/workspace-opencov/EditMode/TestCoverageResults_0000.xml
+        env:
+          FrameworkPathOverride: /opt/Unity/Editor/Data/MonoBleedingEdge/
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_plugins: |
+            @semantic-release/exec
+            @semantic-release/changelog
+            @semantic-release/git
+          branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
