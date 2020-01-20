@@ -9,12 +9,12 @@ on:
       - '*.md'
   
 jobs:
-  ZenjectUsage:
-    runs-on: windows
-    name: ZenjectUsage
-    steps:
-      - name: Setup MSBuild.exe
-        uses: warrenbuckley/Setup-MSBuild@v1
+#  ZenjectUsage:
+#    runs-on: windows
+#    name: ZenjectUsage
+#    steps:
+#      - name: Setup MSBuild.exe
+#        uses: warrenbuckley/Setup-MSBuild@v1
         
 #      - name: MSBuild
 #        working-directory: AssemblyBuild\Zenject-usage
@@ -29,7 +29,7 @@ jobs:
   buildUnity:
     name: Unity test
     runs-on: ubuntu-latest
-    needs: ZenjectUsage
+#    needs: ZenjectUsage
     env:
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
     steps:
