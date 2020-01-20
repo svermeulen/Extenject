@@ -10,7 +10,7 @@ on:
   
 jobs:
   ZenjectUsage:
-    runs-on: windows
+    runs-on: [windows-latest]
     name: ZenjectUsage
     steps:
       - name: Setup MSBuild.exe
