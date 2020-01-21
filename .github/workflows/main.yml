@@ -49,7 +49,7 @@ jobs:
           name: Zenject-usage
 
       - name: Install Zenject-usage
-        run: cp AssemblyBuild\Zenject-usage\bin\Debug\Zenject-usage.dll UnityProject/Assets/Plugins/Zenject/Source/Usage
+        run: cp AssemblyBuild/Zenject-usage/bin/Debug/Zenject-usage.dll UnityProject/Assets/Plugins/Zenject/Source/Usage
         
 #      - name: Set up Python ${{ matrix.python-version }}
 #        uses: actions/setup-python@v1
