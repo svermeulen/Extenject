@@ -633,7 +633,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
     {
         Container.Bind<Bar>().AsSingle();
 
-        Container.BindFactory<Vector3, Foo, Foo.Factory>().FromMonoPoolableMemoryPool<Foo>(
+        Container.BindFactory<Vector3, Foo, Foo.Factory>().FromMonoPoolableMemoryPool(
             x => x.WithInitialSize(2).FromComponentInNewPrefab(FooPrefab).UnderTransformGroup("FooPool"));
     }
 }
