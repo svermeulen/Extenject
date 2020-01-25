@@ -9,6 +9,34 @@ on:
       - '*.md'
   
 jobs:
+   
+  #enable this job to request a manual unity license
+  Request-License:
+    runs-on: ubuntu-latest
+    if: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Request manual activation file
+        uses: MirrorNG/unity-runner@master
+        with:
+            entrypoint: /request_activation.sh
+
+      # This will produce a Unity_xxx.alf file
+      # download it in your computer and upload it to
+      # https://license.unity3d.com/manual
+      # That will produce a Unity_xxx.ulf file
+      # add the contents of Unity_xxx.ulf file to your repository's secrets
+      # as UNITY_LICENSE
+      # then disable this job
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v1
+        with:
+            name: Manual Activation File
+            path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+  
+        
   Zenject-usage:
     runs-on: [windows-latest]
     name: Zenject-usage
