@@ -78,7 +78,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Test results (editor mode)
-          path: Tests/editmode-results.xml
+          path: UnityProject/Tests/editmode-results.xml
 
 #      - name: Generate Solution
 #        uses: MirrorNG/unity-runner@master
