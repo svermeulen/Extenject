@@ -1,0 +1,27 @@
+{
+    "plugins": [
+        "@semantic-release/github",
+        "@semantic-release/release-notes-generator", 
+        ["@semantic-release/commit-analyzer", {
+            "preset": "angular",
+            "releaseRules": [
+                {"type": "breaking", "release": "major"},
+                {"type": "feature", "release": "minor"},
+            ]
+        }],
+        ["@semantic-release/changelog", {
+            "changelogFile": "UnityProject/Assets/Plugins/Zenject/CHANGELOG.md",
+        }],
+        ["@semantic-release/npm", {
+            "npmPublish": false,
+            "pkgRoot": "UnityProject/Assets/Plugins/Zenject"
+        }],
+        ["@semantic-release/git", {
+            "assets": ["UnityProject/Assets/Plugins/Zenject/package.json", "UnityProject/Assets/Plugins/Zenject/CHANGELOG.md"],
+            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }]
+#        ["@semantic-release/exec", {
+#            "publishCmd": "./publish_upm.sh upm ${nextRelease.version}"
+#        }]
+    ]
+}
