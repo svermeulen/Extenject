@@ -50,7 +50,7 @@ namespace Zenject
         }
 
 
-        //AbstractFire Works like a normal Fire but it fires the interface types of the signal too
+        //Fires Signals with their interfaces
         public void AbstractFire<TSignal>() where TSignal : new() => AbstractFire(new TSignal());
 		public void AbstractFire<TSignal>(TSignal signal) => AbstractFireId(null, signal);
 		public void AbstractFireId<TSignal>(object identifier, TSignal signal)
@@ -60,14 +60,10 @@ namespace Zenject
 			var declaration = GetDeclaration(signalType, identifier, true);
 			declaration.Fire(signal);
 
-            //Everything is fired like a normal signal and then method Fires the signal with the interface types
             Type[] interfaces = signalType.GetInterfaces();
             int numOfInterfaces = interfaces.Length;
             for (int i = 0; i < numOfInterfaces; i++)
             {
-                //To make this work you should also declare the signal's interfaces, but they are automatically declared
-                //if you do "DeclareSignalWithInterfaces<TSignal>()" in the container 
-                //Go to SignalExtensions.cs for more info
                 declaration = GetDeclaration(interfaces[i], identifier, true);
                 declaration.Fire(signal);
             }

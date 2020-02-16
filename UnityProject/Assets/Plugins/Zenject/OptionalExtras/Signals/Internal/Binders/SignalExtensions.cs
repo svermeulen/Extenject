@@ -30,14 +30,12 @@ namespace Zenject
             return container.DeclareSignal(typeof(TSignal));
         }
 
-        //If you declare a concrete signal type with their interfaces you can do abstract Firing to get their non concrete subscriptions
         public static DeclareSignalIdRequireHandlerAsyncTickPriorityCopyBinder DeclareSignalWithInterfaces<TSignal>(this DiContainer container)
         {
             Type type = typeof(TSignal);
 
             var declaration = container.DeclareSignal(type);
 
-            //Automatic interface declaration
             Type[] interfaces = type.GetInterfaces();
             int numOfInterfaces = interfaces.Length;
             for (int i = 0; i < numOfInterfaces; i++)
