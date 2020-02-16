@@ -1,33 +1,48 @@
 ![Extenject Header Image](Documentation/Images/ExtenjectMainHeader.png)
 
-[![Join the chat at https://gitter.im/Extenject/community](https://badges.gitter.im/Extenject/Lobby.svg)](https://gitter.im/Extenject/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://img.shields.io/static/v1?label=Gitter&labelColor=ED1965&message=Community%20Support&color=grey&logo=Gitter&logoColor=White&url=https://gitter.im/Extenject/community)](https://gitter.im/Extenject/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/svermeulen/Extenject?color=green)](https://github.com/svermeulen/Extenject/releases)
 ![GitHub Release Date](https://img.shields.io/github/release-date/svermeulen/Extenject)
 ![GitHub contributors](https://img.shields.io/github/contributors/svermeulen/Extenject)
 ![GitHub last commit](https://img.shields.io/github/last-commit/svermeulen/Extenject)
 ![CI](https://github.com/Mathijs-Bakker/Extenject/workflows/CI/badge.svg)
 ![GitHub](https://img.shields.io/github/license/svermeulen/Extenject)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/stevevermeulen)
 
 # Extensions, bug fixes and updates for Zenject 
 
 This project is simply a fork of [Zenject](https://github.com/modesttree/zenject) with the goal of being actively maintained.  I am the primary author and was the primary maintainer until my access was removed after leaving my position at the company Modest Tree.  It is called Extenject to respect Modest Tree's [trademark claim](https://github.com/modesttree/Zenject/commit/2cbbf11b344d083cc697d8b248acf41520d72da3) on the name Zenject.
 
 ## Lawsuit
+```
 
-Extenject has been removed from Asset Store because of a copyright claim by Modest Tree, so the only way to obtain it currently is through the [releases section on github](https://github.com/svermeulen/Extenject/releases).
+Extenject has been removed from Asset Store because of a copyright claim by 
+Modest Tree, so the only way to obtain it currently is through the 
+https://github.com/svermeulen/Extenject/releases.
 
-*Update: Extenject is available in the [Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-framework-157735)*
+Modest Tree has also blocked me from contributing to zenject github issues and 
+removed me from the zenject gitter chat, so to get my help please report 
+issues https://github.com/svermeulen/Extenject/issues/new, 
+and discuss in the https://gitter.im/Extenject/community instead
 
-Modest Tree has also blocked me from contributing to zenject github issues and removed me from the zenject gitter chat, so to get my help please report issues [to extenject](https://github.com/svermeulen/Extenject/issues/new), and discuss in the [extenject chat](https://gitter.im/Extenject/community) instead
+They have also filed a lawsuit against me and Unity tells me that they will 
+not re-enable Extenject in the Asset Store until the lawsuit is complete, 
+which might not occur until 2020.
 
-They have also filed a lawsuit against me and Unity tells me that they will not re-enable Extenject in the Asset Store until the lawsuit is complete, which might not occur until 2020.
+I have been advised not to comment on details of the lawsuit right now 
+however you can read their filing and my defense (both of which are public) 
+for details if interested.  The lawsuit also relates to other MIT licensed 
+open source projects I created such as Projeny and Unity3dAsyncAwaitUtil.
+```
 
-I have been advised not to comment on details of the lawsuit right now - however you can read [their filing](https://drive.google.com/open?id=1pVVCuwsJfhQ-jj2cIe5oF6zNwHITCHbF) and [my defense](https://drive.google.com/open?id=1CYy2g46b2XiDoIsWb75SgLJoIGakGiyz) (both of which are public) for details if interested.  The lawsuit also relates to other MIT license open source projects I created such as [Projeny](https://github.com/modesttree/Projeny) and [Unity3dAsyncAwaitUtil](https://github.com/modesttree/Unity3dAsyncAwaitUtil)
+[![Projeny](https://img.shields.io/badge/Projeny-181717?logo=GitHub&logoColor=white)](https://github.com/modesttree/Projeny)
+[![Unity3dAsyncAwaitUtil](https://img.shields.io/badge/Unity3dAsyncAwaitUtil-181717?logo=GitHub&logoColor=white)](hhttps://github.com/modesttree/Unity3dAsyncAwaitUtil)
+[![Modest Tree filing against me](https://img.shields.io/static/v1?label=Public%20PDF&message=Modest%20Tree%20Filing%20Against%20Me&color=red&url=https://drive.google.com/open?id=1pVVCuwsJfhQ-jj2cIe5oF6zNwHITCHbF)](https://drive.google.com/open?id=1pVVCuwsJfhQ-jj2cIe5oF6zNwHITCHbF)
+[![My Defense Fiiing](https://img.shields.io/static/v1?label=Public%20PDF&message=My%20Defense%20Filing&color=success&url=https://drive.google.com/open?id=1CYy2g46b2XiDoIsWb75SgLJoIGakGiyz)](https://drive.google.com/open?id=1CYy2g46b2XiDoIsWb75SgLJoIGakGiyz)
 
 ## Support
 
 This project is supported via donations.  If you or your team have found it useful, please consider supporting further development through [patreon](https://www.patreon.com/extenject) or [paypal](https://paypal.me/stevevermeulen)
+
 
 ## Introduction
 
@@ -79,22 +94,32 @@ Or, if you have found a bug, you are also welcome to create an issue on the [git
 * Support for 'reflection baking' to eliminate costly reflection operations completely by directly modifying the generated assemblies
 * Automatic injection of game objects using ZenAutoInjecter component
 
-## Installation
+## Installation ![GitHub release (latest by date)](https://img.shields.io/github/v/release/svermeulen/Extenject?color=green)
+
+[![GitHub releases](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub%20Releases&labelColor=181717&message=Downloads&color=green&logo=GitHub&logoColor=white)](https://github.com/svermeulen/Extenject/releases)
+[![Unity](https://img.shields.io/static/v1?style=for-the-badge&label=Unity%20Asset%20Store&labelColor=181717&message=Download&color=green&logo=Unity&logoColor=white)](https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735)
+[![Unity Package](https://img.shields.io/static/v1?style=for-the-badge&label=Unity%20Package&labelColor=181717&message=UPM&color=green&logo=Unity&logoColor=white)](https://github.com/svermeulen/Extenject/issues/2)
 
 You can install Zenject using any of the following methods
 
-1.  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/svermeulen/Extenject?color=green)](https://github.com/svermeulen/Extenject/releases)From [Releases Page](https://github.com/svermeulen/Extenject/releases).  Here you can choose between the following:
+1.  __From [Releases Page](https://github.com/svermeulen/Extenject/releases)__
+    Here you can choose between the following:
 
     * **Zenject-WithAsteroidsDemo.vX.X.unitypackage** - This is equivalent to what you find in the Asset Store and contains both sample games "Asteroids" and "SpaceFighter" as part of the package.  All the source code for Zenject is included here.
     * **Zenject.vX.X.unitypackage** - Same as above except without the Sample projects.
     * **Zenject-NonUnity.vX.X.zip** - Use this if you want to [use Zenject outside of Unity](#using-outside-unity) (eg. just as a normal C# project)
 
-1.  [![Download Extenjext from the Unity Asset Store](https://img.shields.io/badge/Unity%20Asset%20Store-Download-green)](https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735)
-From the [Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-framework-157735)
+
+1.  __From the [Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-framework-157735)__
 
     * Normally this should be the same as what you find in the [Releases section](https://github.com/svermeulen/Extenject/releases), but may also be slightly out of date since Unity Asset Store can take a week or so to review submissions sometimes.
 
-1.  From Source
+1.  __UPM Branch__
+
+    * This option is a [feature request](https://github.com/svermeulen/Extenject/issues/24). The package will be released when Unity is ready. Unity is not giving any insights on the development status. But the expectation is in the first or second release of 2020.
+    * If you can not wait. There is an alternative. But you will need the Unity extension found [here](https://github.com/mob-sakai/UpmGitExtension). And the package found [here](https://github.com/starikcetin/Extenject/tree/upm).
+
+1.  __From Source__
 
     * After syncing the git repo, note that you will have to build the `Zenject-Usage.dll` by building the solution at `AssemblyBuild\Zenject-usage\Zenject-usage.sln`.  Or, if you prefer you can get `Zenject-Usage.dll` from Releases section instead
     * Then you can copy the `UnityProject/Assets/Plugins/Zenject` directory to your own Unity3D project.
