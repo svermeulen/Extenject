@@ -482,7 +482,7 @@ When event driven program is abused, it is possible to find yourself in "callbac
 
 ## <a id="abstract-signals"></a>Abstract Signals
 
-One of the problems of the signals is that when subscribe to their concrete types
+One of the problems of the signals is that when you subscribe to their types
 you are coupling your concrete signal types to the subscribers
 
 For example, Lets say I have a player and i want to save the game when i finish a level.
