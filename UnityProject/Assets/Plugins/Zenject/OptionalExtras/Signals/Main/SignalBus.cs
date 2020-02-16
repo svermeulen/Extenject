@@ -56,25 +56,12 @@ namespace Zenject
 		public void AbstractFireId<TSignal>(object identifier, TSignal signal)
 		{
 			// Do this before creating the signal so that it throws if the signal was not declared
-			Type tt = typeof(TSignal);
-			var declaration = GetDeclaration(tt, identifier, true);
+			Type signalType = typeof(TSignal);
+			var declaration = GetDeclaration(signalType, identifier, true);
 			declaration.Fire(signal);
 
-            //Everything is fired like a normal signal and then this method Fires the signal with the interface types
-            //Its async because its faster and doesn't blocks the main thread when you fire signals
-            //Tested with a loop of 1 million iteration and this is the faster way of getting the interfaces fast
-			FireSignalGetDeclarationForInterfacesAsync(identifier, signal, tt);
-		}
-
-        //Fire and forget methof for the task
-		public async void FireSignalGetDeclarationForInterfacesAsync<TSignal>(object identifier, TSignal signal, Type type)
-		{
-			await Task.Run(() => FireSignalGetDeclarationForInterfacesTask(identifier, signal, type));
-		}
-        public async Task FireSignalGetDeclarationForInterfacesTask<TSignal>(object identifier, TSignal signal, Type type)
-        {
-            //The asynchronous iteration for reflection
-            Type[] interfaces = type.GetInterfaces();
+            //Everything is fired like a normal signal and then method Fires the signal with the interface types
+            Type[] interfaces = signalType.GetInterfaces();
             int numOfInterfaces = interfaces.Length;
             for (int i = 0; i < numOfInterfaces; i++)
             {
@@ -84,9 +71,7 @@ namespace Zenject
                 var declaration = GetDeclaration(interfaces[i], identifier, true);
                 declaration.Fire(signal);
             }
-        }
-
-
+		}
 
         public void LateDispose()
         {
