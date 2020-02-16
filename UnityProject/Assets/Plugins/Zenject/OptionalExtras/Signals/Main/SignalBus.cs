@@ -68,7 +68,7 @@ namespace Zenject
                 //To make this work you should also declare the signal's interfaces, but they are automatically declared
                 //if you do "DeclareSignalWithInterfaces<TSignal>()" in the container 
                 //Go to SignalExtensions.cs for more info
-                var declaration = GetDeclaration(interfaces[i], identifier, true);
+                declaration = GetDeclaration(interfaces[i], identifier, true);
                 declaration.Fire(signal);
             }
 		}
