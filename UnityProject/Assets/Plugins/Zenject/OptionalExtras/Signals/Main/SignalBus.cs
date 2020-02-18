@@ -11,7 +11,7 @@ namespace Zenject
     public class SignalBus : ILateDisposable
     {
         readonly SignalSubscription.Pool _subscriptionPool;
-        readonly Dictionary<BindingId, SignalDeclaration> _localDeclarationMap;
+        readonly Dictionary<BindingId, SignalDeclaration> _localDeclarationMap = new Dictionary<BindingId, SignalDeclaration>();
         readonly SignalBus _parentBus;
         readonly Dictionary<SignalSubscriptionId, SignalSubscription> _subscriptionMap = new Dictionary<SignalSubscriptionId, SignalSubscription>();
         readonly ZenjectSettings.SignalSettings _settings;
@@ -35,7 +35,14 @@ namespace Zenject
             _signalDeclarationFactory = signalDeclarationFactory;
             _container = container;
 
-            _localDeclarationMap = signalDeclarations.ToDictionary(x => x.BindingId, x => x);
+           signalDeclarations.ForEach(x =>
+			{
+				if (!_localDeclarationMap.ContainsKey(x.BindingId))
+				{
+					_localDeclarationMap.Add(x.BindingId, x);
+				}
+				else _localDeclarationMap[x.BindingId].Subscriptions.AllocFreeAddRange(x.Subscriptions);
+			});
             _parentBus = parentBus;
         }
 
@@ -57,15 +64,13 @@ namespace Zenject
 		{
 			// Do this before creating the signal so that it throws if the signal was not declared
 			Type signalType = typeof(TSignal);
-			var declaration = GetDeclaration(signalType, identifier, true);
-			declaration.Fire(signal);
+            InternalFire(signalType, signal, identifier, true);
 
             Type[] interfaces = signalType.GetInterfaces();
             int numOfInterfaces = interfaces.Length;
             for (int i = 0; i < numOfInterfaces; i++)
             {
-                declaration = GetDeclaration(interfaces[i], identifier, true);
-                declaration.Fire(signal);
+                InternalFire(interfaces[i], signal, identifier, true);
             }
 		}
 
@@ -213,7 +218,7 @@ namespace Zenject
 
         public IObservable<object> GetStreamId(Type signalType, object identifier)
         {
-            return GetDeclaration(signalType, identifier, true).Stream;
+            return GetDeclaration(new BindingId(signalType, identifier)).Stream;
         }
 
         public IObservable<object> GetStream(Type signalType)

@@ -41,6 +41,8 @@ namespace Zenject
         }
 #endif
 
+		public List<SignalSubscription> Subscriptions => _subscriptions;
+
         public int TickPriority
         {
             get; private set;
