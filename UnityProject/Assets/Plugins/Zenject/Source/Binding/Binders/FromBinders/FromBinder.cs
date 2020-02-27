@@ -872,7 +872,7 @@ namespace Zenject
             BindInfo.MarkAsCreationBinding = false;
             SubFinalizer = new ScopableBindingFinalizer(
                 BindInfo,
-                (container, type) => new InstanceProvider(type, instance, container));
+                (container, type) => new InstanceProvider(type, instance, container, BindInfo.InstantiatedCallback));
 
             return new ScopeConcreteIdArgConditionCopyNonLazyBinder(BindInfo);
         }

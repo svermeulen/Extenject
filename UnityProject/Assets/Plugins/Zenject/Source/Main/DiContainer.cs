@@ -2871,7 +2871,7 @@ namespace Zenject
             statement.SetFinalizer(
                 new ScopableBindingFinalizer(
                     bindInfo,
-                    (container, type) => new InstanceProvider(type, instance, container)));
+                    (container, type) => new InstanceProvider(type, instance, container, bindInfo.InstantiatedCallback)));
 
             return new IdScopeConcreteIdArgConditionCopyNonLazyBinder(bindInfo);
         }
