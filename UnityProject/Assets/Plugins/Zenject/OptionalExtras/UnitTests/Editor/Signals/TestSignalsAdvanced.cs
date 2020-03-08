@@ -229,6 +229,27 @@ namespace Zenject.Tests.Signals
             Assert.IsEqual(callCount, 2);
         }
 
+        [Test]
+        public void TestAbstractFireReceivedOnSubscribe()
+        {
+            Container.DeclareSignalWithInterfaces<FizzSignal>();
+            var signalBus = Container.Resolve<SignalBus>();
+
+            int callInterfaceCount = 0;
+            signalBus.Subscribe<IFizzSignal>((() => callInterfaceCount++));
+            int callConcreteCount = 0;
+            signalBus.Subscribe<FizzSignal>((() => callConcreteCount++));
+            
+            signalBus.AbstractFire<FizzSignal>();
+            Assert.IsEqual(callInterfaceCount, 1);
+            Assert.IsEqual(callConcreteCount, 1);
+        }
+
+        public interface IFizzSignal { }
+        public class FizzSignal : IFizzSignal
+        {            
+        }
+
         public class FooSignal
         {
         }
