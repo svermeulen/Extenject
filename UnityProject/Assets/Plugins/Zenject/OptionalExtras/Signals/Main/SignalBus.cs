@@ -65,8 +65,6 @@ namespace Zenject
 			// Do this before creating the signal so that it throws if the signal was not declared
 			Type signalType = typeof(TSignal);
             InternalFire(signalType, signal, identifier, true);
-			var declaration = GetDeclaration(signalType, identifier, true);
-			declaration.Fire(signal);
 
             Type[] interfaces = signalType.GetInterfaces();
             int numOfInterfaces = interfaces.Length;
