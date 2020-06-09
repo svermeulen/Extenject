@@ -1,8 +1,30 @@
-  
 {
 	"name": "com.svermeulen.extenject",
 	"displayName": "Extenject",
-	"version": "0.0.1",
+	"version": "9.1.1",
 	"description": "Dependency Injection Framework for Unity3D",
-	"dependencies": {}
+	"unity": "2018.4",
+	"unityRelease": "21f1",
+	"keywords": [
+		"unity",
+		"extenject",
+		"zenject"
+	],
+	"homepage": "https://github.com/svermeulen/Extenject/",
+	"bugs": {
+		"url": "https://github.com/svermeulen/Extenject/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@github.com:svermeulen/Extenject.git"
+	},
+	"license": "MIT",
+	"files": [
+		"*.md",
+		"*.meta",
+		"*.asmdef",
+		"OptionalExtras",
+		"Source",
+		"*.txt"
+	]
 }

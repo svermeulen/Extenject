@@ -22,7 +22,7 @@ jobs:
         projectPath:
           - UnityProject
         unityVersion:
-          - 2019.3.0f1
+          - 2018.4.21f1
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
@@ -163,3 +163,14 @@ jobs:
 #          branch: master
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  tag:
+    name: Auto tag
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        package_root: "UnityProject/Assets/Plugins/Zenject"
+        tag_prefix: "v"
