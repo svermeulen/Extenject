@@ -163,15 +163,3 @@ jobs:
 #          branch: master
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  tag:
-    name: Auto tag
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: Klemensas/action-autotag@stable
-      with:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        package_root: "UnityProject/Assets/Plugins/Zenject"
-        tag_prefix: "v"
