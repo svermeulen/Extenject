@@ -193,7 +193,7 @@ Also see [further reading section](#further-reading) for some external zenject t
     * [Scene Decorators](#scene-decorators)
     * [ZenAutoInjecter](#zenautoinjector)
     * [Sub-Containers And Facades](#sub-containers-and-facades)
-    * [Writing Automated Unit Tests / Integration Tests](#writing-tests)
+    * [Writing Automated Unit Tests / Integration Tests](#writing-automated-unit-tests--integration-tests)
     * [Philosophy Of Zenject](#zenject-philophy)
     * [Using Zenject Outside Unity Or For DLLs](#using-outside-unity)
     * [Zenject Settings](#zenjectsettings)
