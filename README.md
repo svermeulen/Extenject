@@ -183,7 +183,7 @@ Also see [further reading section](#further-reading) for some external zenject t
         * [Convention Based Binding](#convention-based-binding)
     * [Scriptable Object Installer](#scriptable-object-installer)
     * [Runtime Parameters For Installers](#runtime-parameters-for-installers)
-    * [Creating Objects Dynamically Using Factories](#creating-objects-dynamically)
+    * [Creating Objects Dynamically Using Factories](#creating-objects-dynamically-using-factories)
     * [Memory Pools](#memory-pools)
     * [Update / Initialization Order](#update--initialization-order)
     * [Zenject Order Of Operations](#zenject-order-of-operations)
@@ -1115,7 +1115,7 @@ Then, to hook it up in an installer:
 Container.Bind<ITickable>().To<Ship>().AsSingle();
 ```
 
-Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#all-interfaces-shortcuts)
+Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#bindinterfacesto-and-bindinterfacesandselfto)
 
 Note that the order that the Tick() is called in for all ITickables is also configurable, as outlined [here](#update--initialization-order).
 
@@ -1133,7 +1133,7 @@ Then, to hook it up in an installer:
 Container.Bind<IInitializable>().To<Foo>().AsSingle();
 ```
 
-Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#all-interfaces-shortcuts)
+Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#bindinterfacesto-and-bindinterfacesandselfto)
 
 The `Foo.Initialize` method would then be called after the entire object graph is constructed and all constructors have been called.
 
@@ -1151,7 +1151,7 @@ public class Ship : IInitializable
 }
 ```
 
-`IInitializable` works well for start-up initialization, but what about for objects that are created dynamically via factories?  (see [this section](#creating-objects-dynamically) for what I'm referring to here).  For these cases you will most likely want to eitehr use an `[Inject]` method or an explicit Initialize method that is called after the object is created.  For example:
+`IInitializable` works well for start-up initialization, but what about for objects that are created dynamically via factories?  (see [this section](#creating-objects-dynamically-using-factories) for what I'm referring to here).  For these cases you will most likely want to either use an `[Inject]` method or an explicit Initialize method that is called after the object is created.  For example:
 
 ```csharp
 public class Foo
@@ -1201,7 +1201,7 @@ Then in your installer you can include:
 Container.Bind(typeof(Logger), typeof(IInitializable), typeof(IDisposable)).To<Logger>().AsSingle();
 ```
 
-Or you can use the [BindInterfaces shortcut](#all-interfaces-shortcuts):
+Or you can use the [BindInterfaces shortcut](#bindinterfacesto-and-bindinterfacesandselfto):
 
 ```csharp
 Container.BindInterfacesAndSelfTo<Logger>().AsSingle();
@@ -1491,10 +1491,10 @@ The `ZenjectBinding` component has the following properties:
 ## <a id="di-guidelines--recommendations"></a>General Guidelines / Recommendations / Gotchas / Tips and Tricks
 
 * **Do not use GameObject.Instantiate if you want your objects to have their dependencies injected**
-    * If you want to instantiate a prefab at runtime and have any MonoBehaviour's automatically injected, we recommend using a [factory](#creating-objects-dynamically).  You can also instantiate a prefab by directly using the DiContainer by calling any of the [InstantiatePrefab](#dicontainer-methods-instantiate) methods.  Using these ways as opposed to GameObject.Instantiate will ensure any fields that are marked with the `[Inject]` attribute are filled in properly, and all `[Inject]` methods within the prefab are called.
+    * If you want to instantiate a prefab at runtime and have any MonoBehaviour's automatically injected, we recommend using a [factory](#creating-objects-dynamically-using-factories).  You can also instantiate a prefab by directly using the DiContainer by calling any of the [InstantiatePrefab](#dicontainer-methods-instantiate) methods.  Using these ways as opposed to GameObject.Instantiate will ensure any fields that are marked with the `[Inject]` attribute are filled in properly, and all `[Inject]` methods within the prefab are called.
 
 * **Best practice with DI is to *only* reference the container in the composition root "layer"**
-    * Note that factories are part of this layer and the container can be referenced there (which is necessary to create objects at runtime).  See [here](#creating-objects-dynamically) for more details on this.
+    * Note that factories are part of this layer and the container can be referenced there (which is necessary to create objects at runtime).  See [here](#creating-objects-dynamically-using-factories) for more details on this.
 
 * **Do not use IInitializable, ITickable and IDisposable for dynamically created objects**
     * Objects that are of type `IInitializable` are only initialized once - at startup during Unity's `Start` phase.  If you create an object through a factory, and it derives from `IInitializable`, the `Initialize()` method will not be called.  You should use `[Inject]` methods in this case or call Initialize() explicitly yourself after calling Create.
@@ -2186,7 +2186,7 @@ Note that this is an editor only feature.  The default contract names will not b
 
 ## ZenAutoInjecter
 
-As explained in the [section on factories](#creating-objects-dynamically), any object that you create dynamically needs to be created through zenject in order for it to be injected.  You cannot simply execute `GameObject.Instantiate(prefab)`, or call `new Foo()`.
+As explained in the [section on factories](#creating-objects-dynamically-using-factories), any object that you create dynamically needs to be created through zenject in order for it to be injected.  You cannot simply execute `GameObject.Instantiate(prefab)`, or call `new Foo()`.
 
 However, this is sometimes problematic especially when using other third party libraries.  For example, some networking libraries work by automatically instantiating prefabs to sync state across multiple clients.  And it is still desirable in these cases to execute zenject injection.
 
@@ -2890,7 +2890,7 @@ DiContainer is always added to itself, so you can always get it injected into an
 
 ### <a id="dicontainer-methods-instantiate"></a>DiContainer.Instantiate
 
-These instantiate methods might be useful for example inside a custom factory.  Note however that in most cases, you can probably get away with using a normal [Factory](#creating-objects-dynamically) instead without needing to directly reference DiContainer.
+These instantiate methods might be useful for example inside a custom factory.  Note however that in most cases, you can probably get away with using a normal [Factory](#creating-objects-dynamically-using-factories) instead without needing to directly reference DiContainer.
 
 When instantiating objects directly, you can either use DiContainer or you can use IInstantiator, which DiContainer inherits from.  IInstantiator exists because often, in custom factories, you are only interested in the instantiate operation so you don't need the Bind, Resolve, etc. methods
 
