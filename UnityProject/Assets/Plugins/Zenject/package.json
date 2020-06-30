@@ -18,13 +18,5 @@
 		"type": "git",
 		"url": "ssh://git@github.com:svermeulen/Extenject.git"
 	},
-	"license": "MIT",
-	"files": [
-		"*.md",
-		"*.meta",
-		"*.asmdef",
-		"OptionalExtras",
-		"Source",
-		"*.txt"
-	]
+	"license": "MIT"
 }
