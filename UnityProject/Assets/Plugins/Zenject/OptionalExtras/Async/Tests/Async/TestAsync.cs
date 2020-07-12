@@ -20,6 +20,7 @@ namespace Zenject.Tests.Bindings
             PostInstall();
 
             var asycFoo = Container.Resolve<AsyncInject<IFoo>>();
+            
             while (!asycFoo.HasResult)
             {
                 yield return null;
@@ -32,7 +33,38 @@ namespace Zenject.Tests.Bindings
             }
             Assert.Fail();
         }
+
+        private IFoo awaitReturn;
+        [UnityTest]
+        [Timeout(300)]
+        public IEnumerator TestSimpleMethodAwaitable()
+        {
+            PreInstall();
+
+            Container.BindAsync<IFoo>().FromMethod(async () =>
+            {
+                await Task.Delay(100);
+                return (IFoo) new Foo();
+            }).AsCached();
+            PostInstall();
+
+            var asycFoo = Container.Resolve<AsyncInject<IFoo>>();
+
+            awaitReturn = null;
+            TestAwait(asycFoo);
+
+            while (awaitReturn == null)
+            {
+                yield return null;
+            }
+            Assert.Pass();
+        }
         
+        private async void TestAwait(AsyncInject<IFoo> asycFoo)
+        {
+            awaitReturn = await asycFoo;
+        }
+
         public interface IFoo
         {
         

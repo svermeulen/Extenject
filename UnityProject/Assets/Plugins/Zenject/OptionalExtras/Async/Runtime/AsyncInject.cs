@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using ModestTree;
@@ -19,8 +20,10 @@ namespace Zenject
         public bool HasResult { get; private set; }
         public bool IsCancelled  { get; private set; }
         public bool IsFaulted  { get; private set; }
+        
         T _result;
-
+        Task<T> task;
+        
         public AsyncInject(InjectContext context, Func<CancellationToken, Task<T>> asyncMethod)
         {
             _context = context;
@@ -28,7 +31,6 @@ namespace Zenject
             StartAsync(asyncMethod, cancellationTokenSource.Token);
         }
 
-        
         public void Cancel()
         {
             cancellationTokenSource.Cancel();
@@ -36,7 +38,7 @@ namespace Zenject
         
         private async void StartAsync(Func<CancellationToken, Task<T>> asyncMethod, CancellationToken token)
         {
-            Task<T> task = asyncMethod(token);
+            task = asyncMethod(token);
             await task;
             
             if (token.IsCancellationRequested)
@@ -79,5 +81,7 @@ namespace Zenject
                 return _result;
             }
         }
+        
+        public TaskAwaiter<T> GetAwaiter() => task.GetAwaiter();
     }
 }
