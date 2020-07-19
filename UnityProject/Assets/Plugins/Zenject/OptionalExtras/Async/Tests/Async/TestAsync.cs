@@ -67,9 +67,9 @@ namespace Zenject.Tests.Bindings
             }).AsCached();
             PostInstall();
 
+            awaitReturn = null;
             var asycFoo = Container.Resolve<AsyncInject<IFoo>>();
 
-            awaitReturn = null;
             TestAwait(asycFoo);
 
             while (awaitReturn == null)
