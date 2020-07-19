@@ -1,6 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.TestTools;
 
 namespace Zenject.Tests.Bindings
@@ -78,6 +81,38 @@ namespace Zenject.Tests.Bindings
             }
             Assert.Pass();
         }
+
+        [UnityTest]
+        [Timeout(10500)]
+        public IEnumerator TestPreloading()
+        {
+            PreInstall();
+            for (int i = 0; i < 4; i++)
+            {
+                var index = i;
+                Container.BindAsync<IFoo>().FromMethod(async () =>
+                {
+                    var delayAmount = 100 * (4 - index);
+                    await Task.Delay(delayAmount);
+                    return (IFoo) new Foo();
+                }).AsCached();
+            }
+            
+            Container.BindInterfacesTo<DecoratableMonoKernel>().AsCached();
+            Container.Decorate<IDecoratableMonoKernel>()
+                .With<PreloadAsyncKernel>();
+            
+            PostInstall();
+
+            float startTime = Time.timeSinceLevelLoad;
+            var testKernel = Container.Resolve<IDecoratableMonoKernel>() as PreloadAsyncKernel;
+            while (!testKernel.IsPreloadCompleted)
+            {
+                yield return null;
+            }
+            float deltaTime = Time.timeSinceLevelLoad - startTime;
+            Assert.GreaterOrEqual(deltaTime, 0.4f);
+        }
         
         private async void TestAwait(AsyncInject<IFoo> asycFoo)
         {
@@ -93,5 +128,46 @@ namespace Zenject.Tests.Bindings
         {
         
         }
+        
+        public class PreloadAsyncKernel: BaseMonoKernelDecorator
+        {
+            [Inject]
+            private List<AsyncInject> asyncInjects;
+
+            public bool IsPreloadCompleted { get; private set; }
+
+            public async override void Initialize()
+            {
+                foreach (AsyncInject inject in asyncInjects)
+                {
+                    if (!inject.IsCompleted)
+                    {
+                        await Task.Delay(1);
+                    }
+                }
+
+                IsPreloadCompleted = true;
+                DecoratedMonoKernel.Initialize();
+            }
+
+            public override void Update()
+            {
+                if (!IsPreloadCompleted)
+                {
+                    return;
+                }
+                DecoratedMonoKernel.Update();
+            }
+
+            public override void FixedUpdate()
+            {
+                if (!IsPreloadCompleted)
+                {
+                    
+                }
+                DecoratedMonoKernel.FixedUpdate();
+            }
+        }
     }
+
 }
