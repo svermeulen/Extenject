@@ -72,6 +72,34 @@ public class TestAddressable : ZenjectIntegrationTestFixture
         Assert.Pass();
     }
     
+    [UnityTest]
+    public IEnumerator TestAssetReferenceTMethod()
+    {
+        yield return ValidateTestDependency();
+
+        PreInstall();
+
+        Container.BindAsync<GameObject>()
+            .FromAssetReferenceT(addressablePrefabReference)
+            .AsCached();
+        PostInstall();
+
+        AsyncInject<GameObject> asycFoo = Container.Resolve<AsyncInject<GameObject>>();
+
+        int frameCounter = 0;
+        while (!asycFoo.HasResult && !asycFoo.IsFaulted)
+        {
+            frameCounter++;
+            if (frameCounter > 10000)
+            {
+                Assert.Fail();
+            }
+            yield return null;    
+        }
+            
+        Addressables.Release(asycFoo.Result);
+        Assert.Pass();
+    }
 
     private IEnumerator ValidateTestDependency()
     {
