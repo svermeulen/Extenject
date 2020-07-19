@@ -4,12 +4,24 @@ namespace Zenject
 {
     public static class AsyncDiContainerExtensions
     {
-        public static ConcreteAsyncIdBinderGeneric<TContract> BindAsync<TContract>(this DiContainer container)
+        public static
+#if EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS
+            ConcreteAddressableIdBinderGeneric<TContract>
+#else
+            ConcreteAsyncIdBinderGeneric<TContract> 
+#endif
+            BindAsync<TContract>(this DiContainer container)
         {
             return BindAsync<TContract>(container, container.StartBinding());
         }
 
-        public static ConcreteAsyncIdBinderGeneric<TContract> BindAsync<TContract>(this DiContainer container, BindStatement bindStatement)
+        public static
+#if EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS
+            ConcreteAddressableIdBinderGeneric<TContract>
+#else
+            ConcreteAsyncIdBinderGeneric<TContract> 
+#endif
+            BindAsync<TContract>(this DiContainer container, BindStatement bindStatement)
         {
             var bindInfo = bindStatement.SpawnBindInfo();
 
@@ -19,9 +31,12 @@ namespace Zenject
             Assert.That(!bindInfo.ContractTypes.Contains(typeof(AsyncInject<TContract>)));
             bindInfo.ContractTypes.Add(typeof(AsyncInject));
             bindInfo.ContractTypes.Add(typeof(AsyncInject<TContract>));
-            
-            return new ConcreteAsyncIdBinderGeneric<TContract>(
-                container, bindInfo, bindStatement);
+
+#if EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS
+            return new ConcreteAddressableIdBinderGeneric<TContract>(container, bindInfo, bindStatement);
+#else
+            return new ConcreteAsyncIdBinderGeneric<TContract>(container, bindInfo, bindStatement);
+#endif
         }
     }
 }
