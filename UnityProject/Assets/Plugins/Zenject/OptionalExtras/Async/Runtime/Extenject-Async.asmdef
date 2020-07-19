@@ -1,7 +1,9 @@
 {
     "name": "Extenject-Async",
     "references": [
-        "Zenject"
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -10,6 +12,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.addressables",
+            "expression": "0.0.0",
+            "define": "EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS"
+        }
+    ],
     "noEngineReferences": false
 }

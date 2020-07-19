@@ -4,7 +4,6 @@
         "Zenject-TestFramework",
         "Zenject",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
         "Extenject-Async"
     ],
     "includePlatforms": [],
