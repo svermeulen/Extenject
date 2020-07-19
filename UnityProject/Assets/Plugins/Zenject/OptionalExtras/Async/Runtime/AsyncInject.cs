@@ -6,9 +6,20 @@ using ModestTree;
 
 namespace Zenject
 {
+    public interface AsyncInject
+    {
+        bool HasResult { get; }
+        bool IsCancelled  { get; }
+        bool IsFaulted  { get; }
+        bool IsCompleted { get; }
+        
+        TaskAwaiter GetAwaiter();
+    }
+
+
     [ZenjectAllowDuringValidation]
     [NoReflectionBaking]
-    public class AsyncInject<T>
+    public class AsyncInject<T> : AsyncInject
     {
         readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
         readonly InjectContext _context;
@@ -17,9 +28,11 @@ namespace Zenject
         public event Action<AggregateException>  Faulted;
         public event Action Cancelled;
 
-        public bool HasResult { get; private set; }
-        public bool IsCancelled  { get; private set; }
-        public bool IsFaulted  { get; private set; }
+        public bool HasResult { get; protected set; }
+        public bool IsCancelled  { get; protected set; }
+        public bool IsFaulted  { get; protected set; }
+
+        public bool IsCompleted => HasResult || IsCancelled || IsFaulted;
         
         T _result;
         Task<T> task;
@@ -83,5 +96,7 @@ namespace Zenject
         }
         
         public TaskAwaiter<T> GetAwaiter() => task.GetAwaiter();
+
+        TaskAwaiter AsyncInject.GetAwaiter() => task.ContinueWith(task => { }).GetAwaiter();
     }
 }

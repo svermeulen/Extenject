@@ -31,9 +31,7 @@ namespace Zenject
         {
             Assert.IsEmpty(args);
             Assert.IsNotNull(context);
-
-            Assert.That(typeof(TConcrete).DerivesFromOrEqual(context.MemberType.GenericTypeArguments[0]));
-
+            
             injectAction = null;
 
             Func<CancellationToken, Task<TContract>> typeCastAsyncCall = null;

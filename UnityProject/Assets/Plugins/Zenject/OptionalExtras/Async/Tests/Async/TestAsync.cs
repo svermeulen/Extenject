@@ -33,6 +33,25 @@ namespace Zenject.Tests.Bindings
             }
             Assert.Fail();
         }
+        
+        [UnityTest]
+        public IEnumerator TestUntypedInject()
+        {
+            PreInstall();
+
+            Container.BindAsync<IFoo>().FromMethod(async () =>
+            {
+                await Task.Delay(100);
+                return (IFoo) new Foo();
+            }).AsCached();
+            PostInstall();
+
+            var asycFoo = Container.Resolve<AsyncInject>();
+            yield return null;
+            
+            Assert.NotNull(asycFoo);
+        }
+        
 
         private IFoo awaitReturn;
         [UnityTest]
