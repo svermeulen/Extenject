@@ -21,8 +21,8 @@ namespace Zenject
     [NoReflectionBaking]
     public class AsyncInject<T> : AsyncInject
     {
-        readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-        readonly InjectContext _context;
+        protected readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+        protected readonly InjectContext _context;
 
         public event Action<T> Completed;
         public event Action<AggregateException>  Faulted;
@@ -37,6 +37,11 @@ namespace Zenject
         T _result;
         Task<T> task;
         
+        protected AsyncInject(InjectContext context)
+        {
+            _context = context;
+        }
+        
         public AsyncInject(InjectContext context, Func<CancellationToken, Task<T>> asyncMethod)
         {
             _context = context;
@@ -49,7 +54,7 @@ namespace Zenject
             cancellationTokenSource.Cancel();
         }
         
-        private async void StartAsync(Func<CancellationToken, Task<T>> asyncMethod, CancellationToken token)
+        protected async void StartAsync(Func<CancellationToken, Task<T>> asyncMethod, CancellationToken token)
         {
             task = asyncMethod(token);
             await task;
