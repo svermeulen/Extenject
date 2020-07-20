@@ -1,9 +1,6 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
-#if EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.AddressableAssets;
-#endif
 
 namespace Zenject
 {
@@ -39,5 +36,18 @@ namespace Zenject
 
             return this;
         }
+        
+        public AsyncFromBinderBase FromMethod(Func<CancellationToken, Task<TConcrete>> method)
+        {
+            BindInfo.RequireExplicitScope = false;
+            // Don't know how it's created so can't assume here that it violates AsSingle
+            BindInfo.MarkAsCreationBinding = false;
+            SubFinalizer = new ScopableBindingFinalizer(
+                BindInfo,
+                (container, originalType) => new AsyncMethodProviderSimple<TContract, TConcrete>(method));
+
+            return this;
+        }
+        
     }
 }
