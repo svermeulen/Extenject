@@ -104,14 +104,21 @@ namespace Zenject.Tests.Bindings
             
             PostInstall();
 
-            float startTime = Time.timeSinceLevelLoad;
             var testKernel = Container.Resolve<IDecoratableMonoKernel>() as PreloadAsyncKernel;
             while (!testKernel.IsPreloadCompleted)
             {
                 yield return null;
             }
-            float deltaTime = Time.timeSinceLevelLoad - startTime;
-            Assert.GreaterOrEqual(deltaTime, 0.4f);
+
+            foreach (var asycFooUntyped in testKernel.asyncInjects)
+            {
+                var asycFoo = asycFooUntyped as AsyncInject<IFoo>;
+                if (asycFoo.TryGetResult(out IFoo fooAfterLoad))
+                {
+                    Assert.NotNull(fooAfterLoad);
+                    yield break;
+                }
+            }
         }
         
         private async void TestAwait(AsyncInject<IFoo> asycFoo)
@@ -132,7 +139,7 @@ namespace Zenject.Tests.Bindings
         public class PreloadAsyncKernel: BaseMonoKernelDecorator
         {
             [Inject]
-            private List<AsyncInject> asyncInjects;
+            public List<AsyncInject> asyncInjects;
 
             public bool IsPreloadCompleted { get; private set; }
 
