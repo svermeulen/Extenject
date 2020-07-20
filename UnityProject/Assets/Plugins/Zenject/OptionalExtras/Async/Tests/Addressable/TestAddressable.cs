@@ -84,10 +84,10 @@ public class TestAddressable : ZenjectIntegrationTestFixture
             .AsCached();
         PostInstall();
 
-        AsyncInject<GameObject> asycFoo = Container.Resolve<AsyncInject<GameObject>>();
+        AddressableInject<GameObject> asyncPrefab = Container.Resolve<AddressableInject<GameObject>>();
 
         int frameCounter = 0;
-        while (!asycFoo.HasResult && !asycFoo.IsFaulted)
+        while (!asyncPrefab.HasResult && !asyncPrefab.IsFaulted)
         {
             frameCounter++;
             if (frameCounter > 10000)
@@ -96,8 +96,8 @@ public class TestAddressable : ZenjectIntegrationTestFixture
             }
             yield return null;    
         }
-            
-        Addressables.Release(asycFoo.Result);
+        
+        Addressables.Release(asyncPrefab.AssetReferenceHandle);
         Assert.Pass();
     }
 
