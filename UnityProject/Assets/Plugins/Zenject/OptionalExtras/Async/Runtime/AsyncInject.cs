@@ -29,10 +29,11 @@ namespace Zenject
         public event Action Cancelled;
 
         public bool HasResult { get; protected set; }
+        public bool IsSuccessful { get; protected set; }
         public bool IsCancelled  { get; protected set; }
         public bool IsFaulted  { get; protected set; }
 
-        public bool IsCompleted => HasResult || IsCancelled || IsFaulted;
+        public bool IsCompleted => IsSuccessful || IsCancelled || IsFaulted;
         
         T _result;
         Task<T> task;
@@ -56,28 +57,58 @@ namespace Zenject
         
         protected async void StartAsync(Func<CancellationToken, Task<T>> asyncMethod, CancellationToken token)
         {
-            task = asyncMethod(token);
-            await task;
-            
+            try
+            {
+                task = asyncMethod(token);
+                await task;
+            }
+            catch (AggregateException e)
+            {
+                HandleFaulted(e);
+                return;
+            }
+            catch (Exception e)
+            {
+                HandleFaulted(new AggregateException(e));
+                return;
+            }
+
             if (token.IsCancellationRequested)
             {
+                HandleCancelled();
                 return;
             }
             
             if (task.IsCompleted)
             {
-                _result = task.Result;
-                HasResult = true;
-                Completed?.Invoke(task.Result);
+                HandleCompleted(task.Result);
             }else if (task.IsCanceled)
             {
-                IsCancelled = true;
-                Cancelled?.Invoke();
+                HandleCancelled();
             }else if (task.IsFaulted)
             {
-                IsFaulted = true;
-                Faulted?.Invoke(task.Exception);
+                HandleFaulted(task.Exception);
             }
+        }
+
+        private void HandleCompleted(T result)
+        {
+            _result = result;
+            HasResult = !result.Equals(default(T));
+            IsSuccessful = true;
+            Completed?.Invoke(result);
+        }
+
+        private void HandleCancelled()
+        {
+            IsCancelled = true;
+            Cancelled?.Invoke();
+        }
+
+        private void HandleFaulted(AggregateException exception)
+        {
+            IsFaulted = true;
+            Faulted?.Invoke(exception);
         }
 
         public bool TryGetResult(out T result)

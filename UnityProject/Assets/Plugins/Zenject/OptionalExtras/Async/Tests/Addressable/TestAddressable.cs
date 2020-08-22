@@ -3,12 +3,10 @@ using System;
 using Zenject;
 using System.Collections;
 using System.Collections.Generic;
-using ModestTree;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using Assert = NUnit.Framework.Assert;
@@ -99,6 +97,46 @@ public class TestAddressable : ZenjectIntegrationTestFixture
         
         Addressables.Release(asyncPrefab.AssetReferenceHandle);
         Assert.Pass();
+    }
+    
+    [UnityTest]
+    [Timeout(10500)]
+    public IEnumerator TestFailedLoad()
+    {
+        PreInstall();
+        
+        Container.BindAsync<GameObject>().FromMethod(async () =>
+        {
+            FailedOperation failingOperation = new FailedOperation();
+            var customHandle = Addressables.ResourceManager.StartOperation(failingOperation, default(AsyncOperationHandle));   
+            await customHandle.Task;
+
+            if (customHandle.Status == AsyncOperationStatus.Failed)
+            {
+                throw new Exception("Async operation failed", customHandle.OperationException);
+            }
+            
+            return customHandle.Result;
+        }).AsCached();
+        PostInstall();
+
+        yield return new WaitForEndOfFrame();
+        
+        LogAssert.ignoreFailingMessages = true;
+        AsyncInject<GameObject> asyncGameObj = Container.Resolve<AsyncInject<GameObject>>();
+        LogAssert.ignoreFailingMessages = false;
+
+        Assert.IsFalse(asyncGameObj.HasResult);
+        Assert.IsTrue(asyncGameObj.IsCompleted);
+        Assert.IsTrue(asyncGameObj.IsFaulted);
+    }
+
+    private class FailedOperation : AsyncOperationBase<GameObject>
+    {
+        protected override void Execute()
+        {
+            Complete(null, false, "Intentionally failed message");
+        }
     }
 
     private IEnumerator ValidateTestDependency()
