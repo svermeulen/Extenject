@@ -34,6 +34,12 @@ namespace Zenject
             {
                 AsyncOperationHandle<TConcrete> loadHandle = Addressables.LoadAssetAsync<TConcrete>(assetReference);
                 await loadHandle.Task;
+                
+                if (loadHandle.Status == AsyncOperationStatus.Failed)
+                {
+                    throw new Exception("Async operation failed", loadHandle.OperationException);
+                }
+                
                 return  loadHandle;
             }; 
             
