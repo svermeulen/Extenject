@@ -361,13 +361,13 @@ namespace Zenject
     public class StaticMemoryPool<TParam1, TParam2, TParam3, TParam4, TValue> : StaticMemoryPoolBase<TValue>, IMemoryPool<TParam1, TParam2, TParam3, TParam4, TValue>
         where TValue : class, new()
     {
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
         ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TValue> _onSpawnMethod;
 
         public StaticMemoryPool(
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TValue> onSpawnMethod, Action<TValue> onDespawnedMethod = null)
@@ -379,7 +379,7 @@ namespace Zenject
         }
 
         public
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TValue> OnSpawnMethod
@@ -411,13 +411,13 @@ namespace Zenject
     public class StaticMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TValue> : StaticMemoryPoolBase<TValue>, IMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TValue>
         where TValue : class, new()
     {
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
         ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TValue> _onSpawnMethod;
 
         public StaticMemoryPool(
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TValue> onSpawnMethod, Action<TValue> onDespawnedMethod = null)
@@ -429,7 +429,7 @@ namespace Zenject
         }
 
         public
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TValue> OnSpawnMethod
@@ -461,13 +461,13 @@ namespace Zenject
     public class StaticMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TValue> : StaticMemoryPoolBase<TValue>, IMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TValue>
         where TValue : class, new()
     {
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
         ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TValue> _onSpawnMethod;
 
         public StaticMemoryPool(
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TValue> onSpawnMethod, Action<TValue> onDespawnedMethod = null)
@@ -479,7 +479,7 @@ namespace Zenject
         }
 
         public
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TValue> OnSpawnMethod
@@ -511,13 +511,13 @@ namespace Zenject
     public class StaticMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TParam7, TValue> : StaticMemoryPoolBase<TValue>, IMemoryPool<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TParam7, TValue>
         where TValue : class, new()
     {
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
         ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TParam7, TValue> _onSpawnMethod;
 
         public StaticMemoryPool(
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TParam7, TValue> onSpawnMethod, Action<TValue> onDespawnedMethod = null)
@@ -529,7 +529,7 @@ namespace Zenject
         }
 
         public
-#if !NET_4_6
+#if !NET_4_6 && !NET_STANDARD_2_0
             ModestTree.Util.
 #endif
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6, TParam7, TValue> OnSpawnMethod

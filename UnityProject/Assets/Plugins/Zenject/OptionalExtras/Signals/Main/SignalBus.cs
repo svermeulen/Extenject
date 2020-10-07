@@ -18,6 +18,7 @@ namespace Zenject
         readonly SignalDeclaration.Factory _signalDeclarationFactory;
         readonly DiContainer _container;
 
+        [Inject]
         public SignalBus(
             [Inject(Source = InjectSources.Local)]
             List<SignalDeclaration> signalDeclarations,
@@ -364,7 +365,7 @@ namespace Zenject
                 if (throwIfMissing)
                 {
                     throw Assert.CreateException(
-                        "Called unsubscribe for signal '{0}' but could not find corresponding subscribe.  If this is intentional, call TryUnsubscribe instead.");
+                        "Called unsubscribe for signal '{0}' but could not find corresponding subscribe.  If this is intentional, call TryUnsubscribe instead.", id.SignalId);
                 }
             }
         }
@@ -412,7 +413,7 @@ namespace Zenject
 
             if (missingHandlerResponse.HasValue)
             {
-                bindInfo.Identifier = missingHandlerResponse.Value;
+                bindInfo.MissingHandlerResponse = missingHandlerResponse.Value;
             }
 
             if (forceAsync.HasValue)

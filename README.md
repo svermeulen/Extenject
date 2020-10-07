@@ -183,7 +183,7 @@ Also see [further reading section](#further-reading) for some external zenject t
         * [Convention Based Binding](#convention-based-binding)
     * [Scriptable Object Installer](#scriptable-object-installer)
     * [Runtime Parameters For Installers](#runtime-parameters-for-installers)
-    * [Creating Objects Dynamically Using Factories](#creating-objects-dynamically)
+    * [Creating Objects Dynamically Using Factories](#creating-objects-dynamically-using-factories)
     * [Memory Pools](#memory-pools)
     * [Update / Initialization Order](#update--initialization-order)
     * [Zenject Order Of Operations](#zenject-order-of-operations)
@@ -193,7 +193,7 @@ Also see [further reading section](#further-reading) for some external zenject t
     * [Scene Decorators](#scene-decorators)
     * [ZenAutoInjecter](#zenautoinjector)
     * [Sub-Containers And Facades](#sub-containers-and-facades)
-    * [Writing Automated Unit Tests / Integration Tests](#writing-tests)
+    * [Writing Automated Unit Tests / Integration Tests](#writing-automated-unit-tests--integration-tests)
     * [Philosophy Of Zenject](#zenject-philophy)
     * [Using Zenject Outside Unity Or For DLLs](#using-outside-unity)
     * [Zenject Settings](#zenjectsettings)
@@ -1115,7 +1115,7 @@ Then, to hook it up in an installer:
 Container.Bind<ITickable>().To<Ship>().AsSingle();
 ```
 
-Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#all-interfaces-shortcuts)
+Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#bindinterfacesto-and-bindinterfacesandselfto)
 
 Note that the order that the Tick() is called in for all ITickables is also configurable, as outlined [here](#update--initialization-order).
 
@@ -1133,7 +1133,7 @@ Then, to hook it up in an installer:
 Container.Bind<IInitializable>().To<Foo>().AsSingle();
 ```
 
-Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#all-interfaces-shortcuts)
+Or if you don't want to have to always remember which interfaces your class implements, you can use the [shortcut described here](#bindinterfacesto-and-bindinterfacesandselfto)
 
 The `Foo.Initialize` method would then be called after the entire object graph is constructed and all constructors have been called.
 
@@ -1151,7 +1151,7 @@ public class Ship : IInitializable
 }
 ```
 
-`IInitializable` works well for start-up initialization, but what about for objects that are created dynamically via factories?  (see [this section](#creating-objects-dynamically) for what I'm referring to here).  For these cases you will most likely want to eitehr use an `[Inject]` method or an explicit Initialize method that is called after the object is created.  For example:
+`IInitializable` works well for start-up initialization, but what about for objects that are created dynamically via factories?  (see [this section](#creating-objects-dynamically-using-factories) for what I'm referring to here).  For these cases you will most likely want to either use an `[Inject]` method or an explicit Initialize method that is called after the object is created.  For example:
 
 ```csharp
 public class Foo
@@ -1201,7 +1201,7 @@ Then in your installer you can include:
 Container.Bind(typeof(Logger), typeof(IInitializable), typeof(IDisposable)).To<Logger>().AsSingle();
 ```
 
-Or you can use the [BindInterfaces shortcut](#all-interfaces-shortcuts):
+Or you can use the [BindInterfaces shortcut](#bindinterfacesto-and-bindinterfacesandselfto):
 
 ```csharp
 Container.BindInterfacesAndSelfTo<Logger>().AsSingle();
@@ -1491,10 +1491,10 @@ The `ZenjectBinding` component has the following properties:
 ## <a id="di-guidelines--recommendations"></a>General Guidelines / Recommendations / Gotchas / Tips and Tricks
 
 * **Do not use GameObject.Instantiate if you want your objects to have their dependencies injected**
-    * If you want to instantiate a prefab at runtime and have any MonoBehaviour's automatically injected, we recommend using a [factory](#creating-objects-dynamically).  You can also instantiate a prefab by directly using the DiContainer by calling any of the [InstantiatePrefab](#dicontainer-methods-instantiate) methods.  Using these ways as opposed to GameObject.Instantiate will ensure any fields that are marked with the `[Inject]` attribute are filled in properly, and all `[Inject]` methods within the prefab are called.
+    * If you want to instantiate a prefab at runtime and have any MonoBehaviour's automatically injected, we recommend using a [factory](#creating-objects-dynamically-using-factories).  You can also instantiate a prefab by directly using the DiContainer by calling any of the [InstantiatePrefab](#dicontainer-methods-instantiate) methods.  Using these ways as opposed to GameObject.Instantiate will ensure any fields that are marked with the `[Inject]` attribute are filled in properly, and all `[Inject]` methods within the prefab are called.
 
 * **Best practice with DI is to *only* reference the container in the composition root "layer"**
-    * Note that factories are part of this layer and the container can be referenced there (which is necessary to create objects at runtime).  See [here](#creating-objects-dynamically) for more details on this.
+    * Note that factories are part of this layer and the container can be referenced there (which is necessary to create objects at runtime).  See [here](#creating-objects-dynamically-using-factories) for more details on this.
 
 * **Do not use IInitializable, ITickable and IDisposable for dynamically created objects**
     * Objects that are of type `IInitializable` are only initialized once - at startup during Unity's `Start` phase.  If you create an object through a factory, and it derives from `IInitializable`, the `Initialize()` method will not be called.  You should use `[Inject]` methods in this case or call Initialize() explicitly yourself after calling Create.
@@ -2186,7 +2186,7 @@ Note that this is an editor only feature.  The default contract names will not b
 
 ## ZenAutoInjecter
 
-As explained in the [section on factories](#creating-objects-dynamically), any object that you create dynamically needs to be created through zenject in order for it to be injected.  You cannot simply execute `GameObject.Instantiate(prefab)`, or call `new Foo()`.
+As explained in the [section on factories](#creating-objects-dynamically-using-factories), any object that you create dynamically needs to be created through zenject in order for it to be injected.  You cannot simply execute `GameObject.Instantiate(prefab)`, or call `new Foo()`.
 
 However, this is sometimes problematic especially when using other third party libraries.  For example, some networking libraries work by automatically instantiating prefabs to sync state across multiple clients.  And it is still desirable in these cases to execute zenject injection.
 
@@ -2890,7 +2890,7 @@ DiContainer is always added to itself, so you can always get it injected into an
 
 ### <a id="dicontainer-methods-instantiate"></a>DiContainer.Instantiate
 
-These instantiate methods might be useful for example inside a custom factory.  Note however that in most cases, you can probably get away with using a normal [Factory](#creating-objects-dynamically) instead without needing to directly reference DiContainer.
+These instantiate methods might be useful for example inside a custom factory.  Note however that in most cases, you can probably get away with using a normal [Factory](#creating-objects-dynamically-using-factories) instead without needing to directly reference DiContainer.
 
 When instantiating objects directly, you can either use DiContainer or you can use IInstantiator, which DiContainer inherits from.  IInstantiator exists because often, in custom factories, you are only interested in the instantiate operation so you don't need the Bind, Resolve, etc. methods
 
@@ -3227,7 +3227,9 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Yes.  However, there are a few things that you should be aware of.  One of the things that Unity's IL2CPP compiler does is strip out any code that is not used.  It calculates what code is used by statically analyzing the code to find usage.  This is great, except that this will sometimes strip out methods/types that we don't refer to explicitly (and instead access via reflection instead).
 
-    In previous versions of Unity, when used with Zenject, IL2CPP would often strip out the constructors of classes because of this reason.  The recommended fix in these cases was to add an `[Inject]` attribute above the constructor.  Adding this attribute signals to IL2CPP to not strip out this method.  The convention was to use this attribute on all constructors.  However, in newer versions of IL2CPP this attribute is no longer necessary, because it seems that IL2CPP preserves constructors by default.
+    In some versions of Unity, or with some settings applied (eg. a higher level of code stripping), IL2CPP can sometimes strip out the constructors of classes, resulting in errors on IL2CPP platforms.  The recommended fix in these cases is to either edit `link.xml` to force your types to not be stripped (see Unity docs) or to add an `[Inject]` attribute above the constructor.  Adding this attribute signals to IL2CPP to not strip out this method.
+
+    If you do want to use a higher level of code stripping, and decide to go the route of adding `[Inject]` attributes to all constructors, then you might also want to change the `ConstructorChoiceStrategy` value inside the settings found on `ProjectContext` to `InjectAttribute`.  This can be useful because it will force you to explicitly add `[Inject]` attributes to all constructors while testing in Unity Editor, rather than having to test on IL2CPP platforms to discover these problems.  Note however that this would probably be unnecessary with 'Low' code stripping.
 
     Sometimes, another issue that can occur is with classes that have generic arguments and which are instantiated with a "value type" generic argument (eg. int, float, enums, anything deriving from struct, etc.).  In this case, compiling on AOT platforms will sometimes strip out the constructor, so Zenject will not be able to create the class and you will get a runtime error.  For example:
 
@@ -3340,22 +3342,24 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
 * **<a id="what-games-are-using-zenject"></a>What games/tools/libraries are using Zenject?**
 
-    If you know of other projects that are using Zenject, please add a comment [here](https://github.com/modesttree/Zenject/issues/153) so that I can add it to this list.
+    If you know of other projects that are using Zenject, please add a comment [here](https://github.com/svermeulen/Extenject/issues/179) so that I can add it to this list.
 
-    Games
+    Games:
 
-    * Pokemon Go (both [iOS](https://itunes.apple.com/us/app/pokemon-go/id1094591345?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en))
+    * [Beat Saber - VR Rythm Game](https://beatsaber.com) (Windows) ([Steam](https://store.steampowered.com/app/620980/Beat_Saber/), [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) and [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000))
+    * Pokemon Go (both [iOS](https://apps.apple.com/us/app/pokemon-go/id1094591345) and [Android](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en))
+    * Ingress (both [iOS](https://apps.apple.com/us/app/ingress-prime/id576505181) and [Android](https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=en_US))
     * [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Includes complete source.
     * [Viveport VR](https://www.youtube.com/watch?v=PfBQGtdHH7c)
     * [Slugterra: Guardian Force](https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en) (Android)
     * [Submarine](https://github.com/shiwano/submarine) (iOS and Android)
     * [Space Shooter Alpha](https://misfitlabs.itch.io/space-shooter) (Android) (Extenject)
-    * [NOVA Black Holes](https://itunes.apple.com/us/app/nova-black-holes/id1114574985?mt=8) (iOS)
+    * [NOVA Black Holes](https://apps.apple.com/us/app/nova-black-holes/id1114574985) (iOS)
     * [Farm Away!](http://www.farmawaygame.com/) (iOS and Android)
     * [Build Away!](http://www.buildawaygame.com/) (iOS and Android)
     * Stick Soccer 2 ([iOS](https://itunes.apple.com/gb/app/stick-soccer-2/id1104214157?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.sticksports.soccer2&hl=en_GB))
     * [Toy Clash](https://toyclash.com/) - ([GearVR](https://www.oculus.com/experiences/gear-vr/1407846952568081/))
-    * [Bedtime Math App](http://bedtimemath.org/apps) - ([iOS](https://itunes.apple.com/us/app/bedtimemath/id637910701) and [Android](https://play.google.com/store/apps/details?id=com.twofours.bedtimemath))
+    * [Bedtime Math App](http://bedtimemath.org/apps) - ([iOS](https://apps.apple.com/us/app/bedtimemath/id637910701) and [Android](https://play.google.com/store/apps/details?id=com.twofours.bedtimemath))
     * [EcsRx Roguelike 2D](https://github.com/grofit/ecsrx.roguelike2d) - An example of a Roguelike 2d game using EcsRx and Zenject
     * [Golfriends](https://www.airconsole.com/#!play=com.octopusgames.golfriends) (WebGL) - Mini golf game using a combination of WebGL and mobile
     * Word Winner ([iOS](https://itunes.apple.com/us/app/id1404769349) and [Android](https://play.google.com/store/apps/details?id=com.SmoreGames.WordWinner)) - A Word Brain Game

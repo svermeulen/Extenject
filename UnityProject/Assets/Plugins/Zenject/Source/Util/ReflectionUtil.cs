@@ -100,7 +100,7 @@ namespace ModestTree
         }
 
         public static string ToDebugString<TParam1, TParam2, TParam3, TParam4, TParam5>(this
-#if NET_4_6
+#if NET_4_6 || NET_STANDARD_2_0
             Action<TParam1, TParam2, TParam3, TParam4, TParam5> action)
 #else
             ModestTree.Util.Action<TParam1, TParam2, TParam3, TParam4, TParam5> action)
@@ -114,7 +114,7 @@ namespace ModestTree
         }
 
         public static string ToDebugString<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6>(this
-#if NET_4_6
+#if NET_4_6 || NET_STANDARD_2_0
             Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6> action)
 #else
             ModestTree.Util.Action<TParam1, TParam2, TParam3, TParam4, TParam5, TParam6> action)

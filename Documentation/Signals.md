@@ -232,7 +232,7 @@ The format of the DeclareSignal statement is the following:
 <pre>
 Container.DeclareSignal&lt;<b>SignalType</b>&gt;()
     .WithId(<b>Identifier</b>)
-    .<b>(RequiredSubscriber|OptionalSubscriber|OptionalSubscriberWithWarning)</b>()
+    .<b>(RequireSubscriber|OptionalSubscriber|OptionalSubscriberWithWarning)</b>()
     .<b>(RunAsync|RunSync)</b>()
     .WithTickPriority(<b>TickPriority</b>)
     .(<b>Copy</b>|<b>Move</b>)Into(<b>All</b>|<b>Direct</b>)SubContainers();
@@ -244,7 +244,7 @@ Where:
 
 * **Identifier** = The value to use to uniquely identify the binding.  This can be ignored in most cases, but can be useful in cases where you want to define multiple distinct signals using the same signal type.
 
-- **RequiredSubscriber**/**OptionalSubscriber**/**OptionalSubscriberWithWarning** - These values control how the signal should behave when it fired but there are no subscribers associated with it.  Unless it is over-ridden in <a href="#settings">ZenjectSettings</a>, the default is OptionalSubscriber, which will do nothing in this case.  When RequiredSubscriber is set, exceptions will be thrown in the case of zero subscribers.  OptionalSubscriberWithWarning is half way in between where it will issue a console log warning instead of an exception.  Which one you choose depends on how strict you prefer your application to be, and whether it matters if the given signal is actually handled or not.
+- **RequireSubscriber**/**OptionalSubscriber**/**OptionalSubscriberWithWarning** - These values control how the signal should behave when it fired but there are no subscribers associated with it.  Unless it is over-ridden in <a href="#settings">ZenjectSettings</a>, the default is OptionalSubscriber, which will do nothing in this case.  When RequireSubscriber is set, exceptions will be thrown in the case of zero subscribers.  OptionalSubscriberWithWarning is half way in between where it will issue a console log warning instead of an exception.  Which one you choose depends on how strict you prefer your application to be, and whether it matters if the given signal is actually handled or not.
 
 - **RunAsync**/**RunSync** - These values control whether the signal is fired synchronously or asynchronously:
 
@@ -258,7 +258,7 @@ Where:
 
 * (**Copy**|**Move**)Into(**All**|**Direct**)SubContainers = Same behaviour as described in <a href="../README.md#binding">main section on binding</a>.
 
-    Note that the default value for **RunSync**/**RunAsync** and **RequiredSubscriber**/**OptionalSubscriber** can be overridden by changing <a href="#settings">ZenjectSettings</a>
+    Note that the default value for **RunSync**/**RunAsync** and **RequireSubscriber**/**OptionalSubscriber** can be overridden by changing <a href="#settings">ZenjectSettings</a>
 
 ## <a id="firing"></a>Signal Firing
 
@@ -653,7 +653,7 @@ Most of the default settings for signals can be overriden via a settings propert
 
 **Default Sync Mode** - This value controls the default value for the `DeclareSignal` property `RunSync`/`RunAsync` when it is left unspecified.  By default it is set to synchronous so will assume `RunSync` when unspecified by a call to `DeclareSignal`.  So if you are a fan of async signals then you could set this to async to assume async instead.
 
-**Missing Handler Default Response** - This value controls the default value when **RequiredSubscriber**/**OptionalSubscriber**/**OptionalSubscriberWithWarning** is not specified for a call to `DeclareSignal`.  By default it is set to **OptionalSubscriber**.
+**Missing Handler Default Response** - This value controls the default value when **RequireSubscriber**/**OptionalSubscriber**/**OptionalSubscriberWithWarning** is not specified for a call to `DeclareSignal`.  By default it is set to **OptionalSubscriber**.
 
 **Require Strict Unsubscribe** - When true, this will cause exceptions to be thrown if the scene ends and there are still signal handlers that have not yet unsubscribed yet.  By default it is false.
 

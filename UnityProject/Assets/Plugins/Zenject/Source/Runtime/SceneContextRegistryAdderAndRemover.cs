@@ -7,6 +7,7 @@ namespace Zenject
         readonly SceneContextRegistry _registry;
         readonly SceneContext _sceneContext;
 
+        [Inject]
         public SceneContextRegistryAdderAndRemover(
             SceneContext sceneContext,
             SceneContextRegistry registry)

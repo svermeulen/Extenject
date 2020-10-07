@@ -17,6 +17,13 @@ namespace Zenject.Internal
         {
             _injectAttributeTypes = new HashSet<Type>();
             _injectAttributeTypes.Add(typeof(InjectAttributeBase));
+
+            ConstructorChoiceStrategy = ConstructorChoiceStrategy.InjectAttributeThenLeastArguments;
+        }
+
+        public static ConstructorChoiceStrategy ConstructorChoiceStrategy 
+        {
+            get; set;
         }
 
         public static void AddCustomInjectAttribute<T>()
@@ -214,6 +221,11 @@ namespace Zenject.Internal
                     return explicitConstructor;
                 }
 
+                if (ConstructorChoiceStrategy == ConstructorChoiceStrategy.InjectAttribute)
+                {
+                    return null;
+                }
+
                 // If there is only one public constructor then use that
                 // This makes decent sense but is also necessary on WSA sometimes since the WSA generated
                 // constructor can sometimes be private with zero parameters
@@ -232,7 +244,15 @@ namespace Zenject.Internal
                 return constructors.OrderBy(x => x.GetParameters().Count()).First();
             }
 
-            return constructors[0];
+            var onlyConstructor = constructors[0];
+
+            if (ConstructorChoiceStrategy == ConstructorChoiceStrategy.InjectAttribute 
+                && !_injectAttributeTypes.Any(a => onlyConstructor.HasAttribute(a)))
+            {
+                return null;
+            }
+
+            return onlyConstructor;
         }
 
 #if UNITY_WSA && ENABLE_DOTNET && !UNITY_EDITOR

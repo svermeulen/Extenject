@@ -77,6 +77,11 @@ namespace Zenject.Internal
             {
                 if (constructor == null)
                 {
+                    if (ReflectionTypeAnalyzer.ConstructorChoiceStrategy == ConstructorChoiceStrategy.InjectAttribute)
+                    {
+                        return null;
+                    }
+                    
                     // No choice in this case except to use the slow Activator.CreateInstance
                     // as far as I know
                     // This should be rare though and only seems to occur when instantiating
@@ -100,7 +105,7 @@ namespace Zenject.Internal
         static ZenFactoryMethod TryCreateFactoryMethodCompiledLambdaExpression(
             Type type, ConstructorInfo constructor)
         {
-#if NET_4_6 && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
+#if (NET_4_6 || NET_STANDARD_2_0) && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
 
             if (type.ContainsGenericParameters)
             {
@@ -136,7 +141,7 @@ namespace Zenject.Internal
 
         static ZenInjectMethod TryCreateActionForMethod(MethodInfo methodInfo)
         {
-#if NET_4_6 && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
+#if (NET_4_6 || NET_STANDARD_2_0) && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
 
             if (methodInfo.DeclaringType.ContainsGenericParameters)
             {
@@ -237,7 +242,7 @@ namespace Zenject.Internal
 
         static ZenMemberSetterMethod TryGetSetterAsCompiledExpression(Type parentType, MemberInfo memInfo)
         {
-#if NET_4_6 && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
+#if (NET_4_6 || NET_STANDARD_2_0) && !ENABLE_IL2CPP && !ZEN_DO_NOT_USE_COMPILED_EXPRESSIONS
 
             if (parentType.ContainsGenericParameters)
             {

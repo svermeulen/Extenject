@@ -1019,7 +1019,7 @@ namespace Zenject
                     if (memberType.IsGenericType()
                         && (memberType.GetGenericTypeDefinition() == typeof(List<>)
                             || memberType.GetGenericTypeDefinition() == typeof(IList<>)
-#if NET_4_6
+#if NET_4_6 || NET_STANDARD_2_0
                             || memberType.GetGenericTypeDefinition() == typeof(IReadOnlyList<>)
 #endif
                             || memberType.GetGenericTypeDefinition() == typeof(IEnumerable<>)))

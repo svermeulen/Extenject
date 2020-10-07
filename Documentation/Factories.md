@@ -44,7 +44,7 @@ public class Enemy
 }
 ```
 
-However, the above code is an example of an anti-pattern.  This will work, and you can use the container to get access to all other classes in your app, however if you do this you will not really be taking advantage of the power of dependency injection.  This is known, by the way, as [Service Locator Pattern](http://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/).
+However, the above code is an example of an anti-pattern.  This will work, and you can use the container to get access to all other classes in your app, however if you do this you will not really be taking advantage of the power of dependency injection.  This is known, by the way, as [Service Locator Pattern](https://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/).
 
 Note that the only exception to this rule is within factories and installers.  Again, factories and installers make up what we refer to as the "composition root layer".
 
@@ -235,7 +235,7 @@ Other things to be aware of:
 
 - Note that for dynamically instantiated MonoBehaviours (for example when using `FromComponentInNewPrefab` with `BindFactory)` injection should always occur before `Awake` and `Start`, so a common convention we recommend is to use `Awake`/`Start` for initialization logic and use the inject method strictly for saving dependencies (ie. similar to constructors for non-monobehaviours)
 
-- Unlike non-factory injection, you can have multiple runtime parameters declared with the same type.  In this case, the order that the values are given to the factory will be matched to the parameter order - assuming that you are using constructor or method injection.  However, note that this is not the case with field or property injection.  In those cases the order that values are injected is not guaranteed to follow the declaration order, since these fields are retrieved using `Type.GetFields` which does not guarantee order as described <a href="https://msdn.microsoft.com/en-us/library/ch9714z3.aspx">here</a>
+- Unlike non-factory injection, you can have multiple runtime parameters declared with the same type.  In this case, the order that the values are given to the factory will be matched to the parameter order - assuming that you are using constructor or method injection.  However, note that this is not the case with field or property injection.  In those cases the order that values are injected is not guaranteed to follow the declaration order, since these fields are retrieved using `Type.GetFields` which does not guarantee order as described <a href="https://docs.microsoft.com/en-us/dotnet/api/system.type.getfields?redirectedfrom=MSDN&view=netcore-3.1#System_Type_GetFields">here</a>
 
 ## <a id="binding-syntax"></a>Binding Syntax
 
