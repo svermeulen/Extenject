@@ -49,12 +49,24 @@ If you know of other projects that are using Zenject, please add a comment [here
 ### Beat Saber
 `Beat Games`
 
-<img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
+</p>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634749-e6455480-0a8a-11eb-9073-6bcd60bbdff5.png">
 Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
 
 OS: iOS and Android
 Category: Strategy
 Developer: Epic 
+
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634751-e6ddeb00-0a8a-11eb-9ee1-2a755fd72e81.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634753-e7768180-0a8a-11eb-8768-e75801f05a76.png">
+</p>
+
 
 [Website](https://beatsaber.com) • [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) •  [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) • [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000)
 
@@ -71,6 +83,12 @@ OS: iOS and Android
 Category: Multiplayer
 Developer: Niantic
 
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
+
 [Website](https://pokemongolive.com/) • [App Store](https://apps.apple.com/us/app/pokemon-go/id1094591345) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en)
 
 ---
@@ -86,18 +104,32 @@ OS: iOS and Android
 Category: Multiplayer
 Developer: Niantic 
 
-[Website](https://www.ingress.com) • [App Store](https://apps.apple.com/us/app/ingress-prime/id576505181) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=en_US))
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
 
+<p align="center">
+[Website](https://www.ingress.com) • [App Store](https://apps.apple.com/us/app/ingress-prime/id576505181) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=en_US)
+</p>
 ---
 
 ### Slugterra: Guardian Force
 `Epic Story Interactive`
 
-Slugterra: Guardian Force – gather your invincible team of heroes and fight all enemies. In this game you will find yourself in a wonderful world inhabited by civilians Slagteri, the city which was attacked by horrible monsters and now your task will be to resist them. Lead your team of heroes forward and produmyvayte every step, becoming a skilled strategist and tactician. Explore the mysterious and dark caves filled with monsters and enemies and clean them, not letting enemies to harm local residents. Use power level and worked his way forward. Use the strength of each character to form a combined blow and destroy all enemies.
+Slugterra: Guardian Force – gather your invincible team of heroes and fight all enemies. In this game you will find yourself in a wonderful world inhabited by civilians Slagteri, the city which was attacked by horrible monsters and now your task will be to resist them. Lead your team of heroes forward and plan every step, becoming a skilled strategist and tactician. Explore the mysterious and dark caves filled with monsters and enemies and clean them, not letting enemies to harm local residents. Use power level and worked his way forward. Use the strength of each character to form a combined blow and destroy all enemies.
 
 OS: iOS and Android
 Category: Strategy
 Developer: Epic Story Interactive
+
+
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
 
 [Website](https://www.epicstoryinteractive.com) • [App Store](https://apps.apple.com/us/app/slugterra-guardian-force/id1043738296) • [Google Play](https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en)
 
@@ -107,6 +139,13 @@ Developer: Epic Story Interactive
 `Shiwano`
 
 A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
+
+
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
 
 [GitHub](https://github.com/shiwano/submarine)
 
@@ -120,6 +159,12 @@ A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a 
 OS: Android
 Category: 2D Shooter
 Developer: Misfit Labs 
+
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
 
 [Website](https://www.misfitlabs.dev) • [itch.io](https://misfitlabs.itch.io/space-shooter)
 
@@ -139,6 +184,12 @@ Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a
 OS: iOS and Android
 Category: Sports
 Developer: Stick Sports Ltd
+
+<p align="center">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+  <img width="300" height="180" src="">
+</p>
 
 [Website](https://www.sticksports.com/stick-soccer-2/) • [App Store](https://itunes.apple.com/gb/app/stick-soccer-2/id1104214157?mt=8) • [Google Play](https://play.google.com/store/apps/details?id=com.sticksports.soccer2&hl=en_GB)
 
