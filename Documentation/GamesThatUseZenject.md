@@ -8,8 +8,19 @@
   * [Beat Saber](#beat-saber)
   * [Pokémon Go](#pokémon-go)
   * [Ingress Prime](#ingress-prime)
-
+  * [Slugterra: Guardian Force](#slugterra-guardian-force)
+  * [Submarine](#submarine)
+  * [Stellar Frenzy Alpha](#stellar-frenzy-alpha)
+  * [Stick Soccer 2](#stick-soccer-2)
+  * [Word Winner](#word-winner)
+  * [Farm Away!](#farm-away)
+  * [Nova Black Holes](#nova-black-holes)
+  * [Toy Clash](#toy-clash) 
+  * [EcsRx Roguelike 2D](#ecsRx-roguelike-2D)
+  * [Golfriends](#golfriends)
+  * [Build Away!](#build-away)
 </details>
+
 <p align="center">
   <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
   <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
@@ -85,6 +96,48 @@ Developer: Misfit Labs
 Link: https://misfitlabs.itch.io/stellar-frenzy
 
 ---
+### Stick Soccer 2
+Stick Soccer 2 is a soccer game where you start your own Soccer team with the name of your choice, team colors, and mascot. Once you've gotten the ball rolling on those selections, you'll have a fully fledged team capable of conquering the world of soccer facing up against today's powerhouse teams. 
+
+Matches in Stick Soccer 2 are highly unusual in that you won't be playing the whole time. Instead, the game stops at certain key points in each event and you'll be the one to shoot game-changing goals from a myriad of different positions. In order to get the job done, you'll need to slide your finger across the screen in order to kick the ball. 
+
+Between one match and another, you'll soon find that you'll have the chance to recruit some of the best players in the world. However, in order to access these players, you'll need to have their specific card. And we're not talking about just anyone, in this game you'll be able to play with the likes of Ronaldo, Messi, Pogba, Neymar, Iniesta and Alaba.
+
+Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a well-adapted interface designed with touch screens in mind. With awesome graphics and a huge amount of stars to draft—not to mention the nearly endless number of teams to battle—this game is fun.
+
+OS: iOS and Android
+Category: Sports
+Developer: Stick Sports Ltd
+
+https://www.sticksports.com/stick-soccer-2/
+
+---
+
+### Word Winner
+
+---
+
+### Farm Away!
+
+---
+
+### Nova Black Holes
+
+---
+
+### Toy Clash 
+
+---
+
+### EcsRx Roguelike 2D
+
+---
+
+### Golfriends
+
+---
+
+### Build Away!
 
     * [Beat Saber - VR Rythm Game](https://beatsaber.com) (Windows) ([Steam](https://store.steampowered.com/app/620980/Beat_Saber/), [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) and [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000))
     * Pokemon Go (both [iOS](https://apps.apple.com/us/app/pokemon-go/id1094591345) and [Android](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en))
