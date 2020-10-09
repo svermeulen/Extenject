@@ -50,17 +50,26 @@ If you know of other projects that are using Zenject, please add a comment [here
 
 <img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
 Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
-Platforms: Windows
+
+OS: iOS and Android
+Category: Strategy
+Developer: Epic 
+
 [Website](https://beatsaber.com) • [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) •  [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/)  [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000)
 (Windows) ([Steam](https://store.steampowered.com/app/620980/Beat_Saber/), [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) and [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000))
 
 ---
 
 ### Pokémon Go
+
 <img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
 Pokémon Go is a augmented reality (AR) mobile game developed and published by Niantic in collaboration with The Pokémon Company for iOS and Android devices. A part of the Pokémon franchise, the game is the result of a collaboration between Niantic, Nintendo and The Pokémon Company. It uses the mobile device GPS to locate, capture, battle, and train virtual creatures, called Pokémon, which appear as if they are in the player's real-world location. The game is free-to-play; it uses a freemium business model and supports in-app purchases for additional in-game items. The game launched with around 150 species of Pokémon, which had increased to around 600 by 2020.
 
 Pokémon Go was released to mixed reviews; critics praised the concept, but criticized technical problems. It was one of the most used and profitable mobile apps in 2016, having been downloaded more than 500 million times worldwide by the end of the year. It is credited with popularizing location-based and AR technology, promoting physical activity, and helping local businesses grow due to increased foot traffic. However, it attracted controversy for contributing to accidents and creating public nuisances. Various governments expressed concerns about security, and some countries regulate its use. By early 2019, the game had over a billion global downloads and grossed over $3 billion in revenue. The game also had over 147 million monthly active users as of May 2018
+
+OS: iOS and Android
+Category: Multiplayer
+Developer: Niantic
 
 ---
 
@@ -68,6 +77,10 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 Ingress (or Ingress Prime) is an augmented reality (AR) mobile game developed and published by Niantic for Android and iOS devices. The game is free-to-play, uses a freemium business model, and supports in-app purchases for additional in-game items. The mobile app has been downloaded more than 20 million times worldwide as of November 2018.
 
 Ingress uses the mobile device GPS to locate and interact with "portals" which are in proximity to the player's real-world location. The portals are physical points of interest where "human creativity and ingenuity is expressed" often manifesting as public art such as statues and monuments, unique architecture, outdoor murals, historic buildings, local community hubs and other displays of human achievement.[5] The game uses the portals as elements of a science fiction backstory along with a continuous open narrative provided through various forms of media.
+
+OS: iOS and Android
+Category: Multiplayer
+Developer: Niantic 
 
 ---
 
@@ -114,30 +127,72 @@ https://www.sticksports.com/stick-soccer-2/
 ---
 
 ### Word Winner
+In this puzzle game you have to find and collect the words hidden in the board filled with characters. Cross characters to make a complete sensible word by using brain and win score in return. Some crazy words like tasty, lovely and crush etc… are also hidden in words brain game.
+
+OS: iOS and Android
+Category: Crossword Puzzles 
+Developer: Smore Games 
 
 ---
 
 ### Farm Away!
+Finnish mobile game studio Futureplay Games has launched the developer’s debut title Farm Away! – a farming simulator for iOS devices – on the App Store worldwide.
+
+In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual riches ­ even while they¹re away. Futureplay Games also introduces a new category of “view-to-play” games -­ broadly accessible gameplay with a natural integration and rewarding ad-based monetisation – with Farm Away!.
+
+OS: iOS and Android
+Category: Simulation
+Developer: Futureplay Ltd.
 
 ---
 
 ### Nova Black Holes
+NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling a star at various celestial objects. Hosted by astrophysicist Janna Levin, the game is set 4 billion years in the future, when the black holes at the centers of the Milky Way and Andromeda galaxies are colliding. This collision creates massive gravitational waves that send stars and planets flying in all directions. Players are given a star the size of our Sun and can control its trajectory and velocity.
+
+In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
+
+OS: iOS and Android
+Category: Education
+Developer: PBS LearningMedia
 
 ---
 
 ### Toy Clash 
+Toy Clash is a tower offense game to beat up your enemy’s tower while protect yourself safe from their attacks. You are required to dominate the battlefield using your own strategy by leading your toy units and using powerful magics. At the end of the game, you will become a god of battle.
+
+Every toy unit in Toy Clash is either stronger or weaker to a particular type of unit. So you will need to put a tanker type unit in front of long ranged units to defend their weak health points vulnerable to a melee attack. This means it is very important for player to know when and where to place units by seeing how battle is going. And the way the units are deployed will very much likely to determine your victory or defeat.
+
+OS: Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
+Category: VR Strategy 
+Developer: 5minlab Co.
 
 ---
 
 ### EcsRx Roguelike 2D
+Port of the unity roguelike 2d demo project, the developers tried to stay as close to the original unity example logic as possible but in some cases due to the paradigm or to make things simpler there may be some slight changes.
+It uses the EcsRx project and at a high level splits everything into Components and Systems, with some additional things like Blueprints, Events and ViewResolvers.
+
+OS: iOS and Android
+Category: Education
+Developer: EcsRx 
 
 ---
 
 ### Golfriends
+Play MiniGolf in your browser with your mobile device as a game controller.
+
+OS: AirConsole (WebGL)
+Category: Education
+Developer: 
 
 ---
 
 ### Build Away!
+Rome wasn’t built in a day, thank goodness—where would the fun be in that? Build Away! doesn’t require your constant attention, but this captivating cartoon city might keep you coming back more often than you’d expect, as you check on your construction creations and rake in all that sweet, virtual cash. Adorable interactions, cool surprises, and a neverending stream of clinking coins make it an urban architect’s delight.
+Get ready to create, upgrade and automate the most profitable city of all time in this idle game.
+OS: iOS and Android
+Category: Simulation
+Developer: Futureplay Ltd.
 
     * [Beat Saber - VR Rythm Game](https://beatsaber.com) (Windows) ([Steam](https://store.steampowered.com/app/620980/Beat_Saber/), [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) and [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000))
     * Pokemon Go (both [iOS](https://apps.apple.com/us/app/pokemon-go/id1094591345) and [Android](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en))
