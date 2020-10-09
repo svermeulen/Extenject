@@ -46,17 +46,18 @@ If you know of other projects that are using Zenject, please add a comment [here
 
 ## Games:
 
-### Beat Saber
-`Beat Games`
-
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
 </p>
 
+### Beat Saber
+`Beat Games`
+
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634749-e6455480-0a8a-11eb-9073-6bcd60bbdff5.png">
 Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
 
-OS: iOS and Android
+OS: iOS and Android 
+
 Category: Strategy
 Developer: Epic 
 
