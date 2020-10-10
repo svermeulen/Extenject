@@ -78,9 +78,6 @@ Facebook via Oculus Studios acquired Beat Games in November 2019. The company st
 * **Mode(s):** Single-player
 * **Developer:** Beat Games
 
-<br/>
-<br/>
-
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634751-e6ddeb00-0a8a-11eb-9ee1-2a755fd72e81.png">
@@ -117,12 +114,9 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 <br/>
 <br/>
 
-* **Target Platform(s):** Android, iOS and PlayStation
-* **Genre(s):** Multiplayer
+* **Platform(s):** Android and iOS
+* **Genre(s):** Augmented reality, location-based game
 * **Developer:** Niantic
-
-<br/>
-<br/>
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634860-2c9ab380-0a8b-11eb-8cf9-f4876fcaa39a.png">
@@ -156,9 +150,13 @@ Ingress (or Ingress Prime) is an augmented reality (AR) mobile game developed an
 <br/>
 Ingress uses the mobile device GPS to locate and interact with "portals" which are in proximity to the player's real-world location. The portals are physical points of interest where "human creativity and ingenuity is expressed" often manifesting as public art such as statues and monuments, unique architecture, outdoor murals, historic buildings, local community hubs and other displays of human achievement. The game uses the portals as elements of a science fiction backstory along with a continuous open narrative provided through various forms of media.
 
-OS: iOS and Android
-Genre(s): Multiplayer
-Developer: Niantic 
+<br/>
+<br/>
+
+* **Platform(s):** iOS and Android
+* **Genre(s):** Augmented reality, location-based game, MMO
+* **Mode(s):** Multiplayer
+* **Developer:** Niantic 
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634823-155bc600-0a8b-11eb-9f13-e809b48e6f97.png">
@@ -177,32 +175,48 @@ Developer: Niantic
 ### Slugterra: Guardian Force
 `Epic Story Interactive`
 
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634895-3cb29300-0a8b-11eb-814f-69d13c522308.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634900-3d4b2980-0a8b-11eb-8706-b0976a3bdc9d.png">
 Slugterra: Guardian Force – gather your invincible team of heroes and fight all enemies. In this game you will find yourself in a wonderful world inhabited by civilians Slagteri, the city which was attacked by horrible monsters and now your task will be to resist them. Lead your team of heroes forward and plan every step, becoming a skilled strategist and tactician. Explore the mysterious and dark caves filled with monsters and enemies and clean them, not letting enemies to harm local residents. Use power level and worked his way forward. Use the strength of each character to form a combined blow and destroy all enemies.
 
-OS: iOS and Android
-Genre(s): Strategy
-Developer: Epic Story Interactive
+<br/>
+<br/>
 
+* **Platform(s):** iOS and Android
+* **Genre(s):** Strategy
+* **Developer:** Epic Story Interactive
 
 <p align="center">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634901-3de3c000-0a8b-11eb-8595-a1e7f7118016.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634902-3de3c000-0a8b-11eb-814d-757af61e1dd5.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634906-3e7c5680-0a8b-11eb-8bde-e4292b10ed0f.png">
 </p>
 
 <p align="center">
-  <a href="">Website</a> • 
-  <a href="">App Store</a> • 
-  <a href="">Google Play</a>
+  <a href="htts://www.epicstoryinteractive.com">Website</a> • 
+  <a href="https://apps.apple.com/us/app/slugterra-guardian-force/id1043738296">App Store</a> • 
+  <a href="https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en">Google Play</a>
 </p>
-
-[Website](https://www.epicstoryinteractive.com) • [App Store](https://apps.apple.com/us/app/slugterra-guardian-force/id1043738296) • [Google Play](https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en)
 
 ---
 
 ### Submarine
 `Shiwano`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
 
 
@@ -226,9 +240,17 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
 ### Stellar Frenzy Alpha
 `Misfitlabs`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a stage from the star map, blast waves of enemies for awesome power-ups and clear your objectives to unlock the next stage. Clear every stage and find out what's waiting in the final stage...
 
-OS: Android
+Platform(s) Android
 Genre(s): 2D Shooter
 Developer: Misfit Labs 
 
@@ -252,6 +274,14 @@ Developer: Misfit Labs
 ### Stick Soccer 2
 `Stick Sports`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Stick Soccer 2 is a soccer game where you start your own Soccer team with the name of your choice, team colors, and mascot. Once you've gotten the ball rolling on those selections, you'll have a fully fledged team capable of conquering the world of soccer facing up against today's powerhouse teams. 
 
 Matches in Stick Soccer 2 are highly unusual in that you won't be playing the whole time. Instead, the game stops at certain key points in each event and you'll be the one to shoot game-changing goals from a myriad of different positions. In order to get the job done, you'll need to slide your finger across the screen in order to kick the ball. 
@@ -260,7 +290,7 @@ Between one match and another, you'll soon find that you'll have the chance to r
 
 Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a well-adapted interface designed with touch screens in mind. With awesome graphics and a huge amount of stars to draft — not to mention the nearly endless number of teams to battle — this game is fun.
 
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): Sports
 Developer: Stick Sports Ltd
 
@@ -284,9 +314,17 @@ Developer: Stick Sports Ltd
 ### Word Winner
 `Smore Games`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 In this puzzle game you have to find and collect the words hidden in the board filled with characters. Cross characters to make a complete sensible word by using brain and win score in return. Some crazy words like tasty, lovely and crush etc… are also hidden in words brain game.
 
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): Crossword Puzzles 
 Developer: Smore Games 
 
@@ -304,11 +342,19 @@ Developer: Smore Games
 ### Farm Away!
 `Futureplay Ltd.`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Finnish mobile game studio Futureplay Games debut title Farm Away! A farming simulator for iOS devices.
 
 In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual riches even while they¹re away. Futureplay Games also introduces a new category of “view-to-play” games -­ broadly accessible gameplay with a natural integration and rewarding ad-based monetisation – with Farm Away!.
 
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): Simulation
 Developer: Futureplay Ltd.
 
@@ -326,11 +372,19 @@ Developer: Futureplay Ltd.
 ### NOVA Black Holes Apocalypse
 `PBS LearningMedia`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling a star at various celestial objects. Hosted by astrophysicist Janna Levin, the game is set 4 billion years in the future, when the black holes at the centers of the Milky Way and Andromeda galaxies are colliding. This collision creates massive gravitational waves that send stars and planets flying in all directions. Players are given a star the size of our Sun and can control its trajectory and velocity.
 
 In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
 
-OS: iOS (iPad)
+Platform(s) iOS (iPad)
 Genre(s): E-Learning
 Developer: PBS LearningMedia
 
@@ -348,12 +402,20 @@ Developer: PBS LearningMedia
 ### Bedtime Math App
 `Bedtime Math Foundation`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 The Bedtime Math app available in both English and Spanish, is a great way for families with kids ages 3-9 to have fun with math together! Select a daily math problem, surprise problem, or any math problem in the archive, which you can browse to find your favorite topics.
 New findings from a University of Chicago study shows that Bedtime Math, already proven to boost kids’ math performance, has effects that last for years.
 Educators can share this app with student’s families. It’s a great parent-engagement activity that can be part of any home routine: bedtime, bathtime, anytime!
 With high ratings and great reviews on both the Apple App Store and the Google Play Store, this app reached the top 20 free education apps on iTunes and were included as one of the “Favorite Learning Apps for Tablets and Smartphones” by The Wirecutter.
 
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): E-Learning
 Developer: Bedtime Math Foundation
 
@@ -371,11 +433,19 @@ Developer: Bedtime Math Foundation
 ### Toy Clash 
 `5minlab Co.`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Toy Clash is a tower offense game to beat up your enemy’s tower while protect yourself safe from their attacks. You are required to dominate the battlefield using your own strategy by leading your toy units and using powerful magics. At the end of the game, you will become a god of battle.
 
 Every toy unit in Toy Clash is either stronger or weaker to a particular type of unit. So you will need to put a tanker type unit in front of long ranged units to defend their weak health points vulnerable to a melee attack. This means it is very important for player to know when and where to place units by seeing how battle is going. And the way the units are deployed will very much likely to determine your victory or defeat.
 
-OS: Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
+Platform(s) Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
 Genre(s): VR Strategy 
 Developer: 5minlab Co.
 
@@ -386,10 +456,18 @@ Developer: 5minlab Co.
 ### EcsRx Roguelike 2D
 `EcsRx`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Port of the unity roguelike 2d demo project, with procedural tile-based levels, implement turn-based movement, add a hunger system, and finally add audio and mobile touch controls. The developers tried to stay as close to the original unity example logic as possible but in some cases due to the paradigm or to make things simpler there may be some slight changes.
 It uses the EcsRx project and at a high level splits everything into Components and Systems, with some additional things like Blueprints, Events and ViewResolvers.
 
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): Education
 Developer: EcsRx 
 
@@ -399,10 +477,19 @@ Developer: EcsRx
 
 ### Golfriends
 `FuryLion`
+
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Play MiniGolf in your browser with your mobile device as a game controller.
 A colorful mini-golf game for the gamers of all ages and tastes. Choose from three different imaginative arenas including the delicious Candy Land, adventurous Pirate Fortress and the spooky Pizzeria.
 
-OS: AirConsole (WebGL)
+Platform(s) AirConsole (WebGL)
 Genre(s): Education
 Developer: FuriLion
 
@@ -413,9 +500,17 @@ Developer: FuriLion
 ### Build Away!
 `Futureplay Ltd.`
 
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
 Rome wasn’t built in a day, thank goodness—where would the fun be in that? Build Away! doesn’t require your constant attention, but this captivating cartoon city might keep you coming back more often than you’d expect, as you check on your construction creations and rake in all that sweet, virtual cash. Adorable interactions, cool surprises, and a neverending stream of clinking coins make it an urban architect’s delight.
 Get ready to create, upgrade and automate the most profitable city of all time in this idle game.
-OS: iOS and Android
+Platform(s) iOS and Android
 Genre(s): Simulation
 Developer: Futureplay Ltd.
 
