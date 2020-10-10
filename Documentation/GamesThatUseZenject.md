@@ -78,6 +78,9 @@ Facebook via Oculus Studios acquired Beat Games in November 2019. The company st
 * **Mode(s):** Single-player
 * **Developer:** Beat Games
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634751-e6ddeb00-0a8a-11eb-9ee1-2a755fd72e81.png">
@@ -117,6 +120,9 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 * **Platform(s):** Android and iOS
 * **Genre(s):** Augmented reality, location-based game
 * **Developer:** Niantic
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634860-2c9ab380-0a8b-11eb-8cf9-f4876fcaa39a.png">
@@ -158,6 +164,9 @@ Ingress uses the mobile device GPS to locate and interact with "portals" which a
 * **Mode(s):** Multiplayer
 * **Developer:** Niantic 
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634823-155bc600-0a8b-11eb-9f13-e809b48e6f97.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634822-14c32f80-0a8b-11eb-9be8-d85d2974540e.png">
@@ -175,11 +184,13 @@ Ingress uses the mobile device GPS to locate and interact with "portals" which a
 ### Slugterra: Guardian Force
 `Epic Story Interactive`
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634895-3cb29300-0a8b-11eb-814f-69d13c522308.png">
 </p>
 
-<br/>
 <br/>
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634900-3d4b2980-0a8b-11eb-8706-b0976a3bdc9d.png">
@@ -192,6 +203,9 @@ Slugterra: Guardian Force – gather your invincible team of heroes and fight al
 * **Genre(s):** Strategy
 * **Developer:** Epic Story Interactive
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634901-3de3c000-0a8b-11eb-8595-a1e7f7118016.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634902-3de3c000-0a8b-11eb-814d-757af61e1dd5.png">
@@ -199,7 +213,7 @@ Slugterra: Guardian Force – gather your invincible team of heroes and fight al
 </p>
 
 <p align="center">
-  <a href="htts://www.epicstoryinteractive.com">Website</a> • 
+  <a href="https://www.epicstoryinteractive.com">Website</a> • 
   <a href="https://apps.apple.com/us/app/slugterra-guardian-force/id1043738296">App Store</a> • 
   <a href="https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en">Google Play</a>
 </p>
