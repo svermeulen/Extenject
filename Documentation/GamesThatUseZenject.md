@@ -91,19 +91,24 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634862-2d334a00-0a8b-11eb-9b97-85387a86a763.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634863-2dcbe080-0a8b-11eb-860a-7aafadb32758.png">
 </p>
+
 <p align="center">
-  <a href="https://pokemongolive.com/">Website</a> •
+  <a href="https://pokemongolive.com/">Website</a> • 
   <a href="https://apps.apple.com/us/app/pokemon-go/id1094591345">App Store</a> • 
-  <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en">Google Play Store</a>
+  <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en">Google Play</a>
 </p>
-[Website](https://pokemongolive.com/) • [App Store](https://apps.apple.com/us/app/pokemon-go/id1094591345) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en)
+
 ---
 
-### Ingress Prime
-`Niantic`
+### `Niantic:` Ingress Prime
 
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634818-12f96c00-0a8b-11eb-8532-730fe0bb941c.png">
+</p>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634819-142a9900-0a8b-11eb-8b75-5847aa6e423c.png">
 Ingress (or Ingress Prime) is an augmented reality (AR) mobile game developed and published by Niantic for Android and iOS devices. The game is free-to-play, uses a freemium business model, and supports in-app purchases for additional in-game items. The mobile app has been downloaded more than 20 million times worldwide as of November 2018.
-
+<br/>
 Ingress uses the mobile device GPS to locate and interact with "portals" which are in proximity to the player's real-world location. The portals are physical points of interest where "human creativity and ingenuity is expressed" often manifesting as public art such as statues and monuments, unique architecture, outdoor murals, historic buildings, local community hubs and other displays of human achievement. The game uses the portals as elements of a science fiction backstory along with a continuous open narrative provided through various forms of media.
 
 OS: iOS and Android
@@ -111,14 +116,18 @@ Category: Multiplayer
 Developer: Niantic 
 
 <p align="center">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634823-155bc600-0a8b-11eb-9f13-e809b48e6f97.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634822-14c32f80-0a8b-11eb-9be8-d85d2974540e.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634820-142a9900-0a8b-11eb-8605-1103bb78e491.png">
 </p>
 
+
 <p align="center">
-[Website](https://www.ingress.com) • [App Store](https://apps.apple.com/us/app/ingress-prime/id576505181) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=en_US)
+  <a href="https://www.ingress.com">Website</a> • 
+  <a href="https://apps.apple.com/us/app/ingress-prime/id576505181">App Store</a> • 
+  <a href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&hl=en_US">Google Play</a>
 </p>
+
 ---
 
 ### Slugterra: Guardian Force
@@ -135,6 +144,12 @@ Developer: Epic Story Interactive
   <img width="300" height="180" src="">
   <img width="300" height="180" src="">
   <img width="300" height="180" src="">
+</p>
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
 </p>
 
 [Website](https://www.epicstoryinteractive.com) • [App Store](https://apps.apple.com/us/app/slugterra-guardian-force/id1043738296) • [Google Play](https://play.google.com/store/apps/details?id=com.nerdcorps.slugthree&hl=en)
