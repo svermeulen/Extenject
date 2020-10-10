@@ -181,8 +181,7 @@ Ingress uses the mobile device GPS to locate and interact with "portals" which a
 
 ---
 
-### Slugterra: Guardian Force
-`Epic Story Interactive`
+### `Epic Story Interactive:` Slugterra: Guardian Force
 
 <br/>
 <br/>
@@ -220,34 +219,29 @@ Slugterra: Guardian Force – gather your invincible team of heroes and fight al
 
 ---
 
-### Submarine
-`Shiwano`
+### `Shiwano:` Submarine
 
 <p align="center">
-  <img width="400" height="225" src="">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634955-5653da80-0a8b-11eb-99d5-e360dfcbf164.png">
 </p>
 
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634956-56ec7100-0a8b-11eb-9341-5c2f531be0c5.png">
 A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
 
 
 <p align="center">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634952-55bb4400-0a8b-11eb-8204-b52c640868b5.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634957-56ec7100-0a8b-11eb-922f-e27d12ed1505.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634959-57850780-0a8b-11eb-81cf-6b0650edec8e.png">
 </p>
 
 
 <p align="center">
-  <a href="">Website</a> • 
-  <a href="">App Store</a> • 
-  <a href="">Google Play</a>
+  <a href="https://github.com/shiwano/submarine">GitHub</a>
 </p>
-
-[GitHub](https://github.com/shiwano/submarine)
 
 ---
 
