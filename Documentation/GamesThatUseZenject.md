@@ -388,13 +388,13 @@ In this puzzle game you have to find and collect the words hidden in the board f
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95662780-aab59380-0b39-11eb-81d0-431aab26d1db.png">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95665350-b7dd7d00-0b4f-11eb-9463-03421cadaeee.png">
 </p>
 
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662781-ab4e2a00-0b39-11eb-8bcd-f199dfe484c5.png">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665351-b8761380-0b4f-11eb-8483-5df5913b070d.png">
 Finnish mobile game studio Futureplay Games debut title Farm Away! A farming simulator for iOS devices.
 
 In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual riches even while they¹re away. Futureplay Games also introduces a new category of “view-to-play” games -­ broadly accessible gameplay with a natural integration and rewarding ad-based monetisation – with Farm Away!.
@@ -410,9 +410,9 @@ In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual
 <br/>
 
 <p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662777-a8ebd000-0b39-11eb-8fd2-07923e48a349.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662778-a9846680-0b39-11eb-9cd9-ab8bd459f436.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662779-aa1cfd00-0b39-11eb-9b27-566a8a600aae.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665346-b613b980-0b4f-11eb-8111-6afa5d3410fb.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665348-b744e680-0b4f-11eb-997e-1a28577676b7.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665349-b744e680-0b4f-11eb-85ca-9b8c102f62b9.png">
 </p>
 
 <p align="center">
@@ -633,13 +633,13 @@ A colorful mini-golf game for the gamers of all ages and tastes. Choose from thr
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95662780-aab59380-0b39-11eb-81d0-431aab26d1db.png">
 </p>
 
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662781-ab4e2a00-0b39-11eb-8bcd-f199dfe484c5.png">
 Rome wasn’t built in a day, thank goodness—where would the fun be in that? Build Away! doesn’t require your constant attention, but this captivating cartoon city might keep you coming back more often than you’d expect, as you check on your construction creations and rake in all that sweet, virtual cash. Adorable interactions, cool surprises, and a neverending stream of clinking coins make it an urban architect’s delight.
 Get ready to create, upgrade and automate the most profitable city of all time in this idle game.
 
@@ -654,9 +654,9 @@ Get ready to create, upgrade and automate the most profitable city of all time i
 <br/>
 
 <p align="center">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662777-a8ebd000-0b39-11eb-8fd2-07923e48a349.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662778-a9846680-0b39-11eb-9cd9-ab8bd459f436.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662779-aa1cfd00-0b39-11eb-9b27-566a8a600aae.png">
 </p>
 
 <p align="center">
