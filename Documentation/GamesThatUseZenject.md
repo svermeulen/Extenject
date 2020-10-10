@@ -52,7 +52,7 @@ If you know of other projects that are using Zenject, please add a comment [here
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="khttps://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
 </p>
 
 <br/>
