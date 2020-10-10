@@ -52,21 +52,34 @@ If you know of other projects that are using Zenject, please add a comment [here
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95651927-c7c47500-0aed-11eb-917a-676a1bf14ae4.png">
 </p>
 
 <br/>
 <br/>
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634749-e6455480-0a8a-11eb-9073-6bcd60bbdff5.png">
-Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
+Beat Saber is a virtual reality rhythm game developed and published by Beat Games. The game takes place in a surrealistic neon noir environment and features the player slicing blocks representing musical beats with a pair of contrasting colored sabers. Following an early access release in November 2018, the game was fully released for PlayStation 4 and Microsoft Windows on May 21, 2019. The game supports most virtual reality headsets, such as PlayStation VR, Oculus Quest, Oculus Rift, and Windows VR headsets supporting both Steam VR and Oculus VR APIs.
 
+The game includes several songs with up to five levels of difficulty, starting from Easy all the way to Expert+. The player uses VR motion controllers to wield a pair of lightsabers, the left one colored red and the right one colored blue by default. In each song, the game presents the player with a stream of approaching blocks, laid out in sync with the song's beats and notes, located in one of the 12 possible positions of a 4x3 grid. The game also features the option of playing some songs in 360°, or 90° orientations where blocks approach from around the player.
+
+Since its early access stages, the game included a single-player mode as well as a party mode, which features a leaderboard with the player's names, which are entered after each song is played. Additionally, the 1.0 release version introduced a level editor and a practice mode which allows the player to alter the song's speed, or start playing it from some point in time other than the beginning, as well as custom songs.
+
+The game was first released in early access on Microsoft Windows on May 1, 2018. The game was released on PlayStation 4 on November 20, 2018. An editor was announced for release in May 2018, which would allow for the creation of custom user songs, but it was postponed,[3] and added in May 2019.[4]
+
+In March 2019, Beat Games released its first paid song pack, featuring 10 songs from electronic music record label Monstercat.[5] "Crab Rave" was added as a free update on April Fools' day that year.[6] On May 2, 2019, to celebrate the game's first anniversary, a prototype version created three years prior was released to the public as Beat Saber Origins.[7] The game was fully released out of early access on PC on May 21, 2019.[4] On January 29, 2020, the game received a free pack featuring three songs by Japanese artist Camellia.[8]
+
+Facebook via Oculus Studios acquired Beat Games in November 2019. The company stated that the purchase would not affect future development of Beat Saber on third-party VR platforms besides Oculus.[9] Beat Games will continue to operate in Prague as an independent studio, although under the umbrella of Oculus Studios. The studio released the new 360 degree levels on December 14, 2019.
 <br/>
 <br/>
 
-* OS: iOS and Android 
-* Category: Strategy
-* Developer: Epic 
+* **Platform(s):** Oculus VR, SteamVR, PlayStationVR 
+* **Genre(s):** Rythm
+* **Mode(s):** Single-player
+* **Developer:** Beat Games
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
@@ -104,8 +117,8 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 <br/>
 <br/>
 
-* **Target Platform(s):** iOS, Android and PlayStation
-* **Category:** Multiplayer
+* **Target Platform(s):** Android, iOS and PlayStation
+* **Genre(s):** Multiplayer
 * **Developer:** Niantic
 
 <br/>
@@ -144,7 +157,7 @@ Ingress (or Ingress Prime) is an augmented reality (AR) mobile game developed an
 Ingress uses the mobile device GPS to locate and interact with "portals" which are in proximity to the player's real-world location. The portals are physical points of interest where "human creativity and ingenuity is expressed" often manifesting as public art such as statues and monuments, unique architecture, outdoor murals, historic buildings, local community hubs and other displays of human achievement. The game uses the portals as elements of a science fiction backstory along with a continuous open narrative provided through various forms of media.
 
 OS: iOS and Android
-Category: Multiplayer
+Genre(s): Multiplayer
 Developer: Niantic 
 
 <p align="center">
@@ -167,7 +180,7 @@ Developer: Niantic
 Slugterra: Guardian Force – gather your invincible team of heroes and fight all enemies. In this game you will find yourself in a wonderful world inhabited by civilians Slagteri, the city which was attacked by horrible monsters and now your task will be to resist them. Lead your team of heroes forward and plan every step, becoming a skilled strategist and tactician. Explore the mysterious and dark caves filled with monsters and enemies and clean them, not letting enemies to harm local residents. Use power level and worked his way forward. Use the strength of each character to form a combined blow and destroy all enemies.
 
 OS: iOS and Android
-Category: Strategy
+Genre(s): Strategy
 Developer: Epic Story Interactive
 
 
@@ -216,7 +229,7 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
 A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a stage from the star map, blast waves of enemies for awesome power-ups and clear your objectives to unlock the next stage. Clear every stage and find out what's waiting in the final stage...
 
 OS: Android
-Category: 2D Shooter
+Genre(s): 2D Shooter
 Developer: Misfit Labs 
 
 <p align="center">
@@ -248,7 +261,7 @@ Between one match and another, you'll soon find that you'll have the chance to r
 Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a well-adapted interface designed with touch screens in mind. With awesome graphics and a huge amount of stars to draft — not to mention the nearly endless number of teams to battle — this game is fun.
 
 OS: iOS and Android
-Category: Sports
+Genre(s): Sports
 Developer: Stick Sports Ltd
 
 <p align="center">
@@ -274,7 +287,7 @@ Developer: Stick Sports Ltd
 In this puzzle game you have to find and collect the words hidden in the board filled with characters. Cross characters to make a complete sensible word by using brain and win score in return. Some crazy words like tasty, lovely and crush etc… are also hidden in words brain game.
 
 OS: iOS and Android
-Category: Crossword Puzzles 
+Genre(s): Crossword Puzzles 
 Developer: Smore Games 
 
 
@@ -296,7 +309,7 @@ Finnish mobile game studio Futureplay Games debut title Farm Away! A farming sim
 In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual riches even while they¹re away. Futureplay Games also introduces a new category of “view-to-play” games -­ broadly accessible gameplay with a natural integration and rewarding ad-based monetisation – with Farm Away!.
 
 OS: iOS and Android
-Category: Simulation
+Genre(s): Simulation
 Developer: Futureplay Ltd.
 
 
@@ -318,7 +331,7 @@ NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling
 In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
 
 OS: iOS (iPad)
-Category: E-Learning
+Genre(s): E-Learning
 Developer: PBS LearningMedia
 
 
@@ -341,7 +354,7 @@ Educators can share this app with student’s families. It’s a great parent-en
 With high ratings and great reviews on both the Apple App Store and the Google Play Store, this app reached the top 20 free education apps on iTunes and were included as one of the “Favorite Learning Apps for Tablets and Smartphones” by The Wirecutter.
 
 OS: iOS and Android
-Category: E-Learning
+Genre(s): E-Learning
 Developer: Bedtime Math Foundation
 
 
@@ -363,7 +376,7 @@ Toy Clash is a tower offense game to beat up your enemy’s tower while protect 
 Every toy unit in Toy Clash is either stronger or weaker to a particular type of unit. So you will need to put a tanker type unit in front of long ranged units to defend their weak health points vulnerable to a melee attack. This means it is very important for player to know when and where to place units by seeing how battle is going. And the way the units are deployed will very much likely to determine your victory or defeat.
 
 OS: Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
-Category: VR Strategy 
+Genre(s): VR Strategy 
 Developer: 5minlab Co.
 
 [Website](https://toyclash.com/) • [GearVR](https://www.oculus.com/experiences/gear-vr/1407846952568081/) • [Google Play](https://play.google.com/store/apps/details?id=com.fiveminlab.toyclash.daydream) • [STEAM](https://store.steampowered.com/app/620360/Toy_Clash/) • [App Store](https://apps.apple.com/us/app/toy-clash-ar/id1274066398) • [Windows](https://www.microsoft.com/de-de/p/toy-clash/9pn9vbjl9ld4?ocid=badge&rtc=1&activetab=pivot:overviewtab) • [PlayStation Store](https://store.playstation.com/en-sg/product/HP3823-CUSA11820_00-0000000000000000)
@@ -377,7 +390,7 @@ Port of the unity roguelike 2d demo project, with procedural tile-based levels, 
 It uses the EcsRx project and at a high level splits everything into Components and Systems, with some additional things like Blueprints, Events and ViewResolvers.
 
 OS: iOS and Android
-Category: Education
+Genre(s): Education
 Developer: EcsRx 
 
 [GitHub](https://github.com/grofit/ecsrx.roguelike2d)
@@ -390,7 +403,7 @@ Play MiniGolf in your browser with your mobile device as a game controller.
 A colorful mini-golf game for the gamers of all ages and tastes. Choose from three different imaginative arenas including the delicious Candy Land, adventurous Pirate Fortress and the spooky Pizzeria.
 
 OS: AirConsole (WebGL)
-Category: Education
+Genre(s): Education
 Developer: FuriLion
 
 [Website](https://furylion.net) • [AirConsole](https://www.airconsole.com/#!play=com.octopusgames.golfriends)
@@ -403,7 +416,7 @@ Developer: FuriLion
 Rome wasn’t built in a day, thank goodness—where would the fun be in that? Build Away! doesn’t require your constant attention, but this captivating cartoon city might keep you coming back more often than you’d expect, as you check on your construction creations and rake in all that sweet, virtual cash. Adorable interactions, cool surprises, and a neverending stream of clinking coins make it an urban architect’s delight.
 Get ready to create, upgrade and automate the most profitable city of all time in this idle game.
 OS: iOS and Android
-Category: Simulation
+Genre(s): Simulation
 Developer: Futureplay Ltd.
 
 [Website](https://www.buildawaygame.com) • [App Store](https://apps.apple.com/app/id1079852672)  • [Google Play](https://play.google.com/store/apps/details?id=com.futureplay.city)
