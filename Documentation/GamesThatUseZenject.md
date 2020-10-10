@@ -61,13 +61,12 @@ If you know of other projects that are using Zenject, please add a comment [here
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634749-e6455480-0a8a-11eb-9073-6bcd60bbdff5.png">
 Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
 
+<br/>
+<br/>
+
 * OS: iOS and Android 
 * Category: Strategy
 * Developer: Epic 
-
- [Website](https://beatsaber.com) • [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) •  [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) • [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000)
-
----
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
@@ -75,10 +74,16 @@ Beat Saber is an immersive rhythm experience you have never seen before! Enjoy t
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634753-e7768180-0a8a-11eb-8768-e75801f05a76.png">
 </p>
 
+<p align="center">
+  <a href="https://beatsaber.com">Website</a> • 
+  <a href="https://store.steampowered.com/app/620980/Beat_Saber/">STEAM</a> • 
+  <a href="https://www.oculus.com/experiences/rift/1304877726278670/">Oculus</a>
+  <a href="hhttps://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000">PlayStation</a>
+</p>
+
 ---
 
 ### `Niantic:` Pokémon Go
-
 
 <br/>
 <br/>
@@ -86,7 +91,6 @@ Beat Saber is an immersive rhythm experience you have never seen before! Enjoy t
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634866-2e647700-0a8b-11eb-8c85-b4669e570ff1.png">
 </p>
-
 
 <br/>
 <br/>
@@ -143,7 +147,6 @@ Developer: Niantic
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634820-142a9900-0a8b-11eb-8605-1103bb78e491.png">
 </p>
 
-
 <p align="center">
   <a href="https://www.ingress.com">Website</a> • 
   <a href="https://apps.apple.com/us/app/ingress-prime/id576505181">App Store</a> • 
@@ -190,6 +193,13 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
   <img width="300" height="180" src="">
 </p>
 
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
+
 [GitHub](https://github.com/shiwano/submarine)
 
 ---
@@ -208,6 +218,13 @@ Developer: Misfit Labs
   <img width="300" height="180" src="">
   <img width="300" height="180" src="">
 </p>
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
+
 
 [Website](https://www.misfitlabs.dev) • [itch.io](https://misfitlabs.itch.io/space-shooter)
 
@@ -234,6 +251,13 @@ Developer: Stick Sports Ltd
   <img width="300" height="180" src="">
 </p>
 
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
+
+
 [Website](https://www.sticksports.com/stick-soccer-2/) • [App Store](https://itunes.apple.com/gb/app/stick-soccer-2/id1104214157?mt=8) • [Google Play](https://play.google.com/store/apps/details?id=com.sticksports.soccer2&hl=en_GB)
 
 ---
@@ -246,6 +270,13 @@ In this puzzle game you have to find and collect the words hidden in the board f
 OS: iOS and Android
 Category: Crossword Puzzles 
 Developer: Smore Games 
+
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
 
 [Website](https://smoregames.com/games/word-winner/) • [App Store](https://itunes.apple.com/us/app/id1404769349) • [Google Play](https://play.google.com/store/apps/details?id=com.SmoreGames.WordWinner)
 
@@ -262,6 +293,13 @@ OS: iOS and Android
 Category: Simulation
 Developer: Futureplay Ltd.
 
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
+
 [Website](https://www.farmawaygame.com) • [App Store](https://apps.apple.com/de/app/idle-farming-empire/id1018795567?mt=8&ign-mpt=uo%3D4) • [Google Play](https://play.google.com/store/apps/details?id=com.futureplay.boots)
 
 ---
@@ -276,6 +314,13 @@ In each level, the player’s task is to hurl this star at the target celestial 
 OS: iOS (iPad)
 Category: E-Learning
 Developer: PBS LearningMedia
+
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
 
 [Website](https://www.pbslearningmedia.org/resource/nvbh-sci-blackholesguide/wgbh-nova-black-holes-app-educator-guide/) • [App Store](https://apps.apple.com/us/app/nova-black-holes/id1114574985)
 
@@ -292,6 +337,13 @@ With high ratings and great reviews on both the Apple App Store and the Google P
 OS: iOS and Android
 Category: E-Learning
 Developer: Bedtime Math Foundation
+
+
+<p align="center">
+  <a href="">Website</a> • 
+  <a href="">App Store</a> • 
+  <a href="">Google Play</a>
+</p>
 
 [Website](http://bedtimemath.org/bedtimemath-app/) • [App Store](https://apps.apple.com/us/app/bedtimemath/id637910701) • [Google Play](https://play.google.com/store/apps/details?id=com.twofours.bedtimemath)
 
