@@ -511,13 +511,13 @@ With high ratings and great reviews on both the Apple App Store and the Google P
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95666023-efe7be80-0b55-11eb-9646-8fc42a630a85.png">
 </p>
 
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95666024-f0805500-0b55-11eb-9a74-09762c626bb6.png">
 Toy Clash is a tower offense game to beat up your enemy’s tower while protect yourself safe from their attacks. You are required to dominate the battlefield using your own strategy by leading your toy units and using powerful magics. At the end of the game, you will become a god of battle.
 
 Every toy unit in Toy Clash is either stronger or weaker to a particular type of unit. So you will need to put a tanker type unit in front of long ranged units to defend their weak health points vulnerable to a melee attack. This means it is very important for player to know when and where to place units by seeing how battle is going. And the way the units are deployed will very much likely to determine your victory or defeat.
@@ -533,9 +533,9 @@ Every toy unit in Toy Clash is either stronger or weaker to a particular type of
 <br/>
 
 <p align="center">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
-  <img width="300" height="180" src="">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95666017-ebbba100-0b55-11eb-863a-e9020be7c8af.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95666020-eeb69180-0b55-11eb-8ffd-c25515bfca1a.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95666022-efe7be80-0b55-11eb-9e46-186fbf922937.png">
 </p>
 
 <p align="center">
