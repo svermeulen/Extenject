@@ -262,6 +262,9 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
 
 ### `Misfit Labs:` Stellar Frenzy Alpha
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634931-4b994580-0a8b-11eb-86bf-e3419d182a67.png">
 </p>
@@ -271,6 +274,9 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634932-4c31dc00-0a8b-11eb-914f-4245841a1ee4.png">
 A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a stage from the star map, blast waves of enemies for awesome power-ups and clear your objectives to unlock the next stage. Clear every stage and find out what's waiting in the final stage...
+
+<br/>
+<br/>
 
 * **Platform(s)** WebGL 
 * **Genre(s):** Shooter
@@ -291,6 +297,9 @@ A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a 
 
 ### `Stick Sports:` Stick Soccer 2
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95662823-f5cfa680-0b39-11eb-97f5-8659089285cb.png">
 </p>
@@ -306,6 +315,9 @@ Matches in Stick Soccer 2 are highly unusual in that you won't be playing the wh
 Between one match and another, you'll soon find that you'll have the chance to recruit some of the best players in the world. However, in order to access these players, you'll need to have their specific card. And we're not talking about just anyone, in this game you'll be able to play with the likes of Ronaldo, Messi, Pogba, Neymar, Iniesta and Alaba.
 
 Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a well-adapted interface designed with touch screens in mind. With awesome graphics and a huge amount of stars to draft — not to mention the nearly endless number of teams to battle — this game is fun.
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS and Android
 * **Genre(s):** Sports
@@ -327,6 +339,9 @@ Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a
 
 ### `Smore Games:` Word Winner
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95662811-dfc1e600-0b39-11eb-8558-d99f9fd126df.png">
 </p>
@@ -336,6 +351,9 @@ Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662814-e18ba980-0b39-11eb-8d36-d4ad5674ba79.png">
 In this puzzle game you have to find and collect the words hidden in the board filled with characters. Cross characters to make a complete sensible word by using brain and win score in return. Some crazy words like tasty, lovely and crush etc… are also hidden in words brain game.
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS and Android
 * **Genre(s):** Crossword Puzzles 
@@ -357,6 +375,9 @@ In this puzzle game you have to find and collect the words hidden in the board f
 
 ### `Futureplay Ltd:` Farm Away!
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95662780-aab59380-0b39-11eb-81d0-431aab26d1db.png">
 </p>
@@ -368,6 +389,9 @@ In this puzzle game you have to find and collect the words hidden in the board f
 Finnish mobile game studio Futureplay Games debut title Farm Away! A farming simulator for iOS devices.
 
 In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual riches even while they¹re away. Futureplay Games also introduces a new category of “view-to-play” games -­ broadly accessible gameplay with a natural integration and rewarding ad-based monetisation – with Farm Away!.
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS and Android
 * **Genre(s):** Simulation
@@ -389,6 +413,9 @@ In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual
 
 ### `PBS LearningMedia:` NOVA Black Holes Apocalypse
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -400,6 +427,9 @@ In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual
 NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling a star at various celestial objects. Hosted by astrophysicist Janna Levin, the game is set 4 billion years in the future, when the black holes at the centers of the Milky Way and Andromeda galaxies are colliding. This collision creates massive gravitational waves that send stars and planets flying in all directions. Players are given a star the size of our Sun and can control its trajectory and velocity.
 
 In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS (iPad)
 * **Genre(s):** E-Learning
@@ -420,6 +450,9 @@ In each level, the player’s task is to hurl this star at the target celestial 
 
 ### `Bedtime Math Foundation:` Bedtime Math App
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -432,6 +465,9 @@ The Bedtime Math app available in both English and Spanish, is a great way for f
 New findings from a University of Chicago study shows that Bedtime Math, already proven to boost kids’ math performance, has effects that last for years.
 Educators can share this app with student’s families. It’s a great parent-engagement activity that can be part of any home routine: bedtime, bathtime, anytime!
 With high ratings and great reviews on both the Apple App Store and the Google Play Store, this app reached the top 20 free education apps on iTunes and were included as one of the “Favorite Learning Apps for Tablets and Smartphones” by The Wirecutter.
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS and Android
 * **Genre(s):** E-Learning
@@ -453,6 +489,9 @@ With high ratings and great reviews on both the Apple App Store and the Google P
 
 ### `5minlab Co:` Toy Clash 
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -464,6 +503,9 @@ With high ratings and great reviews on both the Apple App Store and the Google P
 Toy Clash is a tower offense game to beat up your enemy’s tower while protect yourself safe from their attacks. You are required to dominate the battlefield using your own strategy by leading your toy units and using powerful magics. At the end of the game, you will become a god of battle.
 
 Every toy unit in Toy Clash is either stronger or weaker to a particular type of unit. So you will need to put a tanker type unit in front of long ranged units to defend their weak health points vulnerable to a melee attack. This means it is very important for player to know when and where to place units by seeing how battle is going. And the way the units are deployed will very much likely to determine your victory or defeat.
+
+<br/>
+<br/>
 
 * **Platform(s):** Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
 * **Genre(s):** VR Strategy 
@@ -489,6 +531,9 @@ Every toy unit in Toy Clash is either stronger or weaker to a particular type of
 
 ### `EcsRx:` EcsRx Roguelike 2D
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -499,6 +544,9 @@ Every toy unit in Toy Clash is either stronger or weaker to a particular type of
 <img align="left" width="100" height="100" src="">
 Port of the unity roguelike 2d demo project, with procedural tile-based levels, implement turn-based movement, add a hunger system, and finally add audio and mobile touch controls. The developers tried to stay as close to the original unity example logic as possible but in some cases due to the paradigm or to make things simpler there may be some slight changes.
 It uses the EcsRx project and at a high level splits everything into Components and Systems, with some additional things like Blueprints, Events and ViewResolvers.
+
+<br/>
+<br/>
 
 * **Platform(s):** iOS and Android
 * **Genre(s):** Education
@@ -518,6 +566,9 @@ It uses the EcsRx project and at a high level splits everything into Components 
 
 ### `FuryLion:` Golfriends
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -528,6 +579,9 @@ It uses the EcsRx project and at a high level splits everything into Components 
 <img align="left" width="100" height="100" src="">
 Play MiniGolf in your browser with your mobile device as a game controller.
 A colorful mini-golf game for the gamers of all ages and tastes. Choose from three different imaginative arenas including the delicious Candy Land, adventurous Pirate Fortress and the spooky Pizzeria.
+
+<br/>
+<br/>
 
 * **Platform(s):** AirConsole (WebGL)
 * **Genre(s):** Education
@@ -548,6 +602,9 @@ A colorful mini-golf game for the gamers of all ages and tastes. Choose from thr
 
 ### `Futureplay Ltd:` Build Away!
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="">
 </p>
@@ -558,6 +615,10 @@ A colorful mini-golf game for the gamers of all ages and tastes. Choose from thr
 <img align="left" width="100" height="100" src="">
 Rome wasn’t built in a day, thank goodness—where would the fun be in that? Build Away! doesn’t require your constant attention, but this captivating cartoon city might keep you coming back more often than you’d expect, as you check on your construction creations and rake in all that sweet, virtual cash. Adorable interactions, cool surprises, and a neverending stream of clinking coins make it an urban architect’s delight.
 Get ready to create, upgrade and automate the most profitable city of all time in this idle game.
+
+<br/>
+<br/>
+
 * **Platform(s):** iOS and Android
 * **Genre(s):** Simulation
 * **Developer:** Futureplay Ltd.
