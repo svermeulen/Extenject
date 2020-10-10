@@ -283,6 +283,9 @@ A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a 
 * **Mode(s):** Single-player
 * **Developer:** Misfit Labs 
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634933-4c31dc00-0a8b-11eb-8cce-4c9d0d5805af.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634934-4cca7280-0a8b-11eb-8eab-114bb6b2ddd5.png">
@@ -323,6 +326,9 @@ Stick Soccer 2 is a soccer game that'll keep you on your toes offering players a
 * **Genre(s):** Sports
 * **Developer:** Stick Sports Ltd
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662826-f700d380-0b39-11eb-862a-d645dddc775d.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662827-f7996a00-0b39-11eb-8881-2a059b5069d8.png">
@@ -358,6 +364,9 @@ In this puzzle game you have to find and collect the words hidden in the board f
 * **Platform(s):** iOS and Android
 * **Genre(s):** Crossword Puzzles 
 * **Developer:** Smore Games 
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662816-e2bcd680-0b39-11eb-832a-fa288d3adc23.png">
@@ -397,6 +406,9 @@ In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual
 * **Genre(s):** Simulation
 * **Developer:** Futureplay Ltd.
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662777-a8ebd000-0b39-11eb-8fd2-07923e48a349.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95662778-a9846680-0b39-11eb-9cd9-ab8bd459f436.png">
@@ -434,6 +446,9 @@ In each level, the player’s task is to hurl this star at the target celestial 
 * **Platform(s):** iOS (iPad)
 * **Genre(s):** E-Learning
 * **Developer:** PBS LearningMedia
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="">
@@ -473,6 +488,9 @@ With high ratings and great reviews on both the Apple App Store and the Google P
 * **Genre(s):** E-Learning
 * **Developer:** Bedtime Math Foundation
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="">
   <img width="300" height="180" src="">
@@ -510,6 +528,9 @@ Every toy unit in Toy Clash is either stronger or weaker to a particular type of
 * **Platform(s):** Oculus Gear VR, STEAM, iOS, Windows, Android and PlayStation VR
 * **Genre(s):** VR Strategy 
 * **Developer:** 5minlab Co.
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="">
@@ -552,6 +573,9 @@ It uses the EcsRx project and at a high level splits everything into Components 
 * **Genre(s):** Education
 * **Developer:** EcsRx 
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="300" height="180" src="">
   <img width="300" height="180" src="">
@@ -586,6 +610,9 @@ A colorful mini-golf game for the gamers of all ages and tastes. Choose from thr
 * **Platform(s):** AirConsole (WebGL)
 * **Genre(s):** Education
 * **Developer:** FuriLion
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="">
@@ -622,6 +649,9 @@ Get ready to create, upgrade and automate the most profitable city of all time i
 * **Platform(s):** iOS and Android
 * **Genre(s):** Simulation
 * **Developer:** Futureplay Ltd.
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="">
