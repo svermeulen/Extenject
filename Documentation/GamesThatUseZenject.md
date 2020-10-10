@@ -46,12 +46,11 @@ If you know of other projects that are using Zenject, please add a comment [here
 
 ## Games:
 
+### `Beat Games:` Beat Saber 
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634748-e5142780-0a8a-11eb-9a90-37474824cc85.png">
 </p>
-
-### Beat Saber
-`Beat Games`
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634749-e6455480-0a8a-11eb-9073-6bcd60bbdff5.png">
 Beat Saber is an immersive rhythm experience you have never seen before! Enjoy tons of handcrafted levels and swing your way through the pulsing music beats, surrounded by a futuristic world. Use your sabers to slash the beats as they come flying at you – every beat indicates which saber you need to use and the direction you need to match. With Beat Saber you become a dancing superhero!
@@ -60,26 +59,24 @@ Beat Saber is an immersive rhythm experience you have never seen before! Enjoy t
 * Category: Strategy
 * Developer: Epic 
 
+ [Website](https://beatsaber.com) • [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) •  [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) • [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000)
+
+---
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634750-e6455480-0a8a-11eb-8586-2d9aad47d83f.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634751-e6ddeb00-0a8a-11eb-9ee1-2a755fd72e81.png">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634753-e7768180-0a8a-11eb-8768-e75801f05a76.png">
-<br/> 
- [Website](https://beatsaber.com) • [Steam](https://store.steampowered.com/app/620980/Beat_Saber/) •  [Oculus](https://www.oculus.com/experiences/rift/1304877726278670/) • [Playstation](https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000)
 </p>
-
-
 
 ---
 
+### `Niantic:` Pokémon Go
 
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634866-2e647700-0a8b-11eb-8c85-b4669e570ff1.png">
 </p>
 
-### Pokémon Go
-`Niantic`
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634868-2efd0d80-0a8b-11eb-9b47-ecae8f41d2ca.png">
 Pokémon Go is a augmented reality (AR) mobile game developed and published by Niantic in collaboration with The Pokémon Company for iOS and Android devices. A part of the Pokémon franchise, the game is the result of a collaboration between Niantic, Nintendo and The Pokémon Company. It uses the mobile device GPS to locate, capture, battle, and train virtual creatures, called Pokémon, which appear as if they are in the player's real-world location. The game is free-to-play; it uses a freemium business model and supports in-app purchases for additional in-game items. The game launched with around 150 species of Pokémon, which had increased to around 600 by 2020.
 
@@ -95,8 +92,11 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634863-2dcbe080-0a8b-11eb-860a-7aafadb32758.png">
 </p>
 <p align="center">
-[Website](https://pokemongolive.com/) • [App Store](https://apps.apple.com/us/app/pokemon-go/id1094591345) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en)
+  <a href="https://pokemongolive.com/">Website</a> •
+  <a href="https://apps.apple.com/us/app/pokemon-go/id1094591345">App Store</a> • 
+  <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en">Google Play Store</a>
 </p>
+[Website](https://pokemongolive.com/) • [App Store](https://apps.apple.com/us/app/pokemon-go/id1094591345) • [Google Play](https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en)
 ---
 
 ### Ingress Prime
