@@ -77,8 +77,8 @@ Beat Saber is an immersive rhythm experience you have never seen before! Enjoy t
 <p align="center">
   <a href="https://beatsaber.com">Website</a> • 
   <a href="https://store.steampowered.com/app/620980/Beat_Saber/">STEAM</a> • 
-  <a href="https://www.oculus.com/experiences/rift/1304877726278670/">Oculus</a>
-  <a href="hhttps://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000">PlayStation</a>
+  <a href="https://www.oculus.com/experiences/rift/1304877726278670/">Oculus</a> • 
+  <a href="https://store.playstation.com/en-cz/product/EP5067-CUSA14143_00-BEATSABERFULL000">PlayStation</a>
 </p>
 
 ---
@@ -101,9 +101,9 @@ Pokémon Go is a augmented reality (AR) mobile game developed and published by N
 <br/>
 Pokémon Go was released to mixed reviews; critics praised the concept, but criticized technical problems. It was one of the most used and profitable mobile apps in 2016, having been downloaded more than 500 million times worldwide by the end of the year. It is credited with popularizing location-based and AR technology, promoting physical activity, and helping local businesses grow due to increased foot traffic. However, it attracted controversy for contributing to accidents and creating public nuisances. Various governments expressed concerns about security, and some countries regulate its use. By early 2019, the game had over a billion global downloads and grossed over $3 billion in revenue. The game also had over 147 million monthly active users as of May 2018
 
-* OS: iOS and Android
-* Category: Multiplayer
-* Developer: Niantic
+**Builds:** iOS, Android and PlayStation
+**Category:** Multiplayer
+**Developer:** Niantic
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634860-2c9ab380-0a8b-11eb-8cf9-f4876fcaa39a.png">
