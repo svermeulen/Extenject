@@ -221,6 +221,9 @@ Slugterra: Guardian Force – gather your invincible team of heroes and fight al
 
 ### `Shiwano:` Submarine
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634955-5653da80-0a8b-11eb-99d5-e360dfcbf164.png">
 </p>
@@ -231,6 +234,15 @@ Slugterra: Guardian Force – gather your invincible team of heroes and fight al
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634956-56ec7100-0a8b-11eb-9341-5c2f531be0c5.png">
 A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
 
+<br/>
+<br/>
+
+* **Platform(s):** Unity3D Editor
+* **Genre(s):** Simulator 
+* **Developer:** Shiwano
+
+<br/>
+<br/>
 
 <p align="center">
   <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95634952-55bb4400-0a8b-11eb-8204-b52c640868b5.png">
