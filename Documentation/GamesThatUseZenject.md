@@ -102,12 +102,19 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 
 ### `Niantic:` Ingress Prime
 
+<br/>
+<br/>
+
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634818-12f96c00-0a8b-11eb-8532-730fe0bb941c.png">
 </p>
 
+<br/>
+<br/>
+
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634819-142a9900-0a8b-11eb-8b75-5847aa6e423c.png">
 Ingress (or Ingress Prime) is an augmented reality (AR) mobile game developed and published by Niantic for Android and iOS devices. The game is free-to-play, uses a freemium business model, and supports in-app purchases for additional in-game items. The mobile app has been downloaded more than 20 million times worldwide as of November 2018.
+<br/>
 <br/>
 Ingress uses the mobile device GPS to locate and interact with "portals" which are in proximity to the player's real-world location. The portals are physical points of interest where "human creativity and ingenuity is expressed" often manifesting as public art such as statues and monuments, unique architecture, outdoor murals, historic buildings, local community hubs and other displays of human achievement. The game uses the portals as elements of a science fiction backstory along with a continuous open narrative provided through various forms of media.
 
