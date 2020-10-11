@@ -1,6 +1,8 @@
 # Games and Libraries that use Zenject/Extenject
 
 ## Table of Contents
+<!-- START doctoc -->
+<!-- END doctoc -->
 <details>
 <summary>Click to expand...</summary>
 
@@ -134,125 +136,6 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
   <a href="https://pokemongolive.com/">Website</a> • 
   <a href="https://apps.apple.com/us/app/pokemon-go/id1094591345">App Store</a> • 
   <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en">Google Play</a>
-</p>
-
----
-
-### `Spinifex Group:` Jasper Dome
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672800-f1d86e80-0ba3-11eb-85ec-1c70b8dbeae6.png">
-</p>
-
-<br/>
-<br/>
-
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672802-f3099b80-0ba3-11eb-8d38-22eecd86c6dd.png">
-Two Dome installations were the central focus point of the Plan Jericho Stem area at the Avalon Air Show 2019. The 15m dome told the story of  Jasper, a young girl who wants to fly, and was the largest projection dome seen in Australia, made interactive through a series of touch tablets.
-<br/>
-<br/>
-The project consisted of 2 applications developed in Unity. An Android app running on 16 Samsung tablets and a PC app running on a highly spec’ed PC, in a 15 metre dome with 8 projectors and speakers.
-<br/>
-<br/>
-Some of the technology used for this installation included Omnity for the projection output, KlakNDI for the NDI output required by the projectionists, UNET for communication between the apps, Curvy Splines for plane paths, Post Processing Stack for visual effects. To keep things G rated Bad Word Filter PRO was used and **Zenject for gluing it all together, also taking advantage of its pooling for spawning/despawning planes**.
-<br/>
-<br/>
-
-* **Platform(s):** Android
-* **Genre(s):** 350, Interactive installation 
-* **Developer:** Jonathan Kafkaris 
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672881-7e832c80-0ba4-11eb-98d7-08b23156e212.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672798-f0a74180-0ba3-11eb-9263-9c63faa1a5b7.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672799-f13fd800-0ba3-11eb-9db2-f2c82ff5c29f.png">
-</p>
-
-<p align="center">
-  <a href="https://kafkaris.com/2019/03/08/spinifex-group-jasper-dome/">Website</a>
-</p>
-
----
-
-### `Spinifex Group:` Yonex Fine Tuned 
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672815-09aff280-0ba4-11eb-9a40-11f77b12cbf0.png">
-</p>
-
-<br/>
-<br/>
-
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672816-0a488900-0ba4-11eb-840f-6781ab146068.png">
-A music-inspired installation designed to help tennis fans better understand Yonex's role as the official string partner of the Grand Slam tournament.
-Tennis fans love the game. Many who go to watch the AO also play recreationally. We tapped into their passion for the game to tell Yonex’s brand story in a way that tennis fans could relate to–through play.
-<br/>
-<br/>
-The result was Yonex Fine Tuned–a tennis-inspired music video activation to test the precision and accuracy of fans and showcased the importance of high-quality strings. The game itself combined on-screen content with a real tennis racquet-style guitar that featured four colour-coded Yonex strings running up its neck.
-<br/>
-<br/>
-
-* **Genre(s):** Sports 
-* **Developer:** Jonathan Kafkaris 
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672811-087ec580-0ba4-11eb-8994-dc383608a57f.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672813-09175c00-0ba4-11eb-83f5-cf92f145ffd6.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672814-09aff280-0ba4-11eb-8a2d-ced40e2188e0.png">
-</p>
-
-<p align="center">
-  <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a>
-</p>
-
----
-
-### `Spinifex Group:` Honda Mobile Product Guide 
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672783-e1c08f00-0ba3-11eb-9032-1e3a92fa74b9.png">
-</p>
-
-<br/>
-<br/>
-
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672784-e2592580-0ba3-11eb-868a-4d202b7e5483.png">
-A Honda AR app to help, train and provide product knowledge to their employees.
-The app uses the actual vehicle as the marker, both for the interior and exterior section of the car.
-<br><br>
-<br/>
-<br/>
-
-* **Platform(s):** Android and iOS
-* **Genre(s):** AR, E-Learning 
-* **Developer:** Jonathan Kafkaris 
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672778-dd947180-0ba3-11eb-9144-c188ac7b2c17.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672780-e08f6200-0ba3-11eb-9291-911e0c05da17.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672782-e127f880-0ba3-11eb-9bfe-c9e64635081e.png">
-</p>
-
-<p align="center">
-  <a href="https://kafkaris.com/2019/12/15/spinifex-group-honda-mobile-product-guide/">Website</a>
 </p>
 
 ---
@@ -542,88 +425,6 @@ In Farm Away! players tap and swipe to cultivate cute animals, crops and virtual
 
 ---
 
-### `PBS LearningMedia:` NOVA Black Holes Apocalypse
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95665382-e4919480-0b4f-11eb-8435-80f2db9eec50.png">
-</p>
-
-<br/>
-<br/>
-
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665384-e5c2c180-0b4f-11eb-8408-672db63d6527.png">
-NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling a star at various celestial objects. Hosted by astrophysicist Janna Levin, the game is set 4 billion years in the future, when the black holes at the centers of the Milky Way and Andromeda galaxies are colliding. This collision creates massive gravitational waves that send stars and planets flying in all directions. Players are given a star the size of our Sun and can control its trajectory and velocity.
-
-In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
-
-<br/>
-<br/>
-
-* **Platform(s):** iOS (iPad)
-* **Genre(s):** E-Learning
-* **Developer:** PBS LearningMedia
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665380-e3f8fe00-0b4f-11eb-98fe-26723822a03e.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665381-e3f8fe00-0b4f-11eb-9e57-b4844d48e8e4.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665378-e2c7d100-0b4f-11eb-92cd-04eaa3819c50.png">
-</p>
-
-<p align="center">
-  <a href="https://www.pbslearningmedia.org/resource/nvbh-sci-blackholesguide/wgbh-nova-black-holes-app-educator-guide/">Website</a> • 
-  <a href="https://apps.apple.com/us/app/nova-black-holes/id1114574985">App Store</a> • 
-</p>
-
----
-
-### `Bedtime Math Foundation:` Bedtime Math App
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95665324-941a3700-0b4f-11eb-939c-9520bfc20432.png">
-</p>
-
-<br/>
-<br/>
-
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665326-94b2cd80-0b4f-11eb-8c24-acc6411f773e.png">
-The Bedtime Math app available in both English and Spanish, is a great way for families with kids ages 3-9 to have fun with math together! Select a daily math problem, surprise problem, or any math problem in the archive, which you can browse to find your favorite topics.
-New findings from a University of Chicago study shows that Bedtime Math, already proven to boost kids’ math performance, has effects that last for years.
-Educators can share this app with student’s families. It’s a great parent-engagement activity that can be part of any home routine: bedtime, bathtime, anytime!
-With high ratings and great reviews on both the Apple App Store and the Google Play Store, this app reached the top 20 free education apps on iTunes and were included as one of the “Favorite Learning Apps for Tablets and Smartphones” by The Wirecutter.
-
-<br/>
-<br/>
-
-* **Platform(s):** iOS and Android
-* **Genre(s):** E-Learning
-* **Developer:** Bedtime Math Foundation
-
-<br/>
-<br/>
-
-<p align="center">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665315-8fee1980-0b4f-11eb-9567-fb27d6138267.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665320-92507380-0b4f-11eb-8177-eb45f98ce142.png">
-  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665322-9381a080-0b4f-11eb-932e-c10602e5f8a7.png">
-</p>
-
-<p align="center">
-  <a href="http://bedtimemath.org/bedtimemath-app/">Website</a> • 
-  <a href="https://apps.apple.com/us/app/bedtimemath/id637910701">App Store</a> • 
-  <a href="https://play.google.com/store/apps/details?id=com.twofours.bedtimemath">Google Play</a>
-</p>
-
----
-
 ### `5minlab Co:` Toy Clash 
 
 <br/>
@@ -780,6 +581,207 @@ Get ready to create, upgrade and automate the most profitable city of all time i
   <a href="https://www.buildawaygame.com">Website</a> • 
   <a href="https://apps.apple.com/app/id1079852672">App Store</a> • 
   <a href="https://play.google.com/store/apps/details?id=com.futureplay.city">Google Play</a>
+</p>
+
+# Brands and creative agencies
+
+### `Spinifex Group:` Jasper Dome
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672800-f1d86e80-0ba3-11eb-85ec-1c70b8dbeae6.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672802-f3099b80-0ba3-11eb-8d38-22eecd86c6dd.png">
+Two Dome installations were the central focus point of the Plan Jericho Stem area at the Avalon Air Show 2019. The 15m dome told the story of  Jasper, a young girl who wants to fly, and was the largest projection dome seen in Australia, made interactive through a series of touch tablets.
+<br/>
+<br/>
+The project consisted of 2 applications developed in Unity. An Android app running on 16 Samsung tablets and a PC app running on a highly spec’ed PC, in a 15 metre dome with 8 projectors and speakers.
+<br/>
+<br/>
+Some of the technology used for this installation included Omnity for the projection output, KlakNDI for the NDI output required by the projectionists, UNET for communication between the apps, Curvy Splines for plane paths, Post Processing Stack for visual effects. To keep things G rated Bad Word Filter PRO was used and **Zenject for gluing it all together, also taking advantage of its pooling for spawning/despawning planes**.
+<br/>
+<br/>
+
+* **Platform(s):** Android
+* **Genre(s):** 350, Interactive installation 
+* **Developer:** Jonathan Kafkaris 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672881-7e832c80-0ba4-11eb-98d7-08b23156e212.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672798-f0a74180-0ba3-11eb-9263-9c63faa1a5b7.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672799-f13fd800-0ba3-11eb-9db2-f2c82ff5c29f.png">
+</p>
+
+<p align="center">
+  <a href="https://kafkaris.com/2019/03/08/spinifex-group-jasper-dome/">Website</a>
+</p>
+
+---
+
+### `Spinifex Group:` Yonex Fine Tuned 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672815-09aff280-0ba4-11eb-9a40-11f77b12cbf0.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672816-0a488900-0ba4-11eb-840f-6781ab146068.png">
+A music-inspired installation designed to help tennis fans better understand Yonex's role as the official string partner of the Grand Slam tournament.
+Tennis fans love the game. Many who go to watch the AO also play recreationally. We tapped into their passion for the game to tell Yonex’s brand story in a way that tennis fans could relate to–through play.
+<br/>
+<br/>
+The result was Yonex Fine Tuned–a tennis-inspired music video activation to test the precision and accuracy of fans and showcased the importance of high-quality strings. The game itself combined on-screen content with a real tennis racquet-style guitar that featured four colour-coded Yonex strings running up its neck.
+<br/>
+<br/>
+
+* **Genre(s):** Sports 
+* **Developer:** Jonathan Kafkaris 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672811-087ec580-0ba4-11eb-8994-dc383608a57f.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672813-09175c00-0ba4-11eb-83f5-cf92f145ffd6.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672814-09aff280-0ba4-11eb-8a2d-ced40e2188e0.png">
+</p>
+
+<p align="center">
+  <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a>
+</p>
+
+## Automotive
+
+### `Spinifex Group:` Honda Mobile Product Guide 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672783-e1c08f00-0ba3-11eb-9032-1e3a92fa74b9.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672784-e2592580-0ba3-11eb-868a-4d202b7e5483.png">
+A Honda AR app to help, train and provide product knowledge to their employees.
+The app uses the actual vehicle as the marker, both for the interior and exterior section of the car.
+<br><br>
+<br/>
+<br/>
+
+* **Platform(s):** Android and iOS
+* **Genre(s):** AR, E-Learning 
+* **Developer:** Jonathan Kafkaris 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672778-dd947180-0ba3-11eb-9144-c188ac7b2c17.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672780-e08f6200-0ba3-11eb-9291-911e0c05da17.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672782-e127f880-0ba3-11eb-9bfe-c9e64635081e.png">
+</p>
+
+<p align="center">
+  <a href="https://kafkaris.com/2019/12/15/spinifex-group-honda-mobile-product-guide/">Website</a>
+</p>
+
+## EdTech
+
+### `PBS LearningMedia:` NOVA Black Holes Apocalypse
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95665382-e4919480-0b4f-11eb-8435-80f2db9eec50.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665384-e5c2c180-0b4f-11eb-8408-672db63d6527.png">
+NOVA Black Holes is an iPad game in which players navigate the cosmos by hurling a star at various celestial objects. Hosted by astrophysicist Janna Levin, the game is set 4 billion years in the future, when the black holes at the centers of the Milky Way and Andromeda galaxies are colliding. This collision creates massive gravitational waves that send stars and planets flying in all directions. Players are given a star the size of our Sun and can control its trajectory and velocity.
+
+In each level, the player’s task is to hurl this star at the target celestial object(s) by touching the star, pulling back on it, and adjusting a velocity vector before releasing it into space. The levels become more complicated as the game proceeds and the player must navigate increasingly challenging sets of orbital patterns and celestial objects (e.g., blue supergiant stars, neutron stars, white dwarf stars, and both stellar and supermassive black holes).
+
+<br/>
+<br/>
+
+* **Platform(s):** iOS (iPad)
+* **Genre(s):** E-Learning
+* **Developer:** PBS LearningMedia
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665380-e3f8fe00-0b4f-11eb-98fe-26723822a03e.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665381-e3f8fe00-0b4f-11eb-9e57-b4844d48e8e4.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665378-e2c7d100-0b4f-11eb-92cd-04eaa3819c50.png">
+</p>
+
+<p align="center">
+  <a href="https://www.pbslearningmedia.org/resource/nvbh-sci-blackholesguide/wgbh-nova-black-holes-app-educator-guide/">Website</a> • 
+  <a href="https://apps.apple.com/us/app/nova-black-holes/id1114574985">App Store</a> • 
+</p>
+
+---
+
+### `Bedtime Math Foundation:` Bedtime Math App
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95665324-941a3700-0b4f-11eb-939c-9520bfc20432.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665326-94b2cd80-0b4f-11eb-8c24-acc6411f773e.png">
+The Bedtime Math app available in both English and Spanish, is a great way for families with kids ages 3-9 to have fun with math together! Select a daily math problem, surprise problem, or any math problem in the archive, which you can browse to find your favorite topics.
+New findings from a University of Chicago study shows that Bedtime Math, already proven to boost kids’ math performance, has effects that last for years.
+Educators can share this app with student’s families. It’s a great parent-engagement activity that can be part of any home routine: bedtime, bathtime, anytime!
+With high ratings and great reviews on both the Apple App Store and the Google Play Store, this app reached the top 20 free education apps on iTunes and were included as one of the “Favorite Learning Apps for Tablets and Smartphones” by The Wirecutter.
+
+<br/>
+<br/>
+
+* **Platform(s):** iOS and Android
+* **Genre(s):** E-Learning
+* **Developer:** Bedtime Math Foundation
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665315-8fee1980-0b4f-11eb-9567-fb27d6138267.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665320-92507380-0b4f-11eb-8177-eb45f98ce142.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95665322-9381a080-0b4f-11eb-932e-c10602e5f8a7.png">
+</p>
+
+<p align="center">
+  <a href="http://bedtimemath.org/bedtimemath-app/">Website</a> • 
+  <a href="https://apps.apple.com/us/app/bedtimemath/id637910701">App Store</a> • 
+  <a href="https://play.google.com/store/apps/details?id=com.twofours.bedtimemath">Google Play</a>
 </p>
 
     •  * [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Includes complete source.
