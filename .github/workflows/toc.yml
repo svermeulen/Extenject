@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: technote-space/toc-generator@v2
         with:
-          TARGET_PATHS: README.md, CONTRIBUTING.md, LICENSE.md, 'Documentation/'
+          TARGET_PATHS: README.md, CONTRIBUTING.md, 'Documentation/*.md'
           FOLDING: true
           MAX_HEADER_LEVEL: 3
           TOC_TITLE: 'TOC Doc Title'
