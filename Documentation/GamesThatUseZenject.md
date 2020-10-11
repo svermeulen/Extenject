@@ -256,7 +256,6 @@ The app uses the actual vehicle as the marker, both for the interior and exterio
 </p>
 
 ---
----
 
 ### `Niantic:` Ingress Prime
 
