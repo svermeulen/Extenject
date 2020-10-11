@@ -138,6 +138,44 @@ Pokémon Go was released to mixed reviews; critics praised the concept, but crit
 
 ---
 
+### `Spinifex Group:` Yonex Fine Tuned 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672815-09aff280-0ba4-11eb-9a40-11f77b12cbf0.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672816-0a488900-0ba4-11eb-840f-6781ab146068.png">
+A music-inspired installation designed to help tennis fans better understand Yonex's role as the official string partner of the Grand Slam tournament.
+Tennis fans love the game. Many who go to watch the AO also play recreationally. We tapped into their passion for the game to tell Yonex’s brand story in a way that tennis fans could relate to–through play.
+
+The result was Yonex Fine Tuned–a tennis-inspired music video activation to test the precision and accuracy of fans and showcased the importance of high-quality strings. The game itself combined on-screen content with a real tennis racquet-style guitar that featured four colour-coded Yonex strings running up its neck.
+<br/>
+<br/>
+
+* **Genre(s):** Sports 
+* **Developer:** Jonathan Kafkaris 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672811-087ec580-0ba4-11eb-8994-dc383608a57f.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672813-09175c00-0ba4-11eb-83f5-cf92f145ffd6.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672814-09aff280-0ba4-11eb-8a2d-ced40e2188e0.png">
+</p>
+
+<p align="center">
+  <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a> • 
+</p>
+
+---
+
 ### `Niantic:` Ingress Prime
 
 <br/>
