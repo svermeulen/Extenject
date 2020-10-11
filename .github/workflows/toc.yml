@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/toc-generator@v2
-      with:
+        with:
           FOLDING: 'true'
           MAX_HEADER_LEVEL: '5'
           TOC_TITLE: 'Table Of Contents'
