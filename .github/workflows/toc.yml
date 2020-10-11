@@ -10,4 +10,4 @@ jobs:
           TARGET_PATHS: README.md, CONTRIBUTING.md, Documentation/*.md
           FOLDING: true
           MAX_HEADER_LEVEL: 3
-          TOC_TITLE: 'TOC Doc Title'
+          TOC_TITLE: 'Details'
