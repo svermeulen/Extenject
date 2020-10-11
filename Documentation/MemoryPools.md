@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>TOC Doc Title</summary>
+
+- [<a id="memory-pools"></a>Memory Pools](#a-idmemory-poolsamemory-pools)
+- [Table Of Contents](#table-of-contents)
+  - [<a id="example"></a>Example](#a-idexampleaexample)
+  - [<a id="binding-syntax"></a>Binding Syntax](#a-idbinding-syntaxabinding-syntax)
+  - [<a id="resetting"></a>Resetting Items In Pool](#a-idresettingaresetting-items-in-pool)
+  - [<a id="runtime-parameters"></a>Runtime Parameters](#a-idruntime-parametersaruntime-parameters)
+  - [<a id="disposepattern"></a>Factories, Pools, and the Dispose Pattern](#a-iddisposepatternafactories-pools-and-the-dispose-pattern)
+  - [<a id="monomemorypool"></a>Memory Pools for GameObjects](#a-idmonomemorypoolamemory-pools-for-gameobjects)
+  - [<a id="static-memory-pool"></a>Static Memory Pools](#a-idstatic-memory-poolastatic-memory-pools)
+  - [<a id="usingstatement"></a>Using statements and dispose pattern](#a-idusingstatementausing-statements-and-dispose-pattern)
+  - [<a id="listpool"></a>List Pool](#a-idlistpoolalist-pool)
+  - [<a id="disposeblock"></a>Dispose Block](#a-iddisposeblockadispose-block)
+  - [<a id="poolable-memorypools"></a>PoolableMemoryPool](#a-idpoolable-memorypoolsapoolablememorypool)
+- [<a id="abstract-pools"></a>Abstract Memory Pools](#a-idabstract-poolsaabstract-memory-pools)
+  - [<a id="subcontainersandpools"></a>Subcontainers/Facades And Memory Pools](#a-idsubcontainersandpoolsasubcontainersfacades-and-memory-pools)
+  - [<a id="instantiating-directory"></a>Instantiating Memory Pools Directly](#a-idinstantiating-directoryainstantiating-memory-pools-directly)
+- [<a id="poolcleanupchecker"></a>Pool Cleanup Checker](#a-idpoolcleanupcheckerapool-cleanup-checker)
+- [<a id="memorypoolmonitor"></a>Memory Pool Monitor](#a-idmemorypoolmonitoramemory-pool-monitor)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## <a id="memory-pools"></a>Memory Pools
 

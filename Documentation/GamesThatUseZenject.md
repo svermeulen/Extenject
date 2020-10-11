@@ -1,8 +1,37 @@
 # Games and Libraries that use Zenject/Extenject
 
 ## Table of Contents
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>TOC Doc Title</summary>
+
+  - [Games:](#games)
+    - [`Beat Games:` Beat Saber](#beat-games-beat-saber)
+    - [`Niantic:` Pokémon Go](#niantic-pok%C3%A9mon-go)
+    - [`Niantic:` Ingress Prime](#niantic-ingress-prime)
+    - [`Epic Story Interactive:` Slugterra: Guardian Force](#epic-story-interactive-slugterra-guardian-force)
+    - [`Shiwano:` Submarine](#shiwano-submarine)
+    - [`Misfit Labs:` Stellar Frenzy Alpha](#misfit-labs-stellar-frenzy-alpha)
+    - [`Stick Sports:` Stick Soccer 2](#stick-sports-stick-soccer-2)
+    - [`Smore Games:` Word Winner](#smore-games-word-winner)
+    - [`Futureplay Ltd:` Farm Away!](#futureplay-ltd-farm-away)
+    - [`5minlab Co:` Toy Clash](#5minlab-co-toy-clash)
+    - [`EcsRx:` EcsRx Roguelike 2D](#ecsrx-ecsrx-roguelike-2d)
+    - [`FuryLion:` Golfriends](#furylion-golfriends)
+    - [`Futureplay Ltd:` Build Away!](#futureplay-ltd-build-away)
+- [Brands and creative agencies](#brands-and-creative-agencies)
+    - [`Spinifex Group:` Jasper Dome](#spinifex-group-jasper-dome)
+    - [`Spinifex Group:` Yonex Fine Tuned](#spinifex-group-yonex-fine-tuned)
+  - [Automotive](#automotive)
+    - [`Spinifex Group:` Honda Mobile Product Guide](#spinifex-group-honda-mobile-product-guide)
+  - [EdTech](#edtech)
+    - [`PBS LearningMedia:` NOVA Black Holes Apocalypse](#pbs-learningmedia-nova-black-holes-apocalypse)
+    - [`Bedtime Math Foundation:` Bedtime Math App](#bedtime-math-foundation-bedtime-math-app)
+  - [Libraries](#libraries)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <details>
 <summary>Click to expand...</summary>
 

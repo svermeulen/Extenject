@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>TOC Doc Title</summary>
+
+- [<a id="auto-mocking-using-moq"></a>Auto-Mocking](#a-idauto-mocking-using-moqaauto-mocking)
+- [Using Moq](#using-moq)
+- [Using NSubstitute](#using-nsubstitute)
+  - [Auto values](#auto-values)
+  - [Setting return values](#setting-return-values)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## <a id="auto-mocking-using-moq"></a>Auto-Mocking
 

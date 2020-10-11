@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>TOC Doc Title</summary>
+
+- [Sub-Containers And Facades](#sub-containers-and-facades)
+- [Table Of Contents](#table-of-contents)
+- [<a id="introduction"></a>Introduction](#a-idintroductionaintroduction)
+- [<a id="hello-world-for-facades"></a>Hello World Example For Sub-Containers/Facade](#a-idhello-world-for-facadesahello-world-example-for-sub-containersfacade)
+- [<a id="using-game-object-contexts"></a>Creating Sub-Containers on GameObject's by using Game Object Context](#a-idusing-game-object-contextsacreating-sub-containers-on-gameobjects-by-using-game-object-context)
+- [<a id="dynamic-game-object-contexts"></a>Creating Game Object Context's Dynamically](#a-iddynamic-game-object-contextsacreating-game-object-contexts-dynamically)
+- [<a id="dynamic-game-object-contexts-with-params"></a>Creating Game Object Context's Dynamically With Parameters](#a-iddynamic-game-object-contexts-with-paramsacreating-game-object-contexts-dynamically-with-parameters)
+- [<a id="using-game-object-contexts-no-monobehaviours"></a>GameObjectContext Example Without MonoBehaviours](#a-idusing-game-object-contexts-no-monobehavioursagameobjectcontext-example-without-monobehaviours)
+- [<a id="byinstaller-bymethod-with-kernel"></a>Using ByInstaller / ByMethod with Kernel](#a-idbyinstaller-bymethod-with-kernelausing-byinstaller--bymethod-with-kernel)
+- [<a id="byinstaller-bymethod-with-kernel-and-bindfactory"></a>Using ByInstaller / ByMethod with Kernel and BindFactory](#a-idbyinstaller-bymethod-with-kernel-and-bindfactoryausing-byinstaller--bymethod-with-kernel-and-bindfactory)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Sub-Containers And Facades
 
