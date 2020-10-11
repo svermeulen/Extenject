@@ -1,7 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
-<summary>TOC Doc Title</summary>
+<summary>Details</summary>
 
 - [Table Of Contents](#table-of-contents)
 - [<a id="theory"></a>Motivation / Theory](#a-idtheoryamotivation--theory)

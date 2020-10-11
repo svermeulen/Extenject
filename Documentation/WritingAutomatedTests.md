@@ -1,7 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
-<summary>TOC Doc Title</summary>
+<summary>Details</summary>
 
 - [Writing Automated Unit Tests and Integration Tests](#writing-automated-unit-tests-and-integration-tests)
   - [Unit Tests](#unit-tests)

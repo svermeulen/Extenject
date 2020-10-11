@@ -1,7 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
-<summary>TOC Doc Title</summary>
+<summary>Details</summary>
 
 - [<a id="release-notes"></a>Release Notes](#a-idrelease-notesarelease-notes)
   - [Version 9.1.0 (October 13, 2019)](#version-910-october-13-2019)

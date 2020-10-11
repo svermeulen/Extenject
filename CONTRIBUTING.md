@@ -1,7 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
-<summary>TOC Doc Title</summary>
+<summary>Details</summary>
 
 - [Contributing to Extenject (Zenject extended).](#contributing-to-extenject-zenject-extended)
   - [Table of Contents](#table-of-contents)
