@@ -177,6 +177,7 @@ Some of the technology used for this installation included Omnity for the projec
 <p align="center">
   <a href="https://kafkaris.com/2019/03/08/spinifex-group-jasper-dome/">Website</a>
 </p>
+
 ---
 
 ### `Spinifex Group:` Yonex Fine Tuned 
@@ -216,6 +217,45 @@ The result was Yonex Fine Tuned–a tennis-inspired music video activation to te
   <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a>
 </p>
 
+---
+
+### `Spinifex Group:` Honda Mobile Product Guide 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95672783-e1c08f00-0ba3-11eb-9032-1e3a92fa74b9.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672784-e2592580-0ba3-11eb-868a-4d202b7e5483.png">
+A Honda AR app to help, train and provide product knowledge to their employees.
+The app uses the actual vehicle as the marker, both for the interior and exterior section of the car.
+<br><br>
+<br/>
+<br/>
+
+* **Platform(s):** Android and iOS
+* **Genre(s):** AR, E-Learning 
+* **Developer:** Jonathan Kafkaris 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672778-dd947180-0ba3-11eb-9144-c188ac7b2c17.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672780-e08f6200-0ba3-11eb-9291-911e0c05da17.png">
+  <img width="300" height="180" src="https://user-images.githubusercontent.com/7645831/95672782-e127f880-0ba3-11eb-9bfe-c9e64635081e.png">
+</p>
+
+<p align="center">
+  <a href="https://kafkaris.com/2019/12/15/spinifex-group-honda-mobile-product-guide/">Website</a>
+</p>
+
+---
 ---
 
 ### `Niantic:` Ingress Prime
