@@ -27,6 +27,8 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Introduction
+
 ### Example
 
 Before understanding memory pools it would be helpful to understand factories, so please read <a href="Factories.md">the introduction to factories</a> first.
@@ -645,6 +647,8 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 ```
 
 Note that unlike in other examples, we derive from `PlaceholderFactory`, implement `IDisposable`, and we use `FromMonoPoolableMemoryPool` instead of `FromPoolableMemoryPool`.  Also be careful of potential <a href="#aot-error">AOT errors</a> with this approach.
+
+## Advanced
 
 ### Static Memory Pools
 
