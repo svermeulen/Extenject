@@ -6,7 +6,7 @@
 <details>
 <summary>Details</summary>
 
-- [<a id="auto-mocking-using-moq"></a>Auto-Mocking](#a-idauto-mocking-using-moqaauto-mocking)
+- [Mocking](#mocking)
 - [Using Moq](#using-moq)
 - [Using NSubstitute](#using-nsubstitute)
   - [Auto values](#auto-values)
