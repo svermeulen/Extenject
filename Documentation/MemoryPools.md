@@ -20,11 +20,11 @@
   - [List Pool](#list-pool)
   - [Dispose Block](#dispose-block)
   - [PoolableMemoryPool](#poolablememorypool)
-- [Abstract Memory Pools](#abstract-memory-pools)
+  - [Abstract Memory Pools](#abstract-memory-pools)
   - [Subcontainers/Facades And Memory Pools](#subcontainersfacades-and-memory-pools)
   - [Instantiating Memory Pools Directly](#instantiating-memory-pools-directly)
-- [Pool Cleanup Checker](#pool-cleanup-checker)
-- [Memory Pool Monitor](#memory-pool-monitor)
+  - [Pool Cleanup Checker](#pool-cleanup-checker)
+  - [Memory Pool Monitor](#memory-pool-monitor)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
