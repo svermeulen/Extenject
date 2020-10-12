@@ -1,3 +1,6 @@
+# Auto-Mocking
+
+## Table of contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -12,8 +15,7 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-## <a id="auto-mocking-using-moq"></a>Auto-Mocking
+## Mocking
 
 > Test double, mock, stub, fake or spy? 
 > For simplicity this documentation is using the word "mock" for all.
