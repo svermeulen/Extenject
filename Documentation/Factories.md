@@ -1,5 +1,11 @@
 # Factories
 
+## Creating Objects Dynamically
+
+One of the things that often confuses people new to dependency injection is the question of how to create new objects dynamically, after the app/game has fully started up.  For example, if you are writing a game in which you are spawning new enemies throughout the game, then you will want to construct new instances of the 'Enemy' class, and you will want to ensure that this object gets injected with dependencies just like all the objects that are part of the initial object graph.  The recommended way to achieve this is to use Factories.
+
+Similar to the main documentation, I recommend at least reading the Introduction section and then skipping around in Advanced if necessary
+
 ## Table Of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -22,28 +28,9 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Introduction:
 
-## Creating Objects Dynamically Using Factories
-
-One of the things that often confuses people new to dependency injection is the question of how to create new objects dynamically, after the app/game has fully started up.  For example, if you are writing a game in which you are spawning new enemies throughout the game, then you will want to construct new instances of the 'Enemy' class, and you will want to ensure that this object gets injected with dependencies just like all the objects that are part of the initial object graph.  The recommended way to achieve this is to use Factories.
-
-Similar to the main documentation, I recommend at least reading the Introduction section and then skipping around in Advanced if necessary
-
-## Table Of Contents
-
-* Introduction
-    * <a href="#theory">Theory</a>
-    * <a href="#example">Example</a>
-    * <a href="#binding-syntax">Binding Syntax</a>
-    * <a href="#abstract-factories">Abstract Factories</a>
-* Advanced
-    * <a href="#custom-factories">Custom Factories</a>
-    * <a href="#ifactory">Using IFactory directly</a>
-    * <a href="#custom-interface">Custom Factory Interface</a>
-    * <a href="#prefab-factories">Prefab Factory</a>
-    * <a href="#implementing-validatable">Implementing IValidatable</a>
-
-## <a id="theory"></a>Theory
+### Theory
 
 Remember that an important part of dependency injection is to reserve use of the container to strictly the "Composition Root Layer".  The container class `(DiContainer)` is included as a dependency in itself automatically so there is nothing stopping you from ignoring this rule and injecting the container into any classes that you want.  For example, the following code will work:
 
@@ -95,7 +82,7 @@ public class Enemy
 
 But now, every place that needs to create a new `Enemy` instance needs to also supply an instance of `Player`, and we are back at the problem mentioned <a href="../README.md#theory">in the main theory section</a>.  So to address this, factories must be used to create every dynamic instance to ensure that these extra dependencies are filled in by zenject.
 
-## <a id="example"></a>Example
+### Example
 
 The recommended way to do this in Zenject is the following:
 
@@ -261,7 +248,7 @@ Other things to be aware of:
 
 - Unlike non-factory injection, you can have multiple runtime parameters declared with the same type.  In this case, the order that the values are given to the factory will be matched to the parameter order - assuming that you are using constructor or method injection.  However, note that this is not the case with field or property injection.  In those cases the order that values are injected is not guaranteed to follow the declaration order, since these fields are retrieved using `Type.GetFields` which does not guarantee order as described <a href="https://docs.microsoft.com/en-us/dotnet/api/system.type.getfields?redirectedfrom=MSDN&view=netcore-3.1#System_Type_GetFields">here</a>
 
-## <a id="binding-syntax"></a>Binding Syntax
+### Binding Syntax
 
 <pre>
 Container.BindFactory&lt;<b>ContractType</b>, <b>PlaceholderFactoryType</b>&gt;()
@@ -289,7 +276,7 @@ Where:
 
 Other bind methods have the same functionality as <a href="../README.md#binding">non factory bindings</a>.
 
-## <a id="abstract-factories"></a>Abstract Factories
+### Abstract Factories
 
 The above description of factories is great for most cases, however, there are times you do not want to depend directly on a concrete class and instead want your factory to return an interface instead.  This kind of factory is called an Abstract Factory.
 
@@ -358,8 +345,9 @@ public class GameInstaller : MonoInstaller
     }
 }
 ```
+## Advanced:
 
-## <a id="custom-factories"></a>Custom Factories
+### Custom Factories
 
 *Ok, but what if I don't know what type I want to create until after the application has started?  Or what if I have special requirements for constructing instances of the Enemy class that are not covered by any of the construction methods?* 
 
@@ -487,7 +475,7 @@ With the above change, any dependencies that are missing from the demon or dog c
 
 Note that if you insist on using the DiContainer methods directly, you can still validate the dependencies you require by making your factory implement `IValidatable` as explained <a href="#implementing-validatable">here</a>.
 
-## <a id="ifactory"></a>Using IFactory directly
+### Using IFactory directly
 
 If you don't want to define any extra factory classes at all, you can inject `IFactory<>` directly into any using classes, and then use the `BindIFactory` method to hook it up to a construction method.  To re-use the above example, that would look like this:
 
@@ -532,7 +520,7 @@ public class GameInstaller : MonoInstaller
 
 This can be simpler than deriving from `PlaceholderFactory` in some cases, however, it has the <a href="#using-factories-directly">same problems</a> that are mentioned above when using `PlaceholderFactory` directly (that is, it is more error prone when changing the parameter list, and it can be more verbose in some cases)
 
-## <a id="custom-interface"></a>Custom Factory Interface
+### Custom Factory Interface
 
 In some cases, you might want to avoid becoming directly coupled to the factory class, and would prefer to use a base class or a custom interface instead.  You can do that by using the `BindFactoryCustomInterface` method instead of `BindFactory` like this:
 
@@ -576,7 +564,7 @@ public class FooInstaller : MonoInstaller<FooInstaller>
 
 Note that there is an equivalent method for memory pools called `BindMemoryPoolCustomInterface` as well
 
-## <a id="prefab-factories"></a>Prefab Factory
+### Prefab Factory
 
 In some cases you might want the code that is calling the Create method to also provide the prefab to use for the new object.  You could directly call `DiContainer.InstantiatePrefabForComponent` but this would violate our rule of only injecting DiContainer into the 'composition root layer' (ie. factories and installers), so it would be better to write a custom factory like this instead:
 
@@ -653,7 +641,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 
 One thing to be aware of when using PrefabResource or PrefabResourceFactory is that validation does not run in those cases.  So if our Foo class above was missing a dependency then we would not find this out until run time.  This is not possible because the prefab is needed for validation.
 
-## <a id="implementing-validatable"></a>Implementing IValidatable
+### Implementing IValidatable
 
 If you do need to use the DiContainer instantiate methods directly, but you still want to validate the dynamically created object graphs, you can still do that, by implementing the `IValidatable` interface.  To re-use the same example from above, that would look like this:
 
