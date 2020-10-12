@@ -11,18 +11,16 @@ The following is a set of guidelines for contributing to Extenject and its packa
 <details>
 <summary>Details</summary>
 
-- [Contributing to Extenject (Zenject extended).](#contributing-to-extenject-zenject-extended)
-  - [Table of Contents](#table-of-contents)
-  - [I don't want to read this whole thing I just have a question!!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
-  - [How Can I Contribute?](#how-can-i-contribute)
-  - [:microscope: Testing](#microscope-testing)
-  - [:beetle: Reporting Bugs](#beetle-reporting-bugs)
-    - [How Do I Submit A (Good) Bug Report?](#how-do-i-submit-a-good-bug-report)
-  - [:muscle: Suggesting Enhancements / Feature Requests](#muscle-suggesting-enhancements--feature-requests)
-    - [How Do I Submit A (Good) Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
-  - [:repeat: Creating Pull Requests](#repeat-creating-pull-requests)
-    - [How Do I Submit A (Good) Pull Request?](#how-do-i-submit-a-good-pull-request)
-  - [:white_check_mark: Coding Conventions](#white_check_mark-coding-conventions)
+- [I don't want to read this whole thing I just have a question!!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
+- [How Can I Contribute?](#how-can-i-contribute)
+- [:microscope: Testing](#microscope-testing)
+- [:beetle: Reporting Bugs](#beetle-reporting-bugs)
+  - [How Do I Submit A (Good) Bug Report?](#how-do-i-submit-a-good-bug-report)
+- [:muscle: Suggesting Enhancements / Feature Requests](#muscle-suggesting-enhancements--feature-requests)
+  - [How Do I Submit A (Good) Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
+- [:repeat: Creating Pull Requests](#repeat-creating-pull-requests)
+  - [How Do I Submit A (Good) Pull Request?](#how-do-i-submit-a-good-pull-request)
+- [:white_check_mark: Coding Conventions](#white_check_mark-coding-conventions)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
