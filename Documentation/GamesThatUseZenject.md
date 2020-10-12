@@ -1,5 +1,7 @@
 # Games and Libraries that use Zenject/Extenject
 
+If you know of other projects that are using Zenject, please add a comment [here](https://github.com/svermeulen/Extenject/issues/179) so that we can add it to this list.
+
 ## Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -52,8 +54,6 @@
   <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
   <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
 </p>
-
-If you know of other projects that are using Zenject, please add a comment [here](https://github.com/svermeulen/Extenject/issues/179) so that we can add it to this list.
 
 ## Games:
 
@@ -673,7 +673,7 @@ The result was Yonex Fine Tuned–a tennis-inspired music video activation to te
   <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a>
 </p>
 
-## Automotive
+# Automotive
 
 ### `Spinifex Group:` Honda Mobile Product Guide 
 
@@ -711,7 +711,7 @@ The app uses the actual vehicle as the marker, both for the interior and exterio
   <a href="https://kafkaris.com/2019/12/15/spinifex-group-honda-mobile-product-guide/">Website</a>
 </p>
 
-## EdTech
+# EdTech
 
 ### `PBS LearningMedia:` NOVA Black Holes Apocalypse
 
@@ -796,9 +796,66 @@ With high ratings and great reviews on both the Apple App Store and the Google P
     •  * [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Includes complete source.
     * [Viveport VR](https://www.youtube.com/watch?v=PfBQGtdHH7c)
 
-##    Libraries
+# Libraries
 
+### `ecsrx/` EcsRx 
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95685633-51ad3480-0bf9-11eb-82c8-077a9e410a5a.png">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95685635-54a82500-0bf9-11eb-99cf-e7da86704197.png">
+EcsRx is a reactive take on the common ECS pattern with a well separated design using rx and adhering to IoC and other sensible design patterns.
+<br/><br/>
+**Features:**
+* Simple ECS interfaces to follow
+* Fully reactive architecture
+* Favours composition over inheritance
+* Adheres to inversion of control
+* Lightweight codebase
+* Built in support for events (raise your own and react to them)
+* Built in support for pooling (easy to add your own implementation or wrap 3rd party pooling tools)
+* Built in support for plugins (wrap up your own components/systems/events and share them with others)
+The core framework is meant to be used primarily by .Net applications/games, there is a Unity specific version [here](https://github.com/ecsrx/ecsrx.unity) which is currently being ported over to use this version.
+<br/>
+<br/>
+
+<p align="center">
+  <a href="https://github.com/EcsRx/ecsrx">ecsrx</a> • 
+  <a href="https://github.com/ecsrx/ecsrx.unity">ecsrx.unity</a> • 
+</p>
+
+---
+
+### `cgarciae/` karma
+
+<p align="center">
+    * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
+<br/>
+<br/>
+
+<p align="center">
+  <img width="400" height="225" src="">
+</p>
+
+<br/>
+<br/>
+
+<img align="left" width="100" height="100" src="">
+
+<br/>
+<br/>
+
+<p align="center">
+    * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
+  <a href="http://bedtimemath.org/bedtimemath-app/">Website</a> • 
+  <a href="https://apps.apple.com/us/app/bedtimemath/id637910701">App Store</a> • 
+</p>
     * [EcsRx](https://github.com/grofit/ecsrx) - A framework for Unity using the ECS pattern
     * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
-    * [View Controller](http://blog.jamjardavies.co.uk/index.php/2016/04/12/view-controller-with-zenject/) - A view controller system
-    * [Alensia](https://github.com/mysticfall/Alensia) - High level framework to build RPG style games using Unity
