@@ -35,27 +35,33 @@ If you know of other projects that are using Zenject, please add a comment [here
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Games:
+
+<br/>
+<br/>
+
 <p align="center">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95651927-c7c47500-0aed-11eb-917a-676a1bf14ae4.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634819-142a9900-0a8b-11eb-8b75-5847aa6e423c.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95685582-fc712300-0bf8-11eb-81d7-4d01a617616e.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634900-3d4b2980-0a8b-11eb-8706-b0976a3bdc9d.png">
 </p>
 <p align="center">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634932-4c31dc00-0a8b-11eb-914f-4245841a1ee4.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634956-56ec7100-0a8b-11eb-9341-5c2f531be0c5.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662781-ab4e2a00-0b39-11eb-8bcd-f199dfe484c5.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662814-e18ba980-0b39-11eb-8d36-d4ad5674ba79.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95662825-f700d380-0b39-11eb-84ff-2211501667bc.png">
 </p>
 <p align="center">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
-  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665339-a1cfbc80-0b4f-11eb-9389-6b156b7da0b6.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665351-b8761380-0b4f-11eb-8483-5df5913b070d.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665365-cd52a700-0b4f-11eb-9a25-ce285a02462f.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95666024-f0805500-0b55-11eb-9a74-09762c626bb6.png">
 </p>
 
-## Games:
+<br/>
+<br/>
 
 ### `Beat Games:` Beat Saber 
 
@@ -591,6 +597,17 @@ Get ready to create, upgrade and automate the most profitable city of all time i
 
 # Brands and creative agencies:
 
+<br/>
+<br/>
+
+<p align="center">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672802-f3099b80-0ba3-11eb-8d38-22eecd86c6dd.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672816-0a488900-0ba4-11eb-840f-6781ab146068.png">
+</p>
+
+<br/>
+<br/>
+
 ### `Spinifex Group:` Jasper Dome
 
 <br/>
@@ -672,6 +689,16 @@ The result was Yonex Fine Tuned–a tennis-inspired music video activation to te
 
 # Automotive:
 
+<br/>
+<br/>
+
+<p align="center">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95672784-e2592580-0ba3-11eb-868a-4d202b7e5483.png">
+</p>
+
+<br/>
+<br/>
+
 ### `Spinifex Group:` Honda Mobile Product Guide 
 
 <br/>
@@ -709,6 +736,17 @@ The app uses the actual vehicle as the marker, both for the interior and exterio
 </p>
 
 # EdTech:
+
+<br/>
+<br/>
+
+<p align="center">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665384-e5c2c180-0b4f-11eb-8408-672db63d6527.png">
+  <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95665326-94b2cd80-0b4f-11eb-8c24-acc6411f773e.png">
+</p>
+
+<br/>
+<br/>
 
 ### `PBS LearningMedia:` NOVA Black Holes Apocalypse
 
