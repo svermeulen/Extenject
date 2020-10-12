@@ -1,3 +1,7 @@
+# Memory Pools
+
+## Table Of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -25,31 +29,7 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-## <a id="memory-pools"></a>Memory Pools
-
-## Table Of Contents
-
-* Introduction
-    * <a href="#example">Example</a>
-    * <a href="#binding-syntax">Binding Syntax</a>
-    * <a href="#resetting">Resetting Items In Pool</a>
-    * <a href="#runtime-parameters">Runtime Parameters</a>
-    * <a href="#disposepattern">Factories, Pools, and the Dispose Pattern</a>
-    * <a href="#monomemorypool">Memory Pools for GameObjects</a>
-* Advanced
-    * <a href="#static-memory-pool">Static Memory Pools</a>
-    * <a href="#usingstatement">Using statements and dispose pattern</a>
-    * <a href="#listpool">List Pool</a>
-    * <a href="#disposeblock">Dispose Block</a>
-    * <a href="#poolable-memorypools">Poolable Memory Pool</a>
-    * <a href="#abstract-pools">Abstract Memory Pools</a>
-    * <a href="#subcontainersandpools">Subcontainers/Facades And Memory Pools</a>
-    * <a href="#instantiating-directory">Instantiating Memory Pools Directly</a>
-    * <a href="#poolcleanupchecker">Pool Cleanup Checker</a>
-    * <a href="#memorypoolmonitor">Memory Pool Monitor</a>
-
-### <a id="example"></a>Example
+### Example
 
 Before understanding memory pools it would be helpful to understand factories, so please read <a href="Factories.md">the introduction to factories</a> first.
 
@@ -160,7 +140,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 
 When we use `WithInitialSize` like this in the Bind statement for our pool, 10 instances of `Foo` will be created immediately on startup to seed the pool.
 
-### <a id="binding-syntax"></a>Binding Syntax
+### Binding Syntax
 
 The syntax for memory pools are almost identical to factories, with a few new bind methods such as `WithInitialSize` and `ExpandBy`.  Also, unlike `BindFactory`, it is not necessary to specify the parameters to the factory as generic arguments to `BindMemoryPool`
 
@@ -228,7 +208,7 @@ Where:
 
 The rest of the bind methods behave the same as the normal bind methods documented <a href="../README.md#binding">here</a>
 
-### <a id="resetting"></a>Resetting Items In Pool
+### Resetting Items In Pool
 
 One very important thing to be aware of when using memory pools instead of factories is that you must make sure to completely "reset" the given instance.  This is necessary otherwise you might have state from a previous "life" of the instance bleeding in to the behaviour of the new instance.
 
@@ -327,7 +307,7 @@ public class Foo
 }
 ```
 
-### <a id="runtime-parameters"></a>Runtime Parameters
+### Runtime Parameters
 
 Just like Factories, you can also pass runtime parameters when spawning new instances of your pooled classes.  The difference is, instead of the parameters being injected into the class, they are passed to the `Reinitialize` method:
 
@@ -390,7 +370,7 @@ public class Bar
 }
 ```
 
-### <a id="disposepattern"></a>Factories, Pools, and the Dispose Pattern
+### Factories, Pools, and the Dispose Pattern
 
 The approach that is outlined above works fairly well but has the following drawbacks:
 
@@ -463,7 +443,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 
 This occurs because sometimes IL2CPP will not include the `PoolableMemoryPool` automatically
 
-### <a id="monomemorypool"></a>Memory Pools for GameObjects
+### Memory Pools for GameObjects
 
 Memory pools for GameObjects works similarly.  For example:
 
@@ -668,7 +648,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 
 Note that unlike in other examples, we derive from `PlaceholderFactory`, implement `IDisposable`, and we use `FromMonoPoolableMemoryPool` instead of `FromPoolableMemoryPool`.  Also be careful of potential <a href="#aot-error">AOT errors</a> with this approach.
 
-### <a id="static-memory-pool"></a>Static Memory Pools
+### Static Memory Pools
 
 Another approach to memory pools is to not bother installing the memory pool at all and instead store the pool statically using the `StaticMemoryPool` class.  For example:
 
@@ -801,7 +781,7 @@ public class Foo : IPoolable<string>, IDisposable
 }
 ```
 
-### <a id="usingstatement"></a>Using statements and dispose pattern
+### Using statements and dispose pattern
 
 There are several drawbacks to the following approach:
 
@@ -864,7 +844,7 @@ public class PoolExample : MonoBehaviour
 
 These approaches guarantee that the Foo object will be returned to the pool, regardless of whether an exception is thrown or the method exits early.  This is another reason why using the `Dispose` pattern for memory pooled objects is useful.
 
-### <a id="listpool"></a>List Pool
+### List Pool
 
 Static memory pools are especially useful for common data structures such as lists or dictionaries.  Zenject includes some standard memory pools for this exact purpose which you can use.  For example, let's say you are writing a `MonoBehaviour` that needs to iterate over every component on a game object every frame.  You might implement it like this:
 
@@ -906,7 +886,7 @@ public class PoolExample : MonoBehaviour
 
 Zenject also includes `DictionaryPool`, `HashSetPool`, and `ArrayPool` classes that can be used similarly.
 
-### <a id="disposeblock"></a>Dispose Block
+### Dispose Block
 
 Zenject also provides the `DisposeBlock` class which is simply a collection of `IDisposable` objects that are disposed of all at once when `DisposeBlock.Dispose` is called.  It can also be useful when combined with the using statement for cases where you are allocating multiple temporary instances from the same pool or multiple pools.  For example, let's say we needed to spawn multiple temporary objects in our `PoolExample` class.  We could do it this way:
 
@@ -1007,7 +987,7 @@ public class PoolExample : MonoBehaviour
 }
 ```
 
-### <a id="poolable-memorypools"></a>PoolableMemoryPool
+### PoolableMemoryPool
 
 If you prefer not to follow the dispose pattern explained above, but would also like to avoid the boilerplate code from the original approach using a `Reset` method, then you can do that too by using `PoolableMemoryPool` or `MonoPoolableMemoryPool`.
 
@@ -1081,7 +1061,7 @@ public class Foo : IPoolable<string>
 }
 ```
 
-## <a id="abstract-pools"></a>Abstract Memory Pools
+## Abstract Memory Pools
 
 Just like <a href="Factories.md#abstract-factories">abstract factories</a>, sometimes you might want to create a memory pool that returns an interface, with the concrete type decided inside an installer.  This works very similarly to abstract factories.  For example:
 
@@ -1147,7 +1127,7 @@ public class TestInstaller : MonoInstaller<TestInstaller>
 
 We might also want to add a `Reset()` method to the `IFoo` interface as well here, and call that on `Reinitialize()`
 
-### <a id="subcontainersandpools"></a>Subcontainers/Facades And Memory Pools
+### Subcontainers/Facades And Memory Pools
 
 You might wonder, if you are using dynamic subcontainers and facades, what is the best way to put the entire subcontainer in a pool?   Consider the following example:
 
@@ -1372,7 +1352,7 @@ Note the following:
 
 Note also that the order that the `IPoolable` classes are triggered will use the same execution order that is set with the `BindExecutionOrder` method, just like the other standard interfaces.  Also note that the `OnDespawned` methods are called in the reverse order compared to `OnSpawned`.
 
-### <a id="instantiating-directory"></a>Instantiating Memory Pools Directly
+### Instantiating Memory Pools Directly
 
 For complex scenarios involving custom factories, it might be desirable to directly instantiate memory pools.  In this case, you just have to make sure to provide an `IFactory<>` derived class to be used for creating new instances and all the settings information that would normally be provided via the bind statements.  For example:
 
@@ -1398,7 +1378,7 @@ var pool = _container.Instantiate<MemoryPool<Bar>>(
     new object[] { settings, new MyBarFactory<Bar>() });
 ```
 
-## <a id="poolcleanupchecker"></a>Pool Cleanup Checker
+## Pool Cleanup Checker
 
 One mistake that can sometimes occur when using memory pools is that the spawned objects are not returned to the pool properly.  This can happen if the `Spawn` method is called but then the programmer forgets to add a matching `Despawn`/`Dispose`.
 
@@ -1427,7 +1407,7 @@ Container.BindInstance(
     .WhenInjectedInto<PoolCleanupChecker>();
 ```
 
-## <a id="memorypoolmonitor"></a>Memory Pool Monitor
+## Memory Pool Monitor
 
 Zenject also includes an experimental editor window that can be used to monitor the sizes of all the memory pools in the scene.  You can open it by clicking `Window -> Zenject Pool Monitor` inside Unity and should look like this:
 
