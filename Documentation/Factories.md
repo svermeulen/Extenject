@@ -13,17 +13,17 @@ Similar to the main documentation, I recommend at least reading the Introduction
 <details>
 <summary>Details</summary>
 
-- [Creating Objects Dynamically Using Factories](#creating-objects-dynamically-using-factories)
-- [Table Of Contents](#table-of-contents)
-- [<a id="theory"></a>Theory](#a-idtheoryatheory)
-- [<a id="example"></a>Example](#a-idexampleaexample)
-- [<a id="binding-syntax"></a>Binding Syntax](#a-idbinding-syntaxabinding-syntax)
-- [<a id="abstract-factories"></a>Abstract Factories](#a-idabstract-factoriesaabstract-factories)
-- [<a id="custom-factories"></a>Custom Factories](#a-idcustom-factoriesacustom-factories)
-- [<a id="ifactory"></a>Using IFactory directly](#a-idifactoryausing-ifactory-directly)
-- [<a id="custom-interface"></a>Custom Factory Interface](#a-idcustom-interfaceacustom-factory-interface)
-- [<a id="prefab-factories"></a>Prefab Factory](#a-idprefab-factoriesaprefab-factory)
-- [<a id="implementing-validatable"></a>Implementing IValidatable](#a-idimplementing-validatableaimplementing-ivalidatable)
+- [Introduction:](#introduction)
+  - [Theory](#theory)
+  - [Example](#example)
+  - [Binding Syntax](#binding-syntax)
+  - [Abstract Factories](#abstract-factories)
+- [Advanced:](#advanced)
+  - [Custom Factories](#custom-factories)
+  - [Using IFactory directly](#using-ifactory-directly)
+  - [Custom Factory Interface](#custom-factory-interface)
+  - [Prefab Factory](#prefab-factory)
+  - [Implementing IValidatable](#implementing-ivalidatable)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
