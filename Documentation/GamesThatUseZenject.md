@@ -32,26 +32,6 @@
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<details>
-<summary>Click to expand...</summary>
-
-- [Games](#Games)
-  * [Beat Saber](#beat-saber)
-  * [Pokémon Go](#pokémon-go)
-  * [Ingress Prime](#ingress-prime)
-  * [Slugterra: Guardian Force](#slugterra-guardian-force)
-  * [Submarine](#submarine)
-  * [Stellar Frenzy Alpha](#stellar-frenzy-alpha)
-  * [Stick Soccer 2](#stick-soccer-2)
-  * [Word Winner](#word-winner)
-  * [Farm Away!](#farm-away)
-  * [Nova Black Hole Apocalypse](#nova-black-hole-apocalypse)
-  * [Bedtime Math App](#bedtime-math-app)
-  * [Toy Clash](#toy-clash) 
-  * [EcsRx Roguelike 2D](#ecsRx-roguelike-2D)
-  * [Golfriends](#golfriends)
-  * [Build Away!](#build-away)
-</details>
 
 <p align="center">
   <img width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95440680-8307d500-0959-11eb-8d11-d09540b68bce.png">
