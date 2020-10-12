@@ -119,7 +119,7 @@ Facebook via Oculus Studios acquired Beat Games in November 2019. The company st
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634868-2efd0d80-0a8b-11eb-9b47-ecae8f41d2ca.png">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95685582-fc712300-0bf8-11eb-81d7-4d01a617616e.png">
 Pokémon Go is a augmented reality (AR) mobile game developed and published by Niantic in collaboration with The Pokémon Company for iOS and Android devices. A part of the Pokémon franchise, the game is the result of a collaboration between Niantic, Nintendo and The Pokémon Company. It uses the mobile device GPS to locate, capture, battle, and train virtual creatures, called Pokémon, which appear as if they are in the player's real-world location. The game is free-to-play; it uses a freemium business model and supports in-app purchases for additional in-game items. The game launched with around 150 species of Pokémon, which had increased to around 600 by 2020.
 <br/>
 <br/>
@@ -279,9 +279,6 @@ A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go
 <p align="center">
   <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95634931-4b994580-0a8b-11eb-86bf-e3419d182a67.png">
 </p>
-
-<br/>
-<br/>
 
 <img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95634932-4c31dc00-0a8b-11eb-914f-4245841a1ee4.png">
 A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a stage from the star map, blast waves of enemies for awesome power-ups and clear your objectives to unlock the next stage. Clear every stage and find out what's waiting in the final stage...
@@ -592,7 +589,7 @@ Get ready to create, upgrade and automate the most profitable city of all time i
   <a href="https://play.google.com/store/apps/details?id=com.futureplay.city">Google Play</a>
 </p>
 
-# Brands and creative agencies
+# Brands and creative agencies:
 
 ### `Spinifex Group:` Jasper Dome
 
@@ -673,7 +670,7 @@ The result was Yonex Fine Tuned–a tennis-inspired music video activation to te
   <a href="https://kafkaris.com/2020/01/15/spinifex-group-gpj-yonex-australian-open/">Website</a>
 </p>
 
-# Automotive
+# Automotive:
 
 ### `Spinifex Group:` Honda Mobile Product Guide 
 
@@ -711,7 +708,7 @@ The app uses the actual vehicle as the marker, both for the interior and exterio
   <a href="https://kafkaris.com/2019/12/15/spinifex-group-honda-mobile-product-guide/">Website</a>
 </p>
 
-# EdTech
+# EdTech:
 
 ### `PBS LearningMedia:` NOVA Black Holes Apocalypse
 
@@ -793,10 +790,7 @@ With high ratings and great reviews on both the Apple App Store and the Google P
   <a href="https://play.google.com/store/apps/details?id=com.twofours.bedtimemath">Google Play</a>
 </p>
 
-    •  * [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Includes complete source.
-    * [Viveport VR](https://www.youtube.com/watch?v=PfBQGtdHH7c)
-
-# Libraries
+# Libraries :
 
 ### `ecsrx/` EcsRx 
 
@@ -828,7 +822,7 @@ The core framework is meant to be used primarily by .Net applications/games, the
 
 <p align="center">
   <a href="https://github.com/EcsRx/ecsrx">EcsRx</a> • 
-  <a href="https://github.com/ecsrx/ecsrx.unity">EcsRx.Unity</a> • 
+  <a href="https://github.com/ecsrx/ecsrx.unity">EcsRx.Unity</a>
 </p>
 
 ---
@@ -855,5 +849,5 @@ Some of the basic constructs and code layout is inspired by other MVC frameworks
 <br/>
 
 <p align="center">
-  <a href="https://github.com/cgarciae/karma">Karma</a> • 
+  <a href="https://github.com/cgarciae/karma">Karma</a>
 </p>
