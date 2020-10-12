@@ -316,7 +316,9 @@ Also see [further reading section](#further-reading) for some external zenject t
 * [Release Notes](#release-notes)
 * [License](#license)
 
-## Theory
+## Introduction to Dependency Injection and Zenject's API
+
+### Theory
 
 What follows is a general overview of Dependency Injection from my perspective.  However, it is kept light, so I highly recommend seeking other resources for more information on the subject, as there are many other people (often with better writing ability) that have written about the theory behind it.
 
@@ -428,6 +430,7 @@ Other benefits include:
 
 Also see [here](#isthisoverkill) and [here](#zenject-philophy) for further discussion and justification for using a DI framework.
 
+# Introduction to Zenject's API
 ## Hello World Example
 
 ```csharp
