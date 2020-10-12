@@ -1,3 +1,7 @@
+# Sub-Containers And Facades
+
+## Table Of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -17,21 +21,7 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-## Sub-Containers And Facades
-
-## Table Of Contents
-
-* <a href="#introduction">Introduction</a>
-* <a href="#hello-world-for-facades">Hello World Example For Sub-Containers/Facade</a>
-* <a href="#using-game-object-contexts">Creating Sub-Containers on GameObject's by using Game Object Context</a>
-* <a href="#dynamic-game-object-contexts">Creating Game Object Context's Dynamically</a>
-* <a href="#dynamic-game-object-contexts-with-params">Creating Game Object Context's Dynamically With Parameters</a>
-* <a href="#using-game-object-contexts-no-monobehaviours">GameObjectContext Example Without MonoBehaviours</a>
-* <a href="#byinstaller-bymethod-with-kernel">Using ByInstaller / ByMethod with Kernel</a>
-* <a href="#byinstaller-bymethod-with-kernel-and-bindfactory">Using ByInstaller / ByMethod with Kernel and BindFactory</a>
-
-## <a id="introduction"></a>Introduction
+## Introduction
 
 In some cases it can be very useful to use multiple containers in the same application.  For example, if you are creating a word processor it might be useful to have a sub-container for each tab that represents a separate document.  This way, you could bind a bunch of classes `AsSingle()` within the sub-container and they could all easily reference each other as if they were all singletons.  Then you could instantiate multiple sub-containers to be used for each document, with each sub-container having unique instances of all the classes that handle each specific document.
 
@@ -45,7 +35,7 @@ Subcontainers can also be incredibly powerful as a way to organize big parts of 
 
 Let's do some examples in the following sections.
 
-## <a id="hello-world-for-facades"></a>Hello World Example For Sub-Containers/Facade
+## Hello World Example For Sub-Containers/Facade
 
 ```csharp
 public class Greeter
@@ -102,7 +92,7 @@ Note the following:
 - Subcontainers can also be used in a similar way to spawn facades dynamically by using BindFactory with FromSubContainerResolve
 - There are some drawbacks to this approach when it comes to using MonoBehaviour's or when using interfaces such as IInitializable / ITickable / IDisposable.  See <a href="#byinstaller-bymethod-with-kernel">here</a> for advanced usage.
 
-## <a id="using-game-object-contexts"></a>Creating Sub-Containers on GameObject's by using Game Object Context
+## Creating Sub-Containers on GameObject's by using Game Object Context
 
 One issue with the <a href="#hello-world-for-facades">sub-container hello world example</a> above is that it does not work very well for MonoBehaviour classes.  There is nothing preventing us from adding MonoBehaviour bindings such as FromComponentInNewPrefab, FromNewComponentOnNewGameObject, etc. to our ByInstaller/ByMethod sub-container - however these will cause these new game objects to be added to the root of the scene heirarchy, so we'll have to manually track the lifetime of these objects ourselves by calling GameObject.Destroy on them when the Facade is destroyed.  Also, there is no way to have GameObject's that exist in our scene at the start but also exist within our sub-container.  Also, using ByInstaller and ByMethod like above does not support the use of interfaces such as IInitializable / ITickable / IDisposable inside the subcontainer.  These problems can be solved by using Game Object Context.
 
@@ -242,7 +232,7 @@ Also note that we can add installers to our ship sub-container in the same way t
 
 In this example we used MonoBehaviour's for everything but this is just one of several ways to implement Facades/Subcontainers.  In the <a href="../README.md#zenject-philophy">spirit of not enforcing any one way of doing things</a>, we also present <a href="#using-game-object-contexts-no-monobehaviours">another approach</a> below that doesn't use any MonoBehaviour's at all.
 
-## <a id="dynamic-game-object-contexts"></a>Creating Game Object Context's Dynamically
+## Creating Game Object Context's Dynamically
 
 Continuing with the ship example <a href="#using-game-object-contexts">above</a>, let's pretend that we now want to create ships dynamically, after the game has started.
 
@@ -306,7 +296,7 @@ After doing this, make sure to drag and drop the newly created Ship prefab into 
 
 Now if we run our scene, we can hit Space to add multiple Ship's to our scene.  You can also add ships directly to the scene at edit time just like before and they should work the same.   Note however that the ZenjectBinding component we added with the "Use Scene Context" flag checked will have no effect for the dynamically created ships, but will be used for the ships added at edit time.  So if you duplicate the ship in the scene hierarchy and then add a `List<Ship>` constructor parameter to one of your classes, you'll get the initial list of Ships but not the dynamically created ones that were added via the factory.
 
-## <a id="dynamic-game-object-contexts-with-params"></a>Creating Game Object Context's Dynamically With Parameters
+## Creating Game Object Context's Dynamically With Parameters
 
 Let's make this even more interesting by passing a parameter into our ship facade.  Let's make the speed of the ship configurable from within the GameController class.
 
@@ -456,7 +446,7 @@ This way, you can drop the Ship prefab into the scene and control the speed in t
 
 For a more real-world example see the SpaceFighter sample project which makes heavy use of Game Object Contexts.
 
-## <a id="using-game-object-contexts-no-monobehaviours"></a>GameObjectContext Example Without MonoBehaviours
+## GameObjectContext Example Without MonoBehaviours
 
 If you're like me, then you might want to minimize all the use of MonoBehaviour in the above example.   It comes down to personal preference, but sometimes it's simpler to just use plain C# classes when possible.  In this example, we'll change the example above so that the ship prefab is just the model used for the ship (which in this case is just a cube):
 
@@ -623,7 +613,7 @@ Note the following changes:
 
 Another benefit to this approach compared to the initial approach we took is that it can be easier to follow in some ways purely by reading the code.  You can read GameInstaller and see that it creates a subcontainer using ShipInstaller, and then you can read ShipInstaller to see all the dependencies that are inside the subcontainer.  When using ByNewContextPrefab, we would have to leave the code and go back to unity, then find the prefab and check which installers are on it, and also look through the hierarchy for ZenjectBinding components, which can be much more difficult to follow
 
-## <a id="byinstaller-bymethod-with-kernel"></a>Using ByInstaller / ByMethod with Kernel
+## Using ByInstaller / ByMethod with Kernel
 
 In some cases you might not want to use GameObjectContext at all and instead just use ByInstaller or ByMethod like in the <a href="#hello-world-for-facades">Hello World example</a> above.  You might also want to use interfaces such as ITickable / IInitializable / IDisposable inside your subcontainer.  However, unlike when using GameObjectContext, this doesn't work out-of-the-box.
 
@@ -775,7 +765,7 @@ public class TestInstaller : MonoInstaller
 }
 ```
 
-## <a id="byinstaller-bymethod-with-kernel-and-bindfactory"></a>Using ByInstaller / ByMethod with Kernel and BindFactory
+## Using ByInstaller / ByMethod with Kernel and BindFactory
 
 You might want to define a subcontainer using ByInstaller or ByMethod but create it dynamically, and you might also want to use the interfaces such as IInitializable / ITickable / IDisposable inside this subcontainer. Starting with the example in the previous section, you might change it to this:
 
