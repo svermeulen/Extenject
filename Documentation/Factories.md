@@ -7,6 +7,7 @@
 <details>
 <summary>Details</summary>
 
+- [Dynamically Creating Objects with Factories](#dynamically-creating-objects-with-factories)
 - [Introduction:](#introduction)
   - [Theory](#theory)
   - [Example](#example)
