@@ -827,35 +827,33 @@ The core framework is meant to be used primarily by .Net applications/games, the
 <br/>
 
 <p align="center">
-  <a href="https://github.com/EcsRx/ecsrx">ecsrx</a> • 
-  <a href="https://github.com/ecsrx/ecsrx.unity">ecsrx.unity</a> • 
+  <a href="https://github.com/EcsRx/ecsrx">EcsRx</a> • 
+  <a href="https://github.com/ecsrx/ecsrx.unity">EcsRx.Unity</a> • 
 </p>
 
 ---
 
 ### `cgarciae/` karma
 
-<p align="center">
-    * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
 <br/>
 <br/>
 
 <p align="center">
-  <img width="400" height="225" src="">
+  <img width="400" height="225" src="https://user-images.githubusercontent.com/7645831/95685629-422deb80-0bf9-11eb-861e-ef8171c92137.png">
 </p>
 
 <br/>
 <br/>
 
-<img align="left" width="100" height="100" src="">
+<img align="left" width="100" height="100" src="https://user-images.githubusercontent.com/7645831/95685630-42c68200-0bf9-11eb-9e6c-39c8769ad28f.png">
+Karma is an MVC framework for Unity3D. Because of how Unity is structured, it actually turns out to be an MVCP architecture (Model/View/Controller/Presenter) where the Presenter is a MonoBehaviour that serves as an intermediary between the Controller and the View.
 
+It's built on top of Zenject which provides Dependency Injection (DI). DI is mainly used to route the app to the desired view, it also enables us to build composable and testable systems.
+
+Some of the basic constructs and code layout is inspired by other MVC frameworks such as AngularJS and ASP vNext.
 <br/>
 <br/>
 
 <p align="center">
-    * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
-  <a href="http://bedtimemath.org/bedtimemath-app/">Website</a> • 
-  <a href="https://apps.apple.com/us/app/bedtimemath/id637910701">App Store</a> • 
+  <a href="https://github.com/cgarciae/karma">Karma</a> • 
 </p>
-    * [EcsRx](https://github.com/grofit/ecsrx) - A framework for Unity using the ECS pattern
-    * [Karma](https://github.com/cgarciae/karma) - An MVC framework for Unity
