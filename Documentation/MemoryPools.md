@@ -1065,7 +1065,7 @@ public class Foo : IPoolable<string>
 }
 ```
 
-## Abstract Memory Pools
+### Abstract Memory Pools
 
 Just like <a href="Factories.md#abstract-factories">abstract factories</a>, sometimes you might want to create a memory pool that returns an interface, with the concrete type decided inside an installer.  This works very similarly to abstract factories.  For example:
 
@@ -1382,7 +1382,7 @@ var pool = _container.Instantiate<MemoryPool<Bar>>(
     new object[] { settings, new MyBarFactory<Bar>() });
 ```
 
-## Pool Cleanup Checker
+### Pool Cleanup Checker
 
 One mistake that can sometimes occur when using memory pools is that the spawned objects are not returned to the pool properly.  This can happen if the `Spawn` method is called but then the programmer forgets to add a matching `Despawn`/`Dispose`.
 
@@ -1411,7 +1411,7 @@ Container.BindInstance(
     .WhenInjectedInto<PoolCleanupChecker>();
 ```
 
-## Memory Pool Monitor
+### Memory Pool Monitor
 
 Zenject also includes an experimental editor window that can be used to monitor the sizes of all the memory pools in the scene.  You can open it by clicking `Window -> Zenject Pool Monitor` inside Unity and should look like this:
 
