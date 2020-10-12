@@ -7,19 +7,20 @@
 <details>
 <summary>Details</summary>
 
-- [Table Of Contents](#table-of-contents)
-- [<a id="theory"></a>Motivation / Theory](#a-idtheoryamotivation--theory)
-- [<a id="quick-start"></a>Signals Quick Start](#a-idquick-startasignals-quick-start)
-- [<a id="declaration"></a>Signals Declaration](#a-iddeclarationasignals-declaration)
-- [<a id="declaration-syntax"></a>Declaration Binding Syntax](#a-iddeclaration-syntaxadeclaration-binding-syntax)
-- [<a id="firing"></a>Signal Firing](#a-idfiringasignal-firing)
-- [<a id="#bindsignal"></a>Binding Signals with BindSignal](#a-idbindsignalabinding-signals-with-bindsignal)
-- [<a id="signalbusinstaller"></a>SignalBusInstaller](#a-idsignalbusinstallerasignalbusinstaller)
-- [<a id="when-to-use-signals"></a>When To Use Signals](#a-idwhen-to-use-signalsawhen-to-use-signals)
-- [<a id="abstract-signals"></a>Abstract Signals](#a-idabstract-signalsaabstract-signals)
-- [<a id="use-with-subcontainers"></a>Signals With Subcontainers](#a-iduse-with-subcontainersasignals-with-subcontainers)
-- [<a id="async-signals"></a>Asynchronous Signals](#a-idasync-signalsaasynchronous-signals)
-- [<a id="settings"></a>Signal Settings](#a-idsettingsasignal-settings)
+- [Introduction](#introduction)
+  - [Motivation / Theory](#motivation--theory)
+  - [Signals Quick Start](#signals-quick-start)
+  - [Signals Declaration](#signals-declaration)
+  - [Declaration Binding Syntax](#declaration-binding-syntax)
+  - [Signal Firing](#signal-firing)
+  - [Binding Signals with BindSignal](#binding-signals-with-bindsignal)
+  - [SignalBusInstaller](#signalbusinstaller)
+  - [When To Use Signals](#when-to-use-signals)
+- [Advanced](#advanced)
+  - [Abstract Signals](#abstract-signals)
+  - [Signals With Subcontainers](#signals-with-subcontainers)
+  - [Asynchronous Signals](#asynchronous-signals)
+  - [Signal Settings](#signal-settings)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
