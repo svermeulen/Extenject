@@ -1,3 +1,11 @@
+# Contributing to Extenject
+
+:+1::tada: **First off, thank you for considering to contribute to Extenject.** :tada::+1:
+
+The following is a set of guidelines for contributing to Extenject and its packages, which are hosted in [Extenject](https://github.com/svermeulen/Extenject) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+
+## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -18,31 +26,6 @@
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Contributing to Extenject (Zenject extended).
-
-:+1::tada: **First off, thank you for considering contributing to Extenject.** :tada::+1:
-
-The following is a set of guidelines for contributing to Extenject and its packages, which are hosted in [Extenject](https://github.com/svermeulen/Extenject) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
-
-## Table of Contents
-
-[I don't want to read this whole thing I just have a question](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
-
-[How Can I Contribute?](#how-can-i-contribute)
-* [Testing](#microscope-testing)
-
-* [Reporting Bugs](#beetle-reporting-bugs)
-  * [How Do I Submit A (Good) Bug Report?](#how-do-i-submit-a-good-bug-report)
-  
-* [Suggesting Enhancements / Feature Requests](#muscle-suggesting-enhancements--feature-requests)
-  * [How Do I Submit A (Good) Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
-  
-* [Creating Pull Requests](#repeat-creating-pull-requests)
-  * [How Do I Submit A (Good) Pull Request?](#how-do-i-submit-a-good-pull-request)
- 
-* [Coding Conventions](#white_check_mark-coding-conventions)
-
 
 ## I don't want to read this whole thing I just have a question!!
 
