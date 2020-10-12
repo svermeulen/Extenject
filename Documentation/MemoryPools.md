@@ -7,12 +7,14 @@
 <details>
 <summary>Details</summary>
 
+- [Introduction](#introduction)
   - [Example](#example)
   - [Binding Syntax](#binding-syntax)
   - [Resetting Items In Pool](#resetting-items-in-pool)
   - [Runtime Parameters](#runtime-parameters)
   - [Factories, Pools, and the Dispose Pattern](#factories-pools-and-the-dispose-pattern)
   - [Memory Pools for GameObjects](#memory-pools-for-gameobjects)
+- [Advanced](#advanced)
   - [Static Memory Pools](#static-memory-pools)
   - [Using statements and dispose pattern](#using-statements-and-dispose-pattern)
   - [List Pool](#list-pool)
