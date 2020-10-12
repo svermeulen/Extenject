@@ -22,15 +22,17 @@ If you know of other projects that are using Zenject, please add a comment [here
     - [`EcsRx:` EcsRx Roguelike 2D](#ecsrx-ecsrx-roguelike-2d)
     - [`FuryLion:` Golfriends](#furylion-golfriends)
     - [`Futureplay Ltd:` Build Away!](#futureplay-ltd-build-away)
-- [Brands and creative agencies](#brands-and-creative-agencies)
+- [Brands and creative agencies:](#brands-and-creative-agencies)
     - [`Spinifex Group:` Jasper Dome](#spinifex-group-jasper-dome)
     - [`Spinifex Group:` Yonex Fine Tuned](#spinifex-group-yonex-fine-tuned)
-  - [Automotive](#automotive)
+- [Automotive:](#automotive)
     - [`Spinifex Group:` Honda Mobile Product Guide](#spinifex-group-honda-mobile-product-guide)
-  - [EdTech](#edtech)
+- [EdTech:](#edtech)
     - [`PBS LearningMedia:` NOVA Black Holes Apocalypse](#pbs-learningmedia-nova-black-holes-apocalypse)
     - [`Bedtime Math Foundation:` Bedtime Math App](#bedtime-math-foundation-bedtime-math-app)
-  - [Libraries](#libraries)
+- [Libraries :](#libraries-)
+    - [`ecsrx/` EcsRx](#ecsrx-ecsrx)
+    - [`cgarciae/` karma](#cgarciae-karma)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
