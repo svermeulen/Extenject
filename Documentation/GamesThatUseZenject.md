@@ -84,11 +84,11 @@ The game includes several songs with up to five levels of difficulty, starting f
 
 Since its early access stages, the game included a single-player mode as well as a party mode, which features a leaderboard with the player's names, which are entered after each song is played. Additionally, the 1.0 release version introduced a level editor and a practice mode which allows the player to alter the song's speed, or start playing it from some point in time other than the beginning, as well as custom songs.
 
-The game was first released in early access on Microsoft Windows on May 1, 2018. The game was released on PlayStation 4 on November 20, 2018. An editor was announced for release in May 2018, which would allow for the creation of custom user songs, but it was postponed,[3] and added in May 2019.[4]
+The game was first released in early access on Microsoft Windows on May 1, 2018. The game was released on PlayStation 4 on November 20, 2018. An editor was announced for release in May 2018, which would allow for the creation of custom user songs, but it was postponed, and added in May 2019.
 
-In March 2019, Beat Games released its first paid song pack, featuring 10 songs from electronic music record label Monstercat.[5] "Crab Rave" was added as a free update on April Fools' day that year.[6] On May 2, 2019, to celebrate the game's first anniversary, a prototype version created three years prior was released to the public as Beat Saber Origins.[7] The game was fully released out of early access on PC on May 21, 2019.[4] On January 29, 2020, the game received a free pack featuring three songs by Japanese artist Camellia.[8]
+In March 2019, Beat Games released its first paid song pack, featuring 10 songs from electronic music record label Monstercat. "Crab Rave" was added as a free update on April Fools' day that year. On May 2, 2019, to celebrate the game's first anniversary, a prototype version created three years prior was released to the public as Beat Saber Origins. The game was fully released out of early access on PC on May 21, 2019. On January 29, 2020, the game received a free pack featuring three songs by Japanese artist Camellia.
 
-Facebook via Oculus Studios acquired Beat Games in November 2019. The company stated that the purchase would not affect future development of Beat Saber on third-party VR platforms besides Oculus.[9] Beat Games will continue to operate in Prague as an independent studio, although under the umbrella of Oculus Studios. The studio released the new 360 degree levels on December 14, 2019.
+Facebook via Oculus Studios acquired Beat Games in November 2019. The company stated that the purchase would not affect future development of Beat Saber on third-party VR platforms besides Oculus. Beat Games will continue to operate in Prague as an independent studio, although under the umbrella of Oculus Studios. The studio released the new 360 degree levels on December 14, 2019.
 <br/>
 <br/>
 
