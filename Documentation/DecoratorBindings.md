@@ -7,9 +7,9 @@
 <details>
 <summary>Details</summary>
 
-- [<a id="intro"></a>Decorator Bindings](#a-idintroadecorator-bindings)
-- [<a id="example"></a>Example](#a-idexampleaexample)
-- [<a id="binding-syntax"></a>Binding Syntax](#a-idbinding-syntaxabinding-syntax)
+- [Introduction](#introduction)
+- [Example](#example)
+- [Binding Syntax](#binding-syntax)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
