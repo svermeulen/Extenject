@@ -1,3 +1,7 @@
+# Signals
+
+## Table Of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -20,9 +24,6 @@
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-## Table Of Contents
-
 * Introduction
     * <a href="#theory">Theory</a>
     * <a href="#quick-start">Signals Quick Start</a>
@@ -39,7 +40,9 @@
     * <a href="#settings">Signal Settings</a>
     * <a href="#identifiers">Identifiers</a>
 
-## <a id="theory"></a>Motivation / Theory
+## Introduction
+
+### Motivation / Theory
 
 Given two classes A and B that need to communicate, your options are usually:
 
@@ -50,7 +53,7 @@ As a third option, in some cases it might actually be better for neither one to 
 
 Note also that while the result will be more loosely coupled, this isn't always going to be better.  Signals can be misused just like any programming pattern, so you have to consider each case for whether it's a good candidate for them or not.
 
-## <a id="quick-start"></a>Signals Quick Start
+### Signals Quick Start
 
 If you just want to get up and running immediately, see the following example which shows basic usage:
 
@@ -191,7 +194,7 @@ As you can see in the the above examples, you can either directly bind a handler
 
 Details of how this works are explained in the following sections.
 
-## <a id="declaration"></a>Signals Declaration
+### Signals Declaration
 
 Before declaring a signal you need to create a class that will represent it.  For example:
 
@@ -247,7 +250,7 @@ public override void InstallBindings()
 
 Any objects that are in the container where it's declared, or any sub container, can now listen on the signal and also fire it.
 
-## <a id="declaration-syntax"></a>Declaration Binding Syntax
+### Declaration Binding Syntax
 
 The format of the DeclareSignal statement is the following:
 
@@ -282,7 +285,7 @@ Where:
 
     Note that the default value for **RunSync**/**RunAsync** and **RequireSubscriber**/**OptionalSubscriber** can be overridden by changing <a href="#settings">ZenjectSettings</a>
 
-## <a id="firing"></a>Signal Firing
+### Signal Firing
 
 To fire the signal, you add a reference to the `SignalBus` class, and then call the `Fire` method like this:
 
@@ -358,7 +361,7 @@ public class UserManager
 }
 ```
 
-## <a id="#bindsignal"></a>Binding Signals with BindSignal
+### Binding Signals with BindSignal
 
 As mentioned above, in addition to being able to directly subscribe to signals on the signal bus (via `SignalBus.Subscribe` or `SignalBus.GetStream`) you can also directly bind a signal to a handling class inside an installer.  This approach has advantages and disadvantages compared to directly subscribing in a handling class so again comes down to personal preference.
 
@@ -483,13 +486,13 @@ Container.Bind<Greeter>().AsSingle();
 Container.BindSignal<UserJoinedSignal>().ToMethod<Greeter>((x, s) => x.SayHello(s.Username)).FromResolve()
 ```
 
-## <a id="signalbusinstaller"></a>SignalBusInstaller
+### SignalBusInstaller
 
 Signals are an optional feature of Zenject.  When importing Zenject, if you do not want to include signals you can simply uncheck the `OptionalExtras/Signals` folder.  As a result of this, signals are not enabled automatically, so you have to explicitly install them yourself by calling `SignalBusInstaller.Install(Container)` in one of your installers.
 
 You could either do this just one time in a `ProjectContext` installer, or you could do this in each scene in a `SceneContext` installer.  Note that you only need to do this once, and then you can use signals in the container that you pass to `SignalBusInstaller,` as well as any subcontainers, which is why if you install to `ProjectContext` you do not need to install to `SceneContext.`
 
-## <a id="when-to-use-signals"></a>When To Use Signals
+### When To Use Signals
 
 Signals are most appropriate as a communication mechanism when:
 
@@ -502,7 +505,9 @@ These are just rules of thumb, but useful to keep in mind when using signals.  T
 
 When event driven program is abused, it is possible to find yourself in "callback hell" where events are triggering other events etc. and which make the entire system impossible to understand.  So signals in general should be used with caution.  Personally I like to use signals for high level game-wide events and then use other forms of communication (unirx streams, c# events, direct method calls, interfaces) for most other things.
 
-## <a id="abstract-signals"></a>Abstract Signals
+## Advanced
+
+### Abstract Signals
 
 One of the problems of the signals is that when you subscribe to their types you are coupling your concrete signal types to the subscribers
 
@@ -647,11 +652,11 @@ public interface ISignalAchievementUnlocker{ string AchievementKey {get;}}
 It offers a lot of modularity and abstraction for signals,
 you fire a concrete signal telling what you did and give them functionality trough Interface implementations
 
-## <a id="use-with-subcontainers"></a>Signals With Subcontainers
+### Signals With Subcontainers
 
 Signals are only visible at the container level where they are declared and below.  For example, you might use Unity's multi-scene support and split up your game into a GUI scene and an Environment scene.  In the GUI scene you might fire a signal indicating that the GUI popup overlay has been opened/closed, so that the Environment scene can pause/resume activity.  One way of achieving this would be to declare a signal in a ProjectContext installer (or a shared <a href="../README.md#scene-parenting">scene parent</a>), then subscribe to it in the Environment scene, and then fire it from the GUI scene.
 
-## <a id="async-signals"></a>Asynchronous Signals
+### Asynchronous Signals
 
 In some cases it might be desirable to run a given signal asynchronously.  Asynchronous signals have the following advantages:
 
@@ -669,7 +674,7 @@ This is not to say that asynchronous signals are superious to synchronous signal
 
 3. The overall system might be more complex than when using synchronous signals and therefore harder to understand.
 
-## <a id="settings"></a>Signal Settings
+### Signal Settings
 
 Most of the default settings for signals can be overriden via a settings property that is on the `ProjectContext`.  It can also be configured on a per-container level by setting the `DiContainer.Settings` property.  For signals this includes the following:
 
@@ -680,4 +685,3 @@ Most of the default settings for signals can be overriden via a settings propert
 **Require Strict Unsubscribe** - When true, this will cause exceptions to be thrown if the scene ends and there are still signal handlers that have not yet unsubscribed yet.  By default it is false.
 
 **Default Async Tick Priority** - This value controls the default tick priority when `RunAsync` is used with `DeclareSignal` but `WithTickPriority` is left unset.  By default it is set to 1, which will cause the signal handlers to be invoked right after all the normal tickables have been called.  This default is chosen because it will ensure that the signal is handled in the same frame that it is triggered, which can be important if the signal affects how the frame is rendered.
-

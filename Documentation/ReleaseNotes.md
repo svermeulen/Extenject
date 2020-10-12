@@ -1,3 +1,5 @@
+# Release Notes
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -78,7 +80,6 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-# <a id="release-notes"></a>Release Notes
 
 ## Version 9.1.0 (October 13, 2019)
 
