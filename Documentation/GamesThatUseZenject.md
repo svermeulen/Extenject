@@ -309,7 +309,7 @@ A classic shoot-em-up game. That breathes the 80's arcade coin ups. Load into a 
 
 <p align="center">
   <a href="https://www.misfitlabs.dev">Website</a> • 
-  <a href="https://misfitlabs.itch.io/space-shooter">itch.io</a> • 
+  <a href="https://misfitlabs.itch.io/space-shooter">itch.io</a> 
 </p>
 
 ---
@@ -477,8 +477,8 @@ Every toy unit in Toy Clash is either stronger or weaker to a particular type of
   <a href="https://www.oculus.com/experiences/gear-vr/1407846952568081/">Oculus GearVR</a> • 
   <a href="https://play.google.com/store/apps/details?id=com.fiveminlab.toyclash.daydream">Google Play</a> • 
   <a href="https://store.steampowered.com/app/620360/Toy_Clash/">Steam</a> • 
-  <a href="https://apps.apple.com/us/app/toy-clash-ar/id1274066398">App Store</a>
-  <a href="https://www.microsoft.com/de-de/p/toy-clash/9pn9vbjl9ld4?ocid=badge&rtc=1&activetab=pivot:overviewtab">Microsoft Store</a>
+  <a href="https://apps.apple.com/us/app/toy-clash-ar/id1274066398">App Store</a> • 
+  <a href="https://www.microsoft.com/de-de/p/toy-clash/9pn9vbjl9ld4?ocid=badge&rtc=1&activetab=pivot:overviewtab">Microsoft Store</a> • 
   <a href="https://store.playstation.com/en-sg/product/HP3823-CUSA11820_00-0000000000000000">PlayStation Store</a>
 </p>
 
@@ -515,7 +515,7 @@ It uses the EcsRx project and at a high level splits everything into Components 
 </p>
 
 <p align="center">
-  <a href="https://github.com/grofit/ecsrx.roguelike2d">GitHub</a> • 
+  <a href="https://github.com/grofit/ecsrx.roguelike2d">GitHub</a> 
 </p>
 
 ---
@@ -554,7 +554,7 @@ A colorful mini-golf game for the gamers of all ages and tastes. Choose from thr
 
 <p align="center">
   <a href="https://furylion.net">Website</a> • 
-  <a href="https://www.airconsole.com/#!play=com.octopusgames.golfriends">App Store</a> • 
+  <a href="https://www.airconsole.com/#!play=com.octopusgames.golfriends">App Store</a>
 </p>
 
 ---
@@ -785,7 +785,7 @@ In each level, the player’s task is to hurl this star at the target celestial 
 
 <p align="center">
   <a href="https://www.pbslearningmedia.org/resource/nvbh-sci-blackholesguide/wgbh-nova-black-holes-app-educator-guide/">Website</a> • 
-  <a href="https://apps.apple.com/us/app/nova-black-holes/id1114574985">App Store</a> • 
+  <a href="https://apps.apple.com/us/app/nova-black-holes/id1114574985">App Store</a>
 </p>
 
 ---
