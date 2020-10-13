@@ -561,8 +561,8 @@ Best practice is to prefer constructor/method injection compared to field/proper
 
 ## Register Mappings to the DI Container 
 
-The core of a dependency injection framework is the DI container. In it's simplest form it's an object which contains a _registrations_ dictionary. 
-In te next section we are going to cover the 'register a new mapping' part. In Zenject it's called _binding_. As it creates a binding between an _absttraction_ to a _concrete type_. 
+The core of a dependency injection framework is the DI container. In it's simplest form it's an object which contains a dictionary that holds all the _registrations_. 
+In this section we are going to cover the 'register a new mapping' part. In Zenject it's called _binding_. As it creates a binding between an _abstraction_ to a _concrete type_. 
 
 ### Binding
 
