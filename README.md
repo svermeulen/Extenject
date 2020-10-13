@@ -97,7 +97,7 @@
 ![Continuous Integration](https://github.com/svermeulen/Extenject/workflows/Continuous%20Integration/badge.svg?branch=master)
 ![GitHub](https://img.shields.io/github/license/svermeulen/Extenject)
 
-# Extensions, bug fixes and updates for Zenject 
+# Extenject: extensions, bug fixes and updates for Zenject 
 
 This project is simply a fork of [Zenject](https://github.com/modesttree/zenject) with the goal of being actively maintained.  I am the primary author and was the primary maintainer until my access was removed after leaving my position at the company Modest Tree.  It is called Extenject to respect Modest Tree's [trademark claim](https://github.com/modesttree/Zenject/commit/2cbbf11b344d083cc697d8b248acf41520d72da3) on the name Zenject.
 
@@ -318,9 +318,9 @@ Also see [further reading section](#further-reading) for some external zenject t
 * [Release Notes](#release-notes)
 * [License](#license)
 
-## Introduction to Dependency Injection and Zenject's API
+# What is Dependency Injection? 
 
-### Theory
+## Theory
 
 What follows is a general overview of Dependency Injection from my perspective.  However, it is kept light, so I highly recommend seeking other resources for more information on the subject, as there are many other people (often with better writing ability) that have written about the theory behind it.
 
@@ -432,7 +432,8 @@ Other benefits include:
 
 Also see [here](#isthisoverkill) and [here](#zenject-philophy) for further discussion and justification for using a DI framework.
 
-# Introduction to Zenject's API
+# Introduction to Zenject API
+
 ## Hello World Example
 
 ```csharp
@@ -554,13 +555,20 @@ Best practice is to prefer constructor/method injection compared to field/proper
 * Constructor/Method injection is more portable for cases where you decide to re-use the code without a DI framework such as Zenject.  You can do the same with public properties but it's more error prone (it's easier to forget to initialize one field and leave the object in an invalid state)
 * Finally, Constructor/Method injection makes it clear what all the dependencies of a class are when another programmer is reading the code.  They can simply look at the parameter list of the method.  This is also good because it will be more obvious when a class has too many dependencies and should therefore be split up (since its constructor parameter list will start to seem long)
 
-## Binding
+## Register Mappings to the DI Container 
+
+The core of a dependency injection framework is the DI container. In it's simplest form it's an object which contains a _registrations_ dictionary. 
+In te next section we are going to cover the 'register a new mapping' part. In Zenject it's called _binding_. As it creates a binding between an _absttraction_ to a _concrete type_. 
+
+### Binding
+
+---
 
 Every dependency injection framework is ultimately just a framework to bind types to instances.
 
-In Zenject, dependency mapping is done by adding bindings to something called a container.  The container should then 'know' how to create all the object instances in your application, by recursively resolving all dependencies for a given object.
+In Zenject, dependency mapping is done by adding bindings to something called a container. The container should then 'know' how to create all the object instances in your application, by recursively resolving all dependencies for a given object.
 
-When the container is asked to construct an instance of a given type, it uses C# reflection to find the list of constructor arguments, and all fields/properties that are marked with an `[Inject]` attribute.  It then attempts to resolve each of these required dependencies, which it uses to call the constructor and create the new instance.
+When the container is asked to construct an instance of a given type, it uses C# reflection to find the list of constructor arguments, and all fields/properties that are marked with an [Inject] attribute. It then attempts to resolve each of these required dependencies, which it uses to call the constructor and create the new instance.
 
 Each Zenject application therefore must tell the container how to resolve each of these dependencies, which is done via Bind commands.  For example, given the following class:
 
@@ -674,7 +682,7 @@ Where:
 
 * **IfNotBound** = When this is added to a binding and there is already a binding with the given contract type + identifier, then this binding will be skipped.
 
-## Construction Methods
+### Construction Methods
 
 1. **FromNew** - Create via the C# new operator. This is the default if no construction method is specified.
 
@@ -1185,7 +1193,11 @@ Another option in addition to `MonoInstaller` and `Installer<>` is to use `Scrip
 
 When calling installers from other installers it is common to want to pass parameters into it.  See [here](#runtime-parameters-for-installers) for details on how that is done.
 
-## ITickable
+## Using Non-MonoBehaviour Classes
+
+### ITickable
+
+---
 
 In some cases it is preferable to avoid the extra weight of MonoBehaviours in favour of just normal C# classes.  Zenject allows you to do this much more easily by providing interfaces that mirror functionality that you would normally need to use a MonoBehaviour for.
 
@@ -1213,7 +1225,9 @@ Note that the order that the Tick() is called in for all ITickables is also conf
 
 Also note that there are interfaces `ILateTickable` and `IFixedTickable` which mirror Unity's LateUpdate and FixedUpdated methods
 
-## IInitializable
+### IInitializable
+
+---
 
 If you have some initialization that needs to occur on a given object, you could include this code in the constructor.  However, this means that the initialization logic would occur in the middle of the object graph being constructed, so it may not be ideal.
 
@@ -1261,7 +1275,9 @@ public class Foo
 }
 ```
 
-## IDisposable
+### IDisposable
+
+---
 
 If you have external resources that you want to clean up when the app closes, the scene changes, or for whatever reason the context object is destroyed, you can declare your class as `IDisposable` like below:
 
@@ -1303,7 +1319,9 @@ This works because when the scene changes or your unity application is closed, t
 
 You can also implement the `ILateDisposable` interface which works similar to `ILateTickable` in that it will be called after all `IDisposable` objects have been triggered.  However, for most cases you're probably better off setting an explicit [execution order](#update--initialization-order) instead if the order is an issue.
 
-## BindInterfacesTo and BindInterfacesAndSelfTo
+### BindInterfacesTo and BindInterfacesAndSelfTo
+
+---
 
 If you end up using the `ITickable`, `IInitializable`, and `IDisposable` interfaces as described above, you will often end up with code like this:
 
@@ -1339,7 +1357,9 @@ Which, in this case, would expand to:
 Container.Bind(typeof(IInitializable), typeof(IDisposable)).To<Foo>().AsSingle();
 ```
 
-## Using the Unity Inspector To Configure Settings
+### Using the Unity Inspector To Configure Settings
+
+---
 
 One implication of writing most of your code as normal C# classes instead of MonoBehaviour's is that you lose the ability to configure data on them using the inspector.  You can however still take advantage of this in Zenject by using the following pattern:
 
@@ -1613,7 +1633,13 @@ Tutorials Provided Elsewhere:
 * [A better architecture for Unity projects](http://www.gamasutra.com/blogs/RubenTorresBonet/20180703/316442/A_better_architecture_for_Unity_projects.php)
 * [Development For Winners](https://grofit.gitbooks.io/development-for-winners/content/)
 
-## Game Object Bind Methods
+# Advanced
+
+## Binding
+
+### Game Object Bind Methods
+
+---
 
 For bindings that create new game objects (eg. `FromComponentInNewPrefab`, `FromNewComponentOnNewGameObject`, etc.) there are also two extra bind methods.
 
