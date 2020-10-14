@@ -1903,60 +1903,6 @@ Container.Bind<Camera>().WithId(Cameras.Player).FromInstance(MyPlayerCamera);
 
 You can also use custom types, as long as they implement the `Equals` operator.
 
-## Scriptable Object Installer
-
-Another alternative to [deriving from MonoInstaller or Installer](#installers) when implementing your own installers, is to derive from the `ScriptableObjectInstaller` class.  This is most commonly used to store game settings.  This approach has the following advantages:
-
-* Any changes you make to the properties of the installer will persist after you stop play mode.  This can be very useful when tweaking runtime parameters.  For other installer types as well as any MonoBehaviour's in your scene, any changes to the inspector properties at runtime will be undone when play mode is stopped.  However, there is a 'gotcha' to be aware of:  Any changes to these settings in code will also be saved persistently (unlike with settings on MonoInstaller's).  So if you go this route you should treat all settings objects as read-only to avoid this from happening.
-* You can very easily swap out multiple instances of the same installer.  For example, using the below example, you might have an instance of `GameSettingsInstaller` called `GameSettingsEasy`, and another one called `GameSettingsHard`, etc.
-
-Example:
-
-* Open Unity
-* Right click somewhere in the Project tab and select `Create -> Zenject -> ScriptableObjectInstaller`
-* Name it GameSettingsInstaller
-* Right click again in the same location
-* Select the newly added menu item `Create -> Installers -> GameSettingsInstaller`
-* Following the approach to settings outlined [here](#using-the-unity-inspector-to-configure-settings), you might then replace it with the following:
-
-```csharp
-public class GameSettings : ScriptableObjectInstaller
-{
-    public Player.Settings Player;
-    public SomethingElse.Settings SomethingElse;
-    // ... etc.
-
-    public override void InstallBindings()
-    {
-        Container.BindInstances(Player, SomethingElse, etc.);
-    }
-}
-
-public class Player : ITickable
-{
-    readonly Settings _settings;
-    Vector3 _position;
-
-    public Player(Settings settings)
-    {
-        _settings = settings;
-    }
-
-    public void Tick()
-    {
-        _position += Vector3.forward * _settings.Speed;
-    }
-
-    [Serializable]
-    public class Settings
-    {
-        public float Speed;
-    }
-}
-```
-
-* Now, you should be able to run your game and adjust the Speed value that is on the `GameSettingsInstaller` asset at runtime, and have that change saved permanently
-
 ### Non Generic Bindings
 
 ---
@@ -2125,10 +2071,63 @@ Note that you can chain together any combination of the below conditionals in th
 
     This is equivalent to calling `Container.BindInterfacesTo<T>()` for every type in the namespace "MyGame.Things".  This works because, as touched on above, Zenject will skip any bindings in which the concrete type does not actually derive from the base type.  So even though we are using `AllInterfaces` which matches every single interface in every single loaded assembly, this is ok because it will not try and bind an interface to a type that doesn't implement this interface.
 
-## Decorator Bindings
+### Decorator Bindings
 
-See [here](Documentation/DecoratorBindings.md).
+Decorator Bindings has it's own documentation [here](Documentation/DecoratorBindings.md).
 
+## Scriptable Object Installer
+
+Another alternative to [deriving from MonoInstaller or Installer](#installers) when implementing your own installers, is to derive from the `ScriptableObjectInstaller` class.  This is most commonly used to store game settings.  This approach has the following advantages:
+
+* Any changes you make to the properties of the installer will persist after you stop play mode.  This can be very useful when tweaking runtime parameters.  For other installer types as well as any MonoBehaviour's in your scene, any changes to the inspector properties at runtime will be undone when play mode is stopped.  However, there is a 'gotcha' to be aware of:  Any changes to these settings in code will also be saved persistently (unlike with settings on MonoInstaller's).  So if you go this route you should treat all settings objects as read-only to avoid this from happening.
+* You can very easily swap out multiple instances of the same installer.  For example, using the below example, you might have an instance of `GameSettingsInstaller` called `GameSettingsEasy`, and another one called `GameSettingsHard`, etc.
+
+Example:
+
+* Open Unity
+* Right click somewhere in the Project tab and select `Create -> Zenject -> ScriptableObjectInstaller`
+* Name it GameSettingsInstaller
+* Right click again in the same location
+* Select the newly added menu item `Create -> Installers -> GameSettingsInstaller`
+* Following the approach to settings outlined [here](#using-the-unity-inspector-to-configure-settings), you might then replace it with the following:
+
+```csharp
+public class GameSettings : ScriptableObjectInstaller
+{
+    public Player.Settings Player;
+    public SomethingElse.Settings SomethingElse;
+    // ... etc.
+
+    public override void InstallBindings()
+    {
+        Container.BindInstances(Player, SomethingElse, etc.);
+    }
+}
+
+public class Player : ITickable
+{
+    readonly Settings _settings;
+    Vector3 _position;
+
+    public Player(Settings settings)
+    {
+        _settings = settings;
+    }
+
+    public void Tick()
+    {
+        _position += Vector3.forward * _settings.Speed;
+    }
+
+    [Serializable]
+    public class Settings
+    {
+        public float Speed;
+    }
+}
+```
+
+* Now, you should be able to run your game and adjust the Speed value that is on the `GameSettingsInstaller` asset at runtime, and have that change saved permanently
 
 ## Runtime Parameters For Installers
 
@@ -2236,7 +2235,7 @@ There are also settings for the signals system which are documented [here](#sett
 
 See [here](Documentation/Signals.md).
 
-## Creating Objects Dynamically Using Factories
+## Factories: Creating Objects Dynamically
 
 See [here](Documentation/Factories.md).
 
@@ -3022,7 +3021,9 @@ In addition to the bind methods documented above, there are also some other meth
 
 DiContainer is always added to itself, so you can always get it injected into any class.  However, note that injecting the DiContainer is usually a sign of bad practice, since there is almost always a better way to design your code such that you don't need to reference DiContainer directly (the exception being custom factories, but even in that case it's often better to [inject a factory into your custom factory](Documentation/Factories.md#custom-factories).  Once again, best practice with dependency injection is to only reference the DiContainer in the "composition root layer" which includes any custom factories you might have as well as the installers.  However there are exceptions to this rule.
 
-### <a id="dicontainer-methods-instantiate"></a>DiContainer.Instantiate
+### DiContainer.Instantiate
+
+---
 
 These instantiate methods might be useful for example inside a custom factory.  Note however that in most cases, you can probably get away with using a normal [Factory](#creating-objects-dynamically-using-factories) instead without needing to directly reference DiContainer.
 
@@ -3114,9 +3115,13 @@ When instantiating objects directly, you can either use DiContainer or you can u
     ```
 ### DiContainer.Bind
 
+---
+
 See [here](#binding)
 
 ### DiContainer.Resolve
+
+---
 
 1.  **DiContainer.Resolve** - Get instance to match the given type.  This may involve creating a new instance or it might return an existing instance, depending on how the given type was bound.
 
@@ -3214,6 +3219,8 @@ See [here](#binding)
 
 ### DiContainer.QueueForInject
 
+---
+
 **DiContainer.QueueForInject** will queue the given instance for injection once the initial object graph is constructed.
 
 Sometimes, there are instances that are not created by Zenject and which exist at startup, and which you want to be injected.  In these cases you will often add them to the container like this:
@@ -3291,6 +3298,8 @@ This is also precisely how the initial MonoBehaviour's in the scene are injected
 
 ### DiContainer Unbind / Rebind
 
+---
+
 It is possible to remove or replace bindings that were added in a previous bind statement.  Note however that using methods are often a sign of bad practice.
 
 1. **Unbind** - Remove all bindings matching the given type/id from container.
@@ -3311,6 +3320,8 @@ It is possible to remove or replace bindings that were added in a previous bind 
     ```
 
 ### Other DiContainer methods
+
+---
 
 1.  **DiContainer.ParentContainers** - The parent containers for the given DiContainer.  For example, for the DiContainer associated with SceneContext, this will usually be the DiContainer associated with the ProjectContext (unless you're using Scene Parenting in which case it will be another SceneContext)
 1.  **DiContainer.IsValidating** - Returns true if the container is being run for validation.  This can be useful in some edge cases where special logic needs to be added during the validation step only.
@@ -3341,7 +3352,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
 ## Frequently Asked Questions
 
-* **<a id="isthisoverkill"></a>Isn't this overkill?  I mean, is using statically accessible singletons really that bad?**
+### Isn't this overkill?  I mean, is using statically accessible singletons really that bad?**
 
     For small enough projects, I would agree with you that using a global singleton might be easier and less complicated.  But as your project grows in size, using global singletons will make your code unwieldy.  Good code is basically synonymous with loosely coupled code, and to write loosely coupled code you need to (A) actually be aware of the dependencies between classes and (B) code to interfaces (however I don't literally mean to use interfaces everywhere, as explained [here](#overusinginterfaces))
 
@@ -3353,11 +3364,11 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Then the result will be more loosely coupled code, which will make it 100x easier to refactor, maintain, test, understand, re-use, etc.
 
-* **<a id="ecs-integration">Is there a way to integrate with the upcoming Unity ECS?</a>**
+### Is there a way to integrate with the upcoming Unity ECS?</a>**
 
     Currently there does not appear to be an official way to do custom injections into Unity ECS systems, however, there are [some workarounds](https://forum.unity.com/threads/request-for-world-addmanager.539271/#post-3558224) until Unity hopefully addresses this.
 
-* **<a id="aot-support"></a>Does this work on AOT platforms such as iOS and WebGL?**
+### Does this work on AOT platforms such as iOS and WebGL?**
 
     Yes.  However, there are a few things that you should be aware of.  One of the things that Unity's IL2CPP compiler does is strip out any code that is not used.  It calculates what code is used by statically analyzing the code to find usage.  This is great, except that this will sometimes strip out methods/types that we don't refer to explicitly (and instead access via reflection instead).
 
@@ -3403,7 +3414,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Normally, in a case like above where a constructor is being stripped out, we can force-include it by adding the `[Inject]` attribute on the Foo constructor, however this does not work for classes with generic types that include a value type.  Therefore, the recommended workarounds here are to either explicitly reference the constructor similar to what you see in the _AotWorkaround, or avoid using value type generic arguments.  One easy way to avoid using value types is to wrap it in a reference type (for example, by using something like [this](https://gist.github.com/svermeulen/a6929e6e26f2de2cc697d24f108c5f85))
 
-* **<a id="faq-performance"></a>How is performance?**
+### How is performance?**
 
     See [here](#optimization_notes)
 
@@ -3415,7 +3426,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
     - Circular reference errors are handled less gracefully.  Instead of an exception with an error message that details the object graph with the circular reference, a StackOverflowException might be thrown
     - If you make heavy use of zenject from multiple threads at the same time, you might also want to enable the define `ZEN_INTERNAL_NO_POOLS` which will cause zenject to not use memory pools for internal operations.  This will cause more memory allocations however can be much faster in some cases because it will avoid hitting locks the memory pools uses to control access to the shared data across threads
 
-* **<a id="howtousecoroutines"></a>How do I use Unity style Coroutines in normal C# classes?**
+### How do I use Unity style Coroutines in normal C# classes?**
 
     With Zenject, there is less of a need to make every class a `MonoBehaviour`.  But it is often still desirable to be able to call `StartCoroutine` to add asynchronous methods.
 
@@ -3463,7 +3474,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Yet another option is to use a coroutine library that implements similar functionality to what Unity provides.  See [here](https://github.com/svermeulen/UnityCoroutinesWithoutMonoBehaviours) for one example that we've used in the past at Modest Tree
 
-* **<a id="more-samples"></a>Are there any more sample projects to look at?**
+### Are there any more sample projects to look at?**
 
     Complete examples (with source) using zenject:
 
@@ -3474,7 +3485,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
     * [Submarine](https://github.com/shiwano/submarine) - A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
     * [Craberoid](https://github.com/Crabar/Craberoid-3.0) - Arkanoid clone
 
-* **<a id="what-games-are-using-zenject"></a>What games/tools/libraries are using Zenject?**
+### What games/tools/libraries are using Zenject?**
 
     If you know of other projects that are using Zenject, please add a comment [here](https://github.com/svermeulen/Extenject/issues/179) so that I can add it to this list.
 
@@ -3544,5 +3555,3 @@ See [here](Documentation/ReleaseNotes.md).
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
-    
-    
