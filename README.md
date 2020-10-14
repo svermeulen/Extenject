@@ -3360,7 +3360,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
 ## Frequently Asked Questions
 
-### Isn't this overkill?  I mean, is using statically accessible singletons really that bad?**
+### Isn't this overkill?  I mean, is using statically accessible singletons really that bad?
 
     For small enough projects, I would agree with you that using a global singleton might be easier and less complicated.  But as your project grows in size, using global singletons will make your code unwieldy.  Good code is basically synonymous with loosely coupled code, and to write loosely coupled code you need to (A) actually be aware of the dependencies between classes and (B) code to interfaces (however I don't literally mean to use interfaces everywhere, as explained [here](#overusinginterfaces))
 
@@ -3372,11 +3372,11 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Then the result will be more loosely coupled code, which will make it 100x easier to refactor, maintain, test, understand, re-use, etc.
 
-### Is there a way to integrate with the upcoming Unity ECS?</a>**
+### Is there a way to integrate with the upcoming Unity ECS?
 
     Currently there does not appear to be an official way to do custom injections into Unity ECS systems, however, there are [some workarounds](https://forum.unity.com/threads/request-for-world-addmanager.539271/#post-3558224) until Unity hopefully addresses this.
 
-### Does this work on AOT platforms such as iOS and WebGL?**
+### Does this work on AOT platforms such as iOS and WebGL?
 
     Yes.  However, there are a few things that you should be aware of.  One of the things that Unity's IL2CPP compiler does is strip out any code that is not used.  It calculates what code is used by statically analyzing the code to find usage.  This is great, except that this will sometimes strip out methods/types that we don't refer to explicitly (and instead access via reflection instead).
 
@@ -3422,7 +3422,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
     Normally, in a case like above where a constructor is being stripped out, we can force-include it by adding the `[Inject]` attribute on the Foo constructor, however this does not work for classes with generic types that include a value type.  Therefore, the recommended workarounds here are to either explicitly reference the constructor similar to what you see in the _AotWorkaround, or avoid using value type generic arguments.  One easy way to avoid using value types is to wrap it in a reference type (for example, by using something like [this](https://gist.github.com/svermeulen/a6929e6e26f2de2cc697d24f108c5f85))
 
-### How is performance?**
+### How is performance?
 
     See [here](#optimization_notes)
 
@@ -3434,7 +3434,7 @@ It is possible to remove or replace bindings that were added in a previous bind 
     - Circular reference errors are handled less gracefully.  Instead of an exception with an error message that details the object graph with the circular reference, a StackOverflowException might be thrown
     - If you make heavy use of zenject from multiple threads at the same time, you might also want to enable the define `ZEN_INTERNAL_NO_POOLS` which will cause zenject to not use memory pools for internal operations.  This will cause more memory allocations however can be much faster in some cases because it will avoid hitting locks the memory pools uses to control access to the shared data across threads
 
-### How do I use Unity style Coroutines in normal C# classes?**
+### How do I use Unity style Coroutines in normal C# classes?
 
     With Zenject, there is less of a need to make every class a `MonoBehaviour`.  But it is often still desirable to be able to call `StartCoroutine` to add asynchronous methods.
 
