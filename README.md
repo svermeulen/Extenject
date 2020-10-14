@@ -1690,7 +1690,9 @@ For bindings that create new game objects (eg. `FromComponentInNewPrefab`, `From
 
     This example will automatically parent the Foo GameObject underneath the game object that it is being injected into, unless the injected object is not a MonoBehaviour in which case it will leave Foo at the root of the scene hierarchy.
 
-## Optional Binding
+### Optional Binding
+
+---
 
 You can declare some dependencies as optional as follows:
 
@@ -1775,7 +1777,9 @@ public class Bar
 Container.BindInstance(1);
 ```
 
-## Conditional Bindings
+#### Conditional Bindings
+
+---
 
 In many cases you will want to restrict where a given dependency is injected.  You can do this using the following syntax:
 
@@ -1801,7 +1805,9 @@ The InjectContext class (which is passed as the `context` parameter above) conta
 * `InjectContext ParentContext` - This contains information on the entire object graph that precedes the current class being created.  For example, dependency A might be created, which requires an instance of B, which requires an instance of C.  You could use this field to inject different values into C, based on some condition about A.  This can be used to create very complex conditions using any combination of parent context information.  Note also that `ParentContext.MemberType` is not necessarily the same as ObjectType, since the ObjectType could be a derived type from `ParentContext.MemberType`
 * `bool Optional` - True if the `[InjectOptional]` parameter is declared on the field being injected
 
-## List Bindings
+### List Bindings
+
+---
 
 When Zenject finds multiple bindings for the same type, it interprets that to be a list.  So, in the example code below, `Bar` would get a list containing a new instance of `Foo1,` `Foo2`, and `Foo3`:
 
@@ -1823,7 +1829,9 @@ public class Bar
 
 The order of the list will be the same as the order in which they were added with a `Bind` method.  The only exception is when you use subcontainers, since in that case the list will be ordered first by the associated subcontainer, with the first set of instances taken from the bottom most subcontainer, and then the parent, then the grandparent, etc.
 
-## Global Bindings Using Project Context
+### Global Bindings Using Project Context
+
+---
 
 This all works great for each individual scene, but what if you have dependencies that you wish to persist permanently across all scenes?  In Zenject you can do this by adding installers to a `ProjectContext` object.
 
@@ -1841,7 +1849,9 @@ The reason that all the bindings you add to a global installer are available for
 
 Note also that by default, any game objects that are instantiated inside ProjectContext will be parented underneath it by default.  If you'd prefer that each newly instantiated object is instead placed at the root of the scene hierarchy (but still marked DontDestroyOnLoad) then you can change this by unchecking the flag 'Parent New Objects Under Context' in the inspector of ProjectContext.
 
-## Identifiers
+### Identifiers
+
+---
 
 You can also give an ID to your binding if you need to have distinct bindings for the same type, and you don't want it to just result in a `List<>`.  For example:
 
@@ -1949,6 +1959,179 @@ public class Player : ITickable
 ```
 
 * Now, you should be able to run your game and adjust the Speed value that is on the `GameSettingsInstaller` asset at runtime, and have that change saved permanently
+
+### Non Generic Bindings
+
+---
+
+In some cases you may not know the exact type you want to bind at compile time.  In these cases you can use the overload of the `Bind` method which takes a `System.Type` value instead of a generic parameter.
+
+```csharp
+// These two lines will result in the same behaviour
+Container.Bind(typeof(Foo));
+Container.Bind<Foo>();
+```
+
+Note also that when using non generic bindings, you can pass multiple arguments:
+
+```csharp
+Container.Bind(typeof(Foo), typeof(Bar), typeof(Qux)).AsSingle();
+
+// The above line is equivalent to these three:
+Container.Bind<Foo>().AsSingle();
+Container.Bind<Bar>().AsSingle();
+Container.Bind<Qux>().AsSingle();
+```
+
+The same goes for the To method:
+
+```csharp
+Container.Bind<IFoo>().To(typeof(Foo), typeof(Bar)).AsSingle();
+
+// The above line is equivalent to these two:
+Container.Bind<IFoo>().To<Foo>().AsSingle();
+Container.Bind<IFoo>().To<Bar>().AsSingle();
+```
+
+You can also do both:
+
+```csharp
+Container.Bind(typeof(IFoo), typeof(IBar)).To(typeof(Foo1), typeof(Foo2)).AsSingle();
+
+// The above line is equivalent to these:
+Container.Bind<IFoo>().To<Foo>().AsSingle();
+Container.Bind<IFoo>().To<Bar>().AsSingle();
+Container.Bind<IBar>().To<Foo>().AsSingle();
+Container.Bind<IBar>().To<Bar>().AsSingle();
+```
+
+This can be especially useful when you have a class that implements multiple interfaces:
+
+```csharp
+Container.Bind(typeof(ITickable), typeof(IInitializable), typeof(IDisposable)).To<Foo>().AsSingle();
+```
+
+Though in this particular example there is already a built-in shortcut method for this:
+
+```csharp
+Container.BindInterfacesTo<Foo>().AsSingle();
+```
+
+### Convention Based Binding
+
+---
+
+Convention based binding can come in handy in any of the following scenarios:
+
+- You want to define a naming convention that determines how classes are bound to the container (eg. using a prefix, suffix, or regex)
+- You want to use custom attributes to determine how classes are bound to the container
+- You want to automatically bind all classes that implement a given interface within a given namespace or assembly
+
+Using "convention over configuration" can allow you to define a framework that other programmers can use to quickly and easily get things done, instead of having to explicitly add every binding within installers.  This is the philosophy that is followed by frameworks like Ruby on Rails, ASP.NET MVC, etc.  Of course, there are both advantages and disadvantages to this approach.
+
+They are specified in a similar way to [Non Generic bindings](#non-generic-bindings), except instead of giving a list of types to the `Bind()` and `To()` methods, you describe the convention using a Fluent API.  For example, to bind `IFoo` to every class that implements it in the entire codebase:
+
+```csharp
+Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>());
+```
+
+Note that you can use the same Fluent API in the `Bind()` method as well, and you can also use it in both `Bind()` and `To()` at the same time.
+
+For more examples see the [examples](#convention-binding-examples) section below.  The full format is as follows:
+
+<pre>
+x.<b>InitialList</b>().<b>Conditional</b>().<b>AssemblySources</b>()
+</pre>
+
+#### Where:
+
+* **InitialList** = The initial list of types to use for our binding.  This list will be filtered by the given **Conditional**s.  It can be one of the following (fairly self explanatory) methods:
+
+    1. **AllTypes**
+    1. **AllNonAbstractClasses**
+    1. **AllAbstractClasses**
+    1. **AllInterfaces**
+    1. **AllClasses**
+
+* **Conditional** = The filter to apply to the list of types given by **InitialList**.  Note that you can chain as many of these together as you want, and they will all be applied to the initial list in sequence.  It can be one of the following:
+
+    1. **DerivingFrom**<T> - Only match types deriving from `T`
+    1. **DerivingFromOrEqual**<T> - Only match types deriving from or equal to `T`
+    1. **WithPrefix**(value) - Only match types with names that start with `value`
+    1. **WithSuffix**(value) - Only match types with names that end with `value`
+    1. **WithAttribute**<T> - Only match types that have the attribute `[T]` above their class declaration
+    1. **WithoutAttribute**<T> - Only match types that do not have the attribute `[T]` above their class declaration
+    1. **WithAttributeWhere**<T>(predicate) - Only match types that have the attribute `[T]` above their class declaration AND in which the given predicate returns true when passed the attribute.  This is useful so you can use data given to the attribute to create bindings
+    1. **InNamespace**(value) - Only match types that are in the given namespace
+    1. **InNamespaces**(value1, value2, etc.) - Only match types that are in any of the given namespaces
+    1. **MatchingRegex**(pattern) - Only match types that match the given regular expression
+    1. **Where**(predicate) - Finally, you can also add any kind of conditional logic you want by passing in a predicate that takes a `Type` parameter
+
+* **AssemblySources** = The list of assemblies to search for types when populating **InitialList**.  It can be one of the following:
+
+    1. **FromAllAssemblies** - Look up types in all loaded assemblies.  This is the default when unspecified.
+    1. **FromAssemblyContaining**<T> - Look up types in whatever assembly the type `T` is in
+    1. **FromAssembliesContaining**(type1, type2, ..) - Look up types in all assemblies that contains any of the given types
+    1. **FromThisAssembly** - Look up types only in the assembly in which you are calling this method
+    1. **FromAssembly**(assembly) - Look up types only in the given assembly
+    1. **FromAssemblies**(assembly1, assembly2, ...) - Look up types only in the given assemblies
+    1. **FromAssembliesWhere**(predicate) - Look up types in all assemblies that match the given predicate
+
+#### Examples:
+
+Note that you can chain together any combination of the below conditionals in the same binding.  Also note that since we aren't specifying an assembly here, Zenject will search within all loaded assemblies.
+
+1. Bind `IFoo` to every class that implements it in the entire codebase:
+
+    ```csharp
+    Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>());
+    ```
+
+    Note that this will also have the same result:
+
+    ```csharp
+    Container.Bind<IFoo>().To(x => x.AllNonAbstractTypes());
+    ```
+
+    This is because Zenject will skip any bindings in which the concrete type does not actually derive from the base type.  Also note that in this case we have to make sure we use `AllNonAbstractTypes` instead of just `AllTypes`, to ensure that we don't bind `IFoo` to itself
+
+1. Bind an interface to all classes implementing it within a given namespace
+
+    ```csharp
+    Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>().InNamespace("MyGame.Foos"));
+    ```
+
+1. Auto-bind `IController` every class that has the suffix "Controller" (as is done in ASP.NET MVC):
+
+    ```csharp
+    Container.Bind<IController>().To(x => x.AllNonAbstractTypes().WithSuffix("Controller"));
+    ```
+
+    You could also do this using `MatchingRegex`:
+
+    ```csharp
+    Container.Bind<IController>().To(x => x.AllNonAbstractTypes().MatchingRegex("Controller$"));
+    ```
+
+1. Bind all types with the prefix "Widget" and inject into Foo
+
+    ```csharp
+    Container.Bind<object>().To(x => x.AllNonAbstractTypes().WithPrefix("Widget")).WhenInjectedInto<Foo>();
+    ```
+
+1. Auto-bind the interfaces that are used by every type in a given namespace
+
+    ```csharp
+    Container.Bind(x => x.AllInterfaces())
+        .To(x => x.AllNonAbstractClasses().InNamespace("MyGame.Things"));
+    ```
+
+    This is equivalent to calling `Container.BindInterfacesTo<T>()` for every type in the namespace "MyGame.Things".  This works because, as touched on above, Zenject will skip any bindings in which the concrete type does not actually derive from the base type.  So even though we are using `AllInterfaces` which matches every single interface in every single loaded assembly, this is ok because it will not try and bind an interface to a type that doesn't implement this interface.
+
+## Decorator Bindings
+
+See [here](Documentation/DecoratorBindings.md).
+
 
 ## Runtime Parameters For Installers
 
@@ -2453,174 +2636,6 @@ public class Bar
 Now, by using `LazyInject<>` instead, the Foo class will not be created until Bar.Run is first called.  After that, it will use the same instance of Foo.
 
 Note that the installers remain the same in both cases.  Any injected dependency can be made lazy by simply wrapping it in `LazyInject<>`.
-
-## Non Generic bindings
-
-In some cases you may not know the exact type you want to bind at compile time.  In these cases you can use the overload of the `Bind` method which takes a `System.Type` value instead of a generic parameter.
-
-```csharp
-// These two lines will result in the same behaviour
-Container.Bind(typeof(Foo));
-Container.Bind<Foo>();
-```
-
-Note also that when using non generic bindings, you can pass multiple arguments:
-
-```csharp
-Container.Bind(typeof(Foo), typeof(Bar), typeof(Qux)).AsSingle();
-
-// The above line is equivalent to these three:
-Container.Bind<Foo>().AsSingle();
-Container.Bind<Bar>().AsSingle();
-Container.Bind<Qux>().AsSingle();
-```
-
-The same goes for the To method:
-
-```csharp
-Container.Bind<IFoo>().To(typeof(Foo), typeof(Bar)).AsSingle();
-
-// The above line is equivalent to these two:
-Container.Bind<IFoo>().To<Foo>().AsSingle();
-Container.Bind<IFoo>().To<Bar>().AsSingle();
-```
-
-You can also do both:
-
-```csharp
-Container.Bind(typeof(IFoo), typeof(IBar)).To(typeof(Foo1), typeof(Foo2)).AsSingle();
-
-// The above line is equivalent to these:
-Container.Bind<IFoo>().To<Foo>().AsSingle();
-Container.Bind<IFoo>().To<Bar>().AsSingle();
-Container.Bind<IBar>().To<Foo>().AsSingle();
-Container.Bind<IBar>().To<Bar>().AsSingle();
-```
-
-This can be especially useful when you have a class that implements multiple interfaces:
-
-```csharp
-Container.Bind(typeof(ITickable), typeof(IInitializable), typeof(IDisposable)).To<Foo>().AsSingle();
-```
-
-Though in this particular example there is already a built-in shortcut method for this:
-
-```csharp
-Container.BindInterfacesTo<Foo>().AsSingle();
-```
-
-## Convention Based Binding
-
-Convention based binding can come in handy in any of the following scenarios:
-
-- You want to define a naming convention that determines how classes are bound to the container (eg. using a prefix, suffix, or regex)
-- You want to use custom attributes to determine how classes are bound to the container
-- You want to automatically bind all classes that implement a given interface within a given namespace or assembly
-
-Using "convention over configuration" can allow you to define a framework that other programmers can use to quickly and easily get things done, instead of having to explicitly add every binding within installers.  This is the philosophy that is followed by frameworks like Ruby on Rails, ASP.NET MVC, etc.  Of course, there are both advantages and disadvantages to this approach.
-
-They are specified in a similar way to [Non Generic bindings](#non-generic-bindings), except instead of giving a list of types to the `Bind()` and `To()` methods, you describe the convention using a Fluent API.  For example, to bind `IFoo` to every class that implements it in the entire codebase:
-
-```csharp
-Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>());
-```
-
-Note that you can use the same Fluent API in the `Bind()` method as well, and you can also use it in both `Bind()` and `To()` at the same time.
-
-For more examples see the [examples](#convention-binding-examples) section below.  The full format is as follows:
-
-<pre>
-x.<b>InitialList</b>().<b>Conditional</b>().<b>AssemblySources</b>()
-</pre>
-
-### Where:
-
-* **InitialList** = The initial list of types to use for our binding.  This list will be filtered by the given **Conditional**s.  It can be one of the following (fairly self explanatory) methods:
-
-    1. **AllTypes**
-    1. **AllNonAbstractClasses**
-    1. **AllAbstractClasses**
-    1. **AllInterfaces**
-    1. **AllClasses**
-
-* **Conditional** = The filter to apply to the list of types given by **InitialList**.  Note that you can chain as many of these together as you want, and they will all be applied to the initial list in sequence.  It can be one of the following:
-
-    1. **DerivingFrom**<T> - Only match types deriving from `T`
-    1. **DerivingFromOrEqual**<T> - Only match types deriving from or equal to `T`
-    1. **WithPrefix**(value) - Only match types with names that start with `value`
-    1. **WithSuffix**(value) - Only match types with names that end with `value`
-    1. **WithAttribute**<T> - Only match types that have the attribute `[T]` above their class declaration
-    1. **WithoutAttribute**<T> - Only match types that do not have the attribute `[T]` above their class declaration
-    1. **WithAttributeWhere**<T>(predicate) - Only match types that have the attribute `[T]` above their class declaration AND in which the given predicate returns true when passed the attribute.  This is useful so you can use data given to the attribute to create bindings
-    1. **InNamespace**(value) - Only match types that are in the given namespace
-    1. **InNamespaces**(value1, value2, etc.) - Only match types that are in any of the given namespaces
-    1. **MatchingRegex**(pattern) - Only match types that match the given regular expression
-    1. **Where**(predicate) - Finally, you can also add any kind of conditional logic you want by passing in a predicate that takes a `Type` parameter
-
-* **AssemblySources** = The list of assemblies to search for types when populating **InitialList**.  It can be one of the following:
-
-    1. **FromAllAssemblies** - Look up types in all loaded assemblies.  This is the default when unspecified.
-    1. **FromAssemblyContaining**<T> - Look up types in whatever assembly the type `T` is in
-    1. **FromAssembliesContaining**(type1, type2, ..) - Look up types in all assemblies that contains any of the given types
-    1. **FromThisAssembly** - Look up types only in the assembly in which you are calling this method
-    1. **FromAssembly**(assembly) - Look up types only in the given assembly
-    1. **FromAssemblies**(assembly1, assembly2, ...) - Look up types only in the given assemblies
-    1. **FromAssembliesWhere**(predicate) - Look up types in all assemblies that match the given predicate
-
-### Examples:
-
-Note that you can chain together any combination of the below conditionals in the same binding.  Also note that since we aren't specifying an assembly here, Zenject will search within all loaded assemblies.
-
-1. Bind `IFoo` to every class that implements it in the entire codebase:
-
-    ```csharp
-    Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>());
-    ```
-
-    Note that this will also have the same result:
-
-    ```csharp
-    Container.Bind<IFoo>().To(x => x.AllNonAbstractTypes());
-    ```
-
-    This is because Zenject will skip any bindings in which the concrete type does not actually derive from the base type.  Also note that in this case we have to make sure we use `AllNonAbstractTypes` instead of just `AllTypes`, to ensure that we don't bind `IFoo` to itself
-
-1. Bind an interface to all classes implementing it within a given namespace
-
-    ```csharp
-    Container.Bind<IFoo>().To(x => x.AllTypes().DerivingFrom<IFoo>().InNamespace("MyGame.Foos"));
-    ```
-
-1. Auto-bind `IController` every class that has the suffix "Controller" (as is done in ASP.NET MVC):
-
-    ```csharp
-    Container.Bind<IController>().To(x => x.AllNonAbstractTypes().WithSuffix("Controller"));
-    ```
-
-    You could also do this using `MatchingRegex`:
-
-    ```csharp
-    Container.Bind<IController>().To(x => x.AllNonAbstractTypes().MatchingRegex("Controller$"));
-    ```
-
-1. Bind all types with the prefix "Widget" and inject into Foo
-
-    ```csharp
-    Container.Bind<object>().To(x => x.AllNonAbstractTypes().WithPrefix("Widget")).WhenInjectedInto<Foo>();
-    ```
-
-1. Auto-bind the interfaces that are used by every type in a given namespace
-
-    ```csharp
-    Container.Bind(x => x.AllInterfaces())
-        .To(x => x.AllNonAbstractClasses().InNamespace("MyGame.Things"));
-    ```
-
-    This is equivalent to calling `Container.BindInterfacesTo<T>()` for every type in the namespace "MyGame.Things".  This works because, as touched on above, Zenject will skip any bindings in which the concrete type does not actually derive from the base type.  So even though we are using `AllInterfaces` which matches every single interface in every single loaded assembly, this is ok because it will not try and bind an interface to a type that doesn't implement this interface.
-
-## Decorator Bindings
-
-See [here](Documentation/DecoratorBindings.md).
 
 ## Open Generic Types
 
