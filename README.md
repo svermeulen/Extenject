@@ -1608,7 +1608,7 @@ The `ZenjectBinding` component has the following properties:
 
 * **Context** - This is completely optional and in most cases should be left unset.  This will determine which `Context` to apply the binding to.  If left unset, it will use whatever context the GameObject is in.  In most cases this will be `SceneContext,` but if it's inside a `GameObjectContext` it will be bound into the `GameObjectContext` container instead.  One important use case for this field is to allow dragging the `SceneContext` into this field, for cases where the component is inside a `GameObjectContext.`  This allows you to treat this MonoBehaviour as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) for the entire sub-container given by the `GameObjectContext.`
 
-## <a id="di-guidelines--recommendations"></a>General Guidelines / Recommendations / Gotchas / Tips and Tricks
+## General Guidelines / Recommendations / Gotchas / Tips and Tricks
 
 * **Do not use GameObject.Instantiate if you want your objects to have their dependencies injected**
     * If you want to instantiate a prefab at runtime and have any MonoBehaviour's automatically injected, we recommend using a [factory](#creating-objects-dynamically-using-factories).  You can also instantiate a prefab by directly using the DiContainer by calling any of the [InstantiatePrefab](#dicontainer-methods-instantiate) methods.  Using these ways as opposed to GameObject.Instantiate will ensure any fields that are marked with the `[Inject]` attribute are filled in properly, and all `[Inject]` methods within the prefab are called.
@@ -2208,7 +2208,7 @@ public class MainInstaller : MonoInstaller
 
 `ScriptableObjectInstaller` works the same as `MonoInstaller` in this regard.
 
-## <a id="using-outside-unity"></a>Using Zenject Outside Unity Or For DLLs
+## Using Zenject Outside Unity Or For DLLs
 
 If you are building some code as DLLs and then including them in Unity, you can still add bindings for those classes inside your installers, with the only limitation being that you have to use constructor injection.  If you want to use the other inject approaches such as member injection or method injection, then you can do that too, however in that case you will need to add a reference for your project to `Zenject-Usage.dll` which can be found in the `Zenject\Source\Usage` directory.  This DLL also includes the standard interfaces such as `ITickable,` `IInitializable,` etc. so you can use those as well.
 
@@ -2809,7 +2809,7 @@ In this case we have some costly operation that we want to run every time some d
 
 See [here](Documentation/AutoMocking.md).
 
-## <a id="editor-windows"></a>Creating Unity EditorWindow's with Zenject
+## Creating Unity EditorWindow's with Zenject
 
 If you need to add your own Unity plugin, and you want to create your own EditorWindow derived class, then you might consider using Zenject to help manage this code as well.  Let's go through an example of how you might do this:
 
@@ -2880,7 +2880,7 @@ Note that every time your code is compiled again within Unity, your editor windo
 
 Something else to note is that the rate at which the ITickable.Tick method gets fired can change depending on what you have on focus.  If you run our timer window, then select another window other than Unity, you can see what I mean.  (Tick Count increments much more slowly)
 
-## <a id="optimization_notes"></a>Optimization Recommendations/Notes
+## Optimization Recommendations/Notes
 
 1. Use [memory pools](#memory-pools) with an initial size.  This should restrict all the costly instantiate operations to scene startup and allow you to avoid any performance spikes once the game starts.  Or, if you want to be really thorough, you could use a fixed size, which would trigger exceptions when the pool size limit is reached.
 
@@ -2941,7 +2941,7 @@ In many cases you will want to limit which areas of the code reflection baking i
 
 By default, reflection baking will only apply to builds and will not be in effect while testing inside the unity editor.  If you want to temporarily disable baking you can uncheck `Is Enabled In Builds` in the inspector.  You can also force baking to apply while inside unity editor by checking `Is Enabled in Editor`.  However note that this will slow down compile times so probably will not be worth it, but can be useful when profiling to see the effect that the baking has.  Also note that if you are using Unity 2017 LTS then reflection baking can only be used by builds due to Unity API limitations.
 
-### <a id="reflection-baking-external-dlls"></a>Baking External DLLs
+### Baking External DLLs
 
 When using reflection baking as described above, by adding a reflection baking settings object, this will only apply reflection baking to the C# files that are dropped directly into your unity project.  If you are using external dlls, and want to have reflection baking applied there as well, then you can do this by adding a post-build step.  There is a command line tool that you can find in the github repo by opening the `zenject\NonUnityBuild\Zenject.sln` file and building the "Zenject-ReflectionBakingCommandLine" project.
 
@@ -2957,7 +2957,7 @@ There are two settings on ProjectContext related to reflection baking that can b
 1. No Check Assume Full Coverage - With this value set, if no reflection baking information is found for a given type, then Zenject will assume that the type does not contain any reflection information.  This can be useful in cases where there is a lot of third party code that does not have reflection baking applied, but also does not use zenject in any way.   When coverage mode is set to (1), then this can be costly because Zenject will still analyze the third party code using reflection operations.  Note that when this is set, you will need to ensure that reflection baking is always applied everywhere that uses zenject.
 1. Fallback To Direct Reflection With Warning - With this value set, when Zenject encounters a type that does not have reflection baking applied, it will use costly reflection operations, but will also issue a warning.  This can be useful if your intention is to get full coverage with reflection baking, but you don't want to use mode (2) and cause things to completely break when certain types are missed by the baking process
 
-## <a id="upgrading-from-zenject5"></a>Upgrade Guide for Zenject 6
+## Upgrade Guide for Zenject 6
 
 The biggest backwards-incompatible change in Zenject 6 is that the signals system was re-written from scratch and works quite differently now.  However - if you want to continue using the previous signals implementation you can get a zenject-6-compatible version of that [here](https://github.com/svermeulen/ZenjectSignalsOld). So to use that, just import zenject 6 and make sure to uncheck the `OptionalExtras/Signals` folder, and then add the ZenjectSignalsOld folder to your project from that link.
 
