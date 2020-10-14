@@ -1,3 +1,19 @@
+![Extenject Header Image](Documentation/Images/ExtenjectMainHeader.png)
+
+[![Gitter](https://img.shields.io/static/v1?label=Gitter&labelColor=ED1965&message=Support&color=grey&logo=Gitter&logoColor=White&url=https://gitter.im/Extenject/community)](https://gitter.im/Extenject/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/svermeulen/Extenject?color=green)](https://github.com/svermeulen/Extenject/releases)
+![GitHub Release Date](https://img.shields.io/github/release-date/svermeulen/Extenject)
+![GitHub contributors](https://img.shields.io/github/contributors/svermeulen/Extenject)
+![GitHub last commit](https://img.shields.io/github/last-commit/svermeulen/Extenject)
+![Continuous Integration](https://github.com/svermeulen/Extenject/workflows/Continuous%20Integration/badge.svg?branch=master)
+![GitHub](https://img.shields.io/github/license/svermeulen/Extenject)
+
+# Extenject: extensions, bug fixes and updates for Zenject 
+
+This project is simply a fork of [Zenject](https://github.com/modesttree/zenject) with the goal of being actively maintained.  I am the primary author and was the primary maintainer until my access was removed after leaving my position at the company Modest Tree.  It is called Extenject to respect Modest Tree's [trademark claim](https://github.com/modesttree/Zenject/commit/2cbbf11b344d083cc697d8b248acf41520d72da3) on the name Zenject.
+
+# Table Of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
@@ -95,20 +111,6 @@
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-![Extenject Header Image](Documentation/Images/ExtenjectMainHeader.png)
-
-[![Gitter](https://img.shields.io/static/v1?label=Gitter&labelColor=ED1965&message=Support&color=grey&logo=Gitter&logoColor=White&url=https://gitter.im/Extenject/community)](https://gitter.im/Extenject/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/svermeulen/Extenject?color=green)](https://github.com/svermeulen/Extenject/releases)
-![GitHub Release Date](https://img.shields.io/github/release-date/svermeulen/Extenject)
-![GitHub contributors](https://img.shields.io/github/contributors/svermeulen/Extenject)
-![GitHub last commit](https://img.shields.io/github/last-commit/svermeulen/Extenject)
-![Continuous Integration](https://github.com/svermeulen/Extenject/workflows/Continuous%20Integration/badge.svg?branch=master)
-![GitHub](https://img.shields.io/github/license/svermeulen/Extenject)
-
-# Extenject: extensions, bug fixes and updates for Zenject 
-
-This project is simply a fork of [Zenject](https://github.com/modesttree/zenject) with the goal of being actively maintained.  I am the primary author and was the primary maintainer until my access was removed after leaving my position at the company Modest Tree.  It is called Extenject to respect Modest Tree's [trademark claim](https://github.com/modesttree/Zenject/commit/2cbbf11b344d083cc697d8b248acf41520d72da3) on the name Zenject.
 
 ## Lawsuit
 ```
@@ -245,87 +247,6 @@ If you are a DI veteran, then it might be worth taking a look at the [cheatsheet
 The tests may also be helpful to show usage for each specific feature (which you can find at `Zenject/OptionalExtras/UnitTests` and `Zenject/OptionalExtras/IntegrationTests`)
 
 Also see [further reading section](#further-reading) for some external zenject tutorials provided elsewhere.
-
-## Table Of Contents
-
-* Introduction
-    * What is Dependency Injection?
-        * [Theory](#theory)
-        * [Misconceptions](#misconceptions)
-    * Zenject API
-        * [Hello World Example](#hello-world-example)
-        * [Injection](#injection)
-        * Binding
-            * [Binding](#binding)
-            * [Construction Methods](#construction-methods)
-        * [Installers](#installers)
-        * Using Non-MonoBehaviour Classes
-            * [ITickable](#itickable)
-            * [IInitializable](#iinitializable)
-            * [IDisposable](#idisposable)
-            * [BindInterfacesTo and BindInterfacesAndSelfTo](#bindinterfacesto-and-bindinterfacesandselfto)
-            * [Using the Unity Inspector To Configure Settings](#using-the-unity-inspector-to-configure-settings)
-        * [Object Graph Validation](#object-graph-validation)
-        * [Scene Bindings](#scene-bindings)
-        * [General Guidelines / Recommendations / Gotchas / Tips and Tricks](#di-guidelines--recommendations)
-        * [Further Reading](#further-reading)
-* Advanced
-    * Binding
-        * [Game Object Bind Methods](#game-object-bind-methods)
-        * [Optional Binding](#optional-binding)
-        * [Conditional Bindings](#conditional-bindings)
-        * [List Bindings](#list-bindings)
-        * [Global Bindings Using Project Context](#global-bindings-using-project-context)
-        * [Identifiers](#identifiers)
-        * [Non Generic bindings](#non-generic-bindings)
-        * [Convention Based Binding](#convention-based-binding)
-    * [Scriptable Object Installer](#scriptable-object-installer)
-    * [Runtime Parameters For Installers](#runtime-parameters-for-installers)
-    * [Creating Objects Dynamically Using Factories](#creating-objects-dynamically-using-factories)
-    * [Memory Pools](#memory-pools)
-    * [Update / Initialization Order](#update--initialization-order)
-    * [Zenject Order Of Operations](#zenject-order-of-operations)
-    * [Injecting data across scenes](#injecting-data-across-scenes)
-    * [Scene Parenting Using Contract Names](#scene-parenting-using-contract-names)
-    * [Just-In-Time Resolving Using LazyInject&lt;&gt;](#just-in-time-resolving-using-lazyinject)
-    * [Scene Decorators](#scene-decorators)
-    * [ZenAutoInjecter](#zenautoinjector)
-    * [Sub-Containers And Facades](#sub-containers-and-facades)
-    * [Writing Automated Unit Tests / Integration Tests](#writing-automated-unit-tests--integration-tests)
-    * [Philosophy Of Zenject](#zenject-philophy)
-    * [Using Zenject Outside Unity Or For DLLs](#using-outside-unity)
-    * [Zenject Settings](#zenjectsettings)
-    * [Signals](#signals)
-    * [Decorator Bindings](#decorator-bindings)
-    * [Open Generic Types](#open-generic-types)
-    * [Notes About Destruction/Dispose Order](#destruction-order)
-    * [UniRx Integration](#unirx-integration)
-    * [Auto-Mocking using Moq](#auto-mocking-using-moq)
-    * [Creating Unity EditorWindow's with Zenject](#editor-windows)
-    * [Optimization Recommendations/Notes](#optimization_notes)
-    * [Reflection Baking](#reflection-baking)
-    * [Upgrade Guide for Zenject 6](#upgrading-from-zenject5)
-    * [DiContainer Methods](#dicontainer-methods)
-        * [DiContainer.Instantiate](#dicontainer-methods-instantiate)
-        * [DiContainer.Bind](#binding)
-        * [DiContainer.Resolve](#dicontainer-methods-resolve)
-        * [DiContainer.Inject](#dicontainer-methods-inject)
-        * [DiContainer.QueueForInject](#dicontainer-methods-queueforinject)
-        * [DiContainer Unbind / Rebind](#dicontainer-methods-rebind)
-        * [Other DiContainer methods](#dicontainer-methods-other)
-* [Frequently Asked Questions](#questions)
-    * [Isn't this overkill?  I mean, is using statically accessible singletons really that bad?](#isthisoverkill)
-    * [Is there a way to integrate with the upcoming Unity ECS?](#ecs-integration)
-    * [Does this work on AOT platforms such as iOS and WebGL?](#aot-support)
-    * [How is Performance?](#faq-performance)
-    * [Does Zenject support multithreading?](#faq-multiple-threads)
-    * [Are there any more sample projects with source to look at?](#more-samples)
-    * [What games/tools/libraries are using Zenject](#what-games-are-using-zenject)
-    * [I keep getting errors complaining about circular reference!  How to address this?](#circular-dependency-error)
-* [Cheat Sheet](#cheat-sheet)
-* [Further Help](#further-help)
-* [Release Notes](#release-notes)
-* [License](#license)
 
 # What is Dependency Injection? 
 
