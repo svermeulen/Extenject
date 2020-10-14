@@ -19,7 +19,6 @@ This project is simply a fork of [Zenject](https://github.com/modesttree/zenject
 <details>
 <summary>Details</summary>
 
-- [Extenject: extensions, bug fixes and updates for Zenject](#extenject-extensions-bug-fixes-and-updates-for-zenject)
   - [Lawsuit](#lawsuit)
   - [Support](#support)
   - [Introduction](#introduction)
@@ -27,7 +26,6 @@ This project is simply a fork of [Zenject](https://github.com/modesttree/zenject
   - [Installation *](#installation-)
   - [History](#history)
   - [Documentation](#documentation)
-  - [Table Of Contents](#table-of-contents)
 - [What is Dependency Injection?](#what-is-dependency-injection)
   - [Theory](#theory)
   - [Misconceptions](#misconceptions)
@@ -96,11 +94,11 @@ This project is simply a fork of [Zenject](https://github.com/modesttree/zenject
     - [DiContainer Unbind / Rebind](#dicontainer-unbind--rebind)
     - [Other DiContainer methods](#other-dicontainer-methods)
   - [Frequently Asked Questions](#frequently-asked-questions)
-    - [Isn't this overkill?  I mean, is using statically accessible singletons really that bad?**](#isnt-this-overkill--i-mean-is-using-statically-accessible-singletons-really-that-bad)
-    - [Is there a way to integrate with the upcoming Unity ECS?</a>**](#is-there-a-way-to-integrate-with-the-upcoming-unity-ecsa)
-    - [Does this work on AOT platforms such as iOS and WebGL?**](#does-this-work-on-aot-platforms-such-as-ios-and-webgl)
-    - [How is performance?**](#how-is-performance)
-    - [How do I use Unity style Coroutines in normal C# classes?**](#how-do-i-use-unity-style-coroutines-in-normal-c-classes)
+    - [Isn't this overkill?  I mean, is using statically accessible singletons really that bad?](#isnt-this-overkill--i-mean-is-using-statically-accessible-singletons-really-that-bad)
+    - [Is there a way to integrate with the upcoming Unity ECS?](#is-there-a-way-to-integrate-with-the-upcoming-unity-ecs)
+    - [Does this work on AOT platforms such as iOS and WebGL?](#does-this-work-on-aot-platforms-such-as-ios-and-webgl)
+    - [How is performance?](#how-is-performance)
+    - [How do I use Unity style Coroutines in normal C# classes?](#how-do-i-use-unity-style-coroutines-in-normal-c-classes)
     - [Are there any more sample projects to look at?](#are-there-any-more-sample-projects-to-look-at)
     - [What games/applications/libraries are using Zenject?](#what-gamesapplicationslibraries-are-using-zenject)
     - [I keep getting errors complaining about circular reference!  How to address this?](#i-keep-getting-errors-complaining-about-circular-reference--how-to-address-this)
