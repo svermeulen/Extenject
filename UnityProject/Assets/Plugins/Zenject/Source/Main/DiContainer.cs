@@ -838,7 +838,7 @@ namespace Zenject
             }
 
 #if UNITY_EDITOR
-            if (context.MemberType.DerivesFrom<Context>())
+            if (context.MemberType.DerivesFromOrEqual<Context>())
             {
                 // This happens when getting default transform parent so ok
                 return;
