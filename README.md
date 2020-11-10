@@ -3342,7 +3342,7 @@ Normally, in a case like above where a constructor is being stripped out, we can
 
 ### How is performance?
 
-See [here](#optimization_notes)
+See [here](#optimization-recommendationsnotes).
 
 ### <a id="faq-multiple-threads">Does Zenject support multithreading?</a>
 
