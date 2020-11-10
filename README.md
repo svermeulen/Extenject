@@ -3281,136 +3281,136 @@ It is possible to remove or replace bindings that were added in a previous bind 
 
 ### Isn't this overkill?  I mean, is using statically accessible singletons really that bad?
 
-    For small enough projects, I would agree with you that using a global singleton might be easier and less complicated.  But as your project grows in size, using global singletons will make your code unwieldy.  Good code is basically synonymous with loosely coupled code, and to write loosely coupled code you need to (A) actually be aware of the dependencies between classes and (B) code to interfaces (however I don't literally mean to use interfaces everywhere, as explained [here](#overusinginterfaces))
+For small enough projects, I would agree with you that using a global singleton might be easier and less complicated.  But as your project grows in size, using global singletons will make your code unwieldy.  Good code is basically synonymous with loosely coupled code, and to write loosely coupled code you need to (A) actually be aware of the dependencies between classes and (B) code to interfaces (however I don't literally mean to use interfaces everywhere, as explained [here](#overusinginterfaces))
 
-    In terms of (A), using global singletons, it's not obvious at all what depends on what, and over time your code will become really convoluted, as everything will tend towards depending on everything.  There could always be some method somewhere deep in a call stack that does some hail mary request to some other class anywhere in your code base.  In terms of (B), you can't really code to interfaces with global singletons because you're always referring to a concrete class
+In terms of (A), using global singletons, it's not obvious at all what depends on what, and over time your code will become really convoluted, as everything will tend towards depending on everything.  There could always be some method somewhere deep in a call stack that does some hail mary request to some other class anywhere in your code base.  In terms of (B), you can't really code to interfaces with global singletons because you're always referring to a concrete class
 
-    With a DI framework, in terms of (A), it's a bit more work to declare the dependencies you need up-front in your constructor, but this can be a good thing too because it forces you to be aware of the dependencies between classes.
+With a DI framework, in terms of (A), it's a bit more work to declare the dependencies you need up-front in your constructor, but this can be a good thing too because it forces you to be aware of the dependencies between classes.
 
-    And in terms of (B), it also forces you to code to interfaces.  By declaring all your dependencies as constructor parameters, you are basically saying "in order for me to do X, I need these contracts fulfilled".  These constructor parameters might not actually be interfaces or abstract classes, but it doesn't matter - in an abstract sense, they are still contracts, which isn't the case when you are creating them within the class or using global singletons.
+And in terms of (B), it also forces you to code to interfaces.  By declaring all your dependencies as constructor parameters, you are basically saying "in order for me to do X, I need these contracts fulfilled".  These constructor parameters might not actually be interfaces or abstract classes, but it doesn't matter - in an abstract sense, they are still contracts, which isn't the case when you are creating them within the class or using global singletons.
 
-    Then the result will be more loosely coupled code, which will make it 100x easier to refactor, maintain, test, understand, re-use, etc.
+Then the result will be more loosely coupled code, which will make it 100x easier to refactor, maintain, test, understand, re-use, etc.
 
 ### Is there a way to integrate with the upcoming Unity ECS?
 
-    Currently there does not appear to be an official way to do custom injections into Unity ECS systems, however, there are [some workarounds](https://forum.unity.com/threads/request-for-world-addmanager.539271/#post-3558224) until Unity hopefully addresses this.
+Currently there does not appear to be an official way to do custom injections into Unity ECS systems, however, there are [some workarounds](https://forum.unity.com/threads/request-for-world-addmanager.539271/#post-3558224) until Unity hopefully addresses this.
 
 ### Does this work on AOT platforms such as iOS and WebGL?
 
-    Yes.  However, there are a few things that you should be aware of.  One of the things that Unity's IL2CPP compiler does is strip out any code that is not used.  It calculates what code is used by statically analyzing the code to find usage.  This is great, except that this will sometimes strip out methods/types that we don't refer to explicitly (and instead access via reflection instead).
+Yes.  However, there are a few things that you should be aware of.  One of the things that Unity's IL2CPP compiler does is strip out any code that is not used.  It calculates what code is used by statically analyzing the code to find usage.  This is great, except that this will sometimes strip out methods/types that we don't refer to explicitly (and instead access via reflection instead).
 
-    In some versions of Unity, or with some settings applied (eg. a higher level of code stripping), IL2CPP can sometimes strip out the constructors of classes, resulting in errors on IL2CPP platforms.  The recommended fix in these cases is to either edit `link.xml` to force your types to not be stripped (see Unity docs) or to add an `[Inject]` attribute above the constructor.  Adding this attribute signals to IL2CPP to not strip out this method.
+In some versions of Unity, or with some settings applied (eg. a higher level of code stripping), IL2CPP can sometimes strip out the constructors of classes, resulting in errors on IL2CPP platforms.  The recommended fix in these cases is to either edit `link.xml` to force your types to not be stripped (see Unity docs) or to add an `[Inject]` attribute above the constructor.  Adding this attribute signals to IL2CPP to not strip out this method.
 
-    If you do want to use a higher level of code stripping, and decide to go the route of adding `[Inject]` attributes to all constructors, then you might also want to change the `ConstructorChoiceStrategy` value inside the settings found on `ProjectContext` to `InjectAttribute`.  This can be useful because it will force you to explicitly add `[Inject]` attributes to all constructors while testing in Unity Editor, rather than having to test on IL2CPP platforms to discover these problems.  Note however that this would probably be unnecessary with 'Low' code stripping.
+If you do want to use a higher level of code stripping, and decide to go the route of adding `[Inject]` attributes to all constructors, then you might also want to change the `ConstructorChoiceStrategy` value inside the settings found on `ProjectContext` to `InjectAttribute`.  This can be useful because it will force you to explicitly add `[Inject]` attributes to all constructors while testing in Unity Editor, rather than having to test on IL2CPP platforms to discover these problems.  Note however that this would probably be unnecessary with 'Low' code stripping.
 
-    Sometimes, another issue that can occur is with classes that have generic arguments and which are instantiated with a "value type" generic argument (eg. int, float, enums, anything deriving from struct, etc.).  In this case, compiling on AOT platforms will sometimes strip out the constructor, so Zenject will not be able to create the class and you will get a runtime error.  For example:
+Sometimes, another issue that can occur is with classes that have generic arguments and which are instantiated with a "value type" generic argument (eg. int, float, enums, anything deriving from struct, etc.).  In this case, compiling on AOT platforms will sometimes strip out the constructor, so Zenject will not be able to create the class and you will get a runtime error.  For example:
+```csharp
+public class Foo<T1>
+{
+    public Foo()
+    {
+        Debug.Log("Successfully created Foo!");
+    }
+}
 
-    ```csharp
-        public class Foo<T1>
+public class Runner2 : MonoBehaviour
+{
+    public void OnGUI()
+    {
+        if (GUI.Button(new Rect(100, 100, 500, 100), "Attempt to Create Foo"))
         {
-            public Foo()
-            {
-                Debug.Log("Successfully created Foo!");
-            }
+            var container = new DiContainer();
+
+            // This will throw exceptions on AOT platforms because the constructor for Foo<int> is stripped out of the build
+            container.Instantiate<Foo<int>>();
+
+            // This will run fine however, because string is not value type
+            //container.Instantiate<Foo<string>>();
         }
+    }
 
-        public class Runner2 : MonoBehaviour
-        {
-            public void OnGUI()
-            {
-                if (GUI.Button(new Rect(100, 100, 500, 100), "Attempt to Create Foo"))
-                {
-                    var container = new DiContainer();
+    static void _AotWorkaround()
+    {
+        // As a workaround, we can explicitly reference the constructor here to force the AOT
+        // compiler to leave it in the build
+        // new Foo<int>();
+    }
+}
+```
 
-                    // This will throw exceptions on AOT platforms because the constructor for Foo<int> is stripped out of the build
-                    container.Instantiate<Foo<int>>();
-
-                    // This will run fine however, because string is not value type
-                    //container.Instantiate<Foo<string>>();
-                }
-            }
-
-            static void _AotWorkaround()
-            {
-                // As a workaround, we can explicitly reference the constructor here to force the AOT
-                // compiler to leave it in the build
-                // new Foo<int>();
-            }
-        }
-    ```
-
-    Normally, in a case like above where a constructor is being stripped out, we can force-include it by adding the `[Inject]` attribute on the Foo constructor, however this does not work for classes with generic types that include a value type.  Therefore, the recommended workarounds here are to either explicitly reference the constructor similar to what you see in the _AotWorkaround, or avoid using value type generic arguments.  One easy way to avoid using value types is to wrap it in a reference type (for example, by using something like [this](https://gist.github.com/svermeulen/a6929e6e26f2de2cc697d24f108c5f85))
+Normally, in a case like above where a constructor is being stripped out, we can force-include it by adding the `[Inject]` attribute on the Foo constructor, however this does not work for classes with generic types that include a value type.  Therefore, the recommended workarounds here are to either explicitly reference the constructor similar to what you see in the _AotWorkaround, or avoid using value type generic arguments.  One easy way to avoid using value types is to wrap it in a reference type (for example, by using something like [this](https://gist.github.com/svermeulen/a6929e6e26f2de2cc697d24f108c5f85))
 
 ### How is performance?
 
-    See [here](#optimization_notes)
+See [here](#optimization_notes)
 
-* **<a id="faq-multiple-threads"></a>Does Zenject support multithreading?**
+### <a id="faq-multiple-threads">Does Zenject support multithreading?</a>
 
-    Yes, with a few caveats:
-    - You need to enable the define `ZEN_MULTITHREADING` in player settings
-    - Only the resolve and instantiate operations support multithreading.  The bindings that occur during the install phase must cannot be executed concurrently on multiple threads.  In other words, everything after the initial install should support multithreading.
-    - Circular reference errors are handled less gracefully.  Instead of an exception with an error message that details the object graph with the circular reference, a StackOverflowException might be thrown
-    - If you make heavy use of zenject from multiple threads at the same time, you might also want to enable the define `ZEN_INTERNAL_NO_POOLS` which will cause zenject to not use memory pools for internal operations.  This will cause more memory allocations however can be much faster in some cases because it will avoid hitting locks the memory pools uses to control access to the shared data across threads
+Yes, with a few caveats:
+
+- You need to enable the define `ZEN_MULTITHREADING` in player settings
+- Only the resolve and instantiate operations support multithreading.  The bindings that occur during the install phase must cannot be executed concurrently on multiple threads.  In other words, everything after the initial install should support multithreading.
+- Circular reference errors are handled less gracefully.  Instead of an exception with an error message that details the object graph with the circular reference, a StackOverflowException might be thrown
+- If you make heavy use of zenject from multiple threads at the same time, you might also want to enable the define `ZEN_INTERNAL_NO_POOLS` which will cause zenject to not use memory pools for internal operations.  This will cause more memory allocations however can be much faster in some cases because it will avoid hitting locks the memory pools uses to control access to the shared data across threads
 
 ### How do I use Unity style Coroutines in normal C# classes?
 
-    With Zenject, there is less of a need to make every class a `MonoBehaviour`.  But it is often still desirable to be able to call `StartCoroutine` to add asynchronous methods.
+With Zenject, there is less of a need to make every class a `MonoBehaviour`.  But it is often still desirable to be able to call `StartCoroutine` to add asynchronous methods.
 
-    One solution here is to use a dedicated class and just call `StartCoroutine` on that instead.  For example:
+One solution here is to use a dedicated class and just call `StartCoroutine` on that instead.  For example:
 
-    ```csharp
-    public class AsyncProcessor : MonoBehaviour
+```csharp
+public class AsyncProcessor : MonoBehaviour
+{
+    // Purposely left empty
+}
+
+public class Foo : IInitializable
+{
+    AsyncProcessor _asyncProcessor;
+
+    public Foo(AsyncProcessor asyncProcessor)
     {
-        // Purposely left empty
+        _asyncProcessor = asyncProcessor;
     }
 
-    public class Foo : IInitializable
+    public void Initialize()
     {
-        AsyncProcessor _asyncProcessor;
-
-        public Foo(AsyncProcessor asyncProcessor)
-        {
-            _asyncProcessor = asyncProcessor;
-        }
-
-        public void Initialize()
-        {
-            _asyncProcessor.StartCoroutine(RunAsync());
-        }
-
-        public IEnumerator RunAsync()
-        {
-            Debug.Log("Foo started");
-            yield return new WaitForSeconds(2.0f);
-            Debug.Log("Foo finished");
-        }
+        _asyncProcessor.StartCoroutine(RunAsync());
     }
 
-    public class TestInstaller : MonoInstaller
+    public IEnumerator RunAsync()
     {
-        public override void InstallBindings()
-        {
-            Container.Bind<IInitializable>().To<Foo>().AsSingle();
-            Container.Bind<AsyncProcessor>().FromNewComponentOnNewGameObject().AsSingle();
-        }
+        Debug.Log("Foo started");
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("Foo finished");
     }
-    ```
+}
 
-    Another solution to this problem which I highly recommend is [UniRx](https://github.com/neuecc/UniRx).
+public class TestInstaller : MonoInstaller
+{
+    public override void InstallBindings()
+    {
+        Container.Bind<IInitializable>().To<Foo>().AsSingle();
+        Container.Bind<AsyncProcessor>().FromNewComponentOnNewGameObject().AsSingle();
+    }
+}
+```
 
-    Yet another option is to use a coroutine library that implements similar functionality to what Unity provides.  See [here](https://github.com/svermeulen/UnityCoroutinesWithoutMonoBehaviours) for one example that we've used in the past at Modest Tree
+Another solution to this problem which I highly recommend is [UniRx](https://github.com/neuecc/UniRx).
+
+Yet another option is to use a coroutine library that implements similar functionality to what Unity provides.  See [here](https://github.com/svermeulen/UnityCoroutinesWithoutMonoBehaviours) for one example that we've used in the past at Modest Tree
 
 ### Are there any more sample projects to look at?
 
-    Complete examples (with source) using zenject:
+Complete examples (with source) using zenject:
 
-    * [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Based on Zenject 6
-    * [Quick Golf](https://assetstore.unity.com/packages/templates/packs/quick-golf-67900) - Mini-golf game
-    * [EcsRx Roguelike 2D](https://github.com/grofit/ecsrx.roguelike2d) - An example of a Roguelike 2d game using EcsRx and Zenject
-    * [Push The Squares](https://assetstore.unity.com/packages/templates/packs/push-the-squares-69780) - This is the puzzle game in which you have to find the proper way to connect squares with stars of the same color. 
-    * [Submarine](https://github.com/shiwano/submarine) - A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
-    * [Craberoid](https://github.com/Crabar/Craberoid-3.0) - Arkanoid clone
+* [Zenject Hero](https://github.com/Mathijs-Bakker/Zenject-Hero) - Remake of the classic Atari game H.E.R.O.   Based on Zenject 6
+* [Quick Golf](https://assetstore.unity.com/packages/templates/packs/quick-golf-67900) - Mini-golf game
+* [EcsRx Roguelike 2D](https://github.com/grofit/ecsrx.roguelike2d) - An example of a Roguelike 2d game using EcsRx and Zenject
+* [Push The Squares](https://assetstore.unity.com/packages/templates/packs/push-the-squares-69780) - This is the puzzle game in which you have to find the proper way to connect squares with stars of the same color. 
+* [Submarine](https://github.com/shiwano/submarine) - A mobile game that is made with Unity3D, RoR, and WebSocket server written in Go.
+* [Craberoid](https://github.com/Crabar/Craberoid-3.0) - Arkanoid clone
 
 ### What games/applications/libraries are using Zenject?
 
