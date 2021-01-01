@@ -5,7 +5,7 @@
 ## Table Of Contents
 
 * Introduction
-    * <a href="#async-and-di">Async in DI</a>
+    * <a href="#async-and-di">`async` in DI</a>
     * <a href="#example">Example</a>
 * Advanced
     * <a href="#static-memory-pool">Static Memory Pools</a>
@@ -16,11 +16,11 @@
 ## Introduction
 ### <a id="async-and-di"></a>Async in DI
 
-In dependency injection, the injector resolves dependencies of the target class only once, often after class is first created. In other words, injection is a one time process that does not track the injected dependencies to update them later on. If a dependency is not ready at the moment of injection; either binding would not resolve in case of optional bindings or fail completely throwing an error.
+In dependency injection, the injector resolves dependencies of the target class only once, often after class is first created. In other words, injection is a one time process that does not track the injected dependencies to update them later on. If a dependency is not ready at the moment of injection, either the binding wouldn't resolve in case of optional bindings or would fail completely throwing an error.
 
-This is creates a dilemma when implementing dependencies that are resolved asyncroniously. You can design around the DI limitations by carefully architecting your code so that the injection happens after async process is completed. This requires careful planning, increased complexity in setup. It is also prone to errors.
+This creates a dilemma while implementing dependencies that are resolved asynchronous. You can design around the DI limitations by carefully designing your code so that the injection happens after the `async` process is completed. This requires careful planning, which leads to an increased complexity in the setup, and is also prone to errors.
 
-Alternatively you can inject a intermediary object that tracks the result of the async operation. When you need to access the dependency, you can use this intermediary object to check if async task is completed and get the resulting object. With the experimental async support, we would like to provide ways to tackle this problem in Extenject. You can find Async extensions in **Plugins/Zenject/OptionalExtras/Async** folder.
+Alternatively you can inject an intermediary object that tracks the result of the `async` operation. When you need to access the dependency, you can use this intermediary object to check if the `async` task is completed and get the resulting object. With the experimental `async` support, we would like to provide ways to tackle this problem in Extenject. You can find `async` extensions in the folder **Plugins/Zenject/OptionalExtras/Async**.
 
 ### <a id="example"></a>Example
 
@@ -69,13 +69,13 @@ public class Bar : IInitializable, IDisposable
 }
 ```
 
-Here we use `BindAsync<IFoo>().FromMethod()` to pass an async method delegate that waits for 100 ms and then returns a newly created `Foo` object. This method can be any other method with `async Task<T> Method()` signature. `BindAsync<T>` extension provides a separate binder for async operations. This binder is currently limited to a few `FromX()` providers. Features like Pooling and Factories are not supported at the moment.
+Here we use `BindAsync<IFoo>().FromMethod()` to pass an `async` lambda that waits for 100 ms and then returns a newly created `Foo` instance. This method can be any other method with the signature `Task<T> Method()`. *Note: the `async` keyword is an implementation detail and thus not part of the signature. The `BindAsync<T>` extension method provides a separate binder for `async` operations. This binder is currently limited to a few `FromX()` providers. Features like Pooling and Factories are not supported at the moment.
 
-With above binding `AsyncInject<IFoo>` object is added to the container. Since scope is set to `AsCached()` the operation will run only once and `AsyncInject<IFoo>` will keep the result. It is important to note that async operation will not start before this binding is resolved. If you want async operation to start immediately after installing use `NonLazy()` option. 
+With the above `AsyncInject<IFoo>` binding, the instance is added to the container. Since the scope is set to `AsCached()` the operation will run only once and `AsyncInject<IFoo>` will keep the result. It is important to note that `async` operations won't start before this binding is getting resolved. If you want `async` operation to start immediately after installing, use `NonLazy()` option. 
 
-Once injected to `Bar`, we can check whether the return value of the async operation is already available by `TryGetResult`. method. This method will return false if there is no result to return. If result is not ready yet, we can listen to `Completed` event to get the return value when async operation completes.
+Once injected to `Bar`, we can check whether the return value of the `async` operation is already available by calling the `TryGetResult`. method. This method will return `false` if there is no result to return. If result is not ready yet, we can listen to the `Completed` event to get the return value when the `async` operation completes.
 
-Alternatively we can use following methods to check result.
+Alternatively we can use the  following methods to check the results availability.
 ```csharp
 // Use HasResult to check if result exists 
 if (_asyncFoo.HasResult)
