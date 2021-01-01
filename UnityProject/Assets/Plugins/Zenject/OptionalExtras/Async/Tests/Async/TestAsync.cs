@@ -49,7 +49,7 @@ namespace Zenject.Tests.Bindings
             }).AsCached();
             PostInstall();
 
-            var asycFoo = Container.Resolve<AsyncInject>();
+            var asycFoo = Container.Resolve<IAsyncInject>();
             yield return null;
             
             Assert.NotNull(asycFoo);
@@ -139,13 +139,13 @@ namespace Zenject.Tests.Bindings
         public class PreloadAsyncKernel: BaseMonoKernelDecorator
         {
             [Inject]
-            public List<AsyncInject> asyncInjects;
+            public List<IAsyncInject> asyncInjects;
 
             public bool IsPreloadCompleted { get; private set; }
 
             public async override void Initialize()
             {
-                foreach (AsyncInject inject in asyncInjects)
+                foreach (IAsyncInject inject in asyncInjects)
                 {
                     if (!inject.IsCompleted)
                     {

@@ -29,7 +29,7 @@ namespace Zenject
                 "You should not use Container.BindAsync for factory classes.  Use Container.BindFactory instead.");
 
             Assert.That(!bindInfo.ContractTypes.Contains(typeof(AsyncInject<TContract>)));
-            bindInfo.ContractTypes.Add(typeof(AsyncInject));
+            bindInfo.ContractTypes.Add(typeof(IAsyncInject));
             bindInfo.ContractTypes.Add(typeof(AsyncInject<TContract>));
 
 #if EXTENJECT_INCLUDE_ADDRESSABLE_BINDINGS
