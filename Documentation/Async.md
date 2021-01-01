@@ -51,9 +51,9 @@ public class Bar : IInitializable, IDisposable
 
     public void Initialize()
     {
-        if (!asycFoo.TryGetResult(out _foo))
+        if (!_asyncFoo.TryGetResult(out _foo))
         {
-            asycFoo.Completed += OnFooReady;
+            _asyncFoo.Completed += OnFooReady;
         }
     }
        
@@ -64,7 +64,7 @@ public class Bar : IInitializable, IDisposable
 
     public void Dispose()
     {
-        asycFoo.Completed -= OnFooReady;
+        _asyncFoo.Completed -= OnFooReady;
     }
 }
 ```
@@ -78,12 +78,12 @@ Once injected to `Bar`, we can check whether the return value of the async opera
 Alternatively we can use following methods to check result.
 ```csharp
 // Use HasResult to check if result exists 
-if (asycFoo.HasResult)
+if (_asyncFoo.HasResult)
 {
     // Result will throw error if prematurely used. 
-    var foo = asycFoo.Result;
+    var foo = _asyncFoo.Result;
 }
 
 // AsyncInject<T> provides custom awaiter
-IFoo foo = await asyncFoo;
+IFoo foo = await _asyncFoo;
 ```
