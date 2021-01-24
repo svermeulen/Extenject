@@ -1,5 +1,6 @@
 {
     "name": "Zenject-IntegrationTests-Editor",
+    "rootNamespace": "",
     "references": [
         "Zenject-TestFramework",
         "Zenject",
@@ -17,7 +18,8 @@
     ],
     "autoReferenced": false,
     "defineConstraints": [
-        "UNITY_INCLUDE_TESTS"
+        "UNITY_INCLUDE_TESTS",
+        "UNITY_EDITOR"
     ],
     "versionDefines": [],
     "noEngineReferences": false
