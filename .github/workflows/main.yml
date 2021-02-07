@@ -72,35 +72,7 @@ jobs:
         with:
           name: Build
           path: build
-   
-#enable this job to request a manual unity license
-#Request-License:
-# runs-on: ubuntu-latest
-#if: false
-#steps:
-#  - name: Checkout repository
-#    uses: actions/checkout@v2
-#
-#      - name: Request manual activation file
-#       uses: MirrorNG/unity-runner@master
-#      id: getManualLicenseFile
-#     with:
-#        entrypoint: /request_activation.sh
-
-      # This will produce a Unity_xxx.alf file
-      # download it in your computer and upload it to
-      # https://license.unity3d.com/manual
-      # That will produce a Unity_xxx.ulf file
-      # add the contents of Unity_xxx.ulf file to your repository's secrets
-      # as UNITY_LICENSE
-      # then disable this job
-#    - name: Expose as artifact
-#      uses: actions/upload-artifact@v1
-#     with:
-#        name: Manual Activation File
-#       path: ${{ steps.getManualLicenseFile.outputs.filePath }}
-  
-        
+    
   Zenject-usage:
     runs-on: [windows-latest]
     name: Zenject-usage
@@ -108,8 +80,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup MSBuild.exe
-        uses: warrenbuckley/Setup-MSBuild@v1
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1
         
       - name: MSBuild
         working-directory: AssemblyBuild\Zenject-usage
@@ -145,21 +117,3 @@ jobs:
           ls -l Zenject-usage
           cp Zenject-usage/Zenject-usage.dll UnityProject/Assets/Plugins/Zenject/Source/Usage
           ls -l UnityProject/Assets/Plugins/Zenject/Source/Usage
-                
-# Upload artifacts
-#      - name: Publish test results
-#        uses: actions/upload-artifact@v1
-#        with:
-#          name: Test results (editor mode)
-#          path: UnityProject/Tests/editmode-results.xml
-
-#      - name: Release
-#        uses: cycjimmy/semantic-release-action@v2
-#        with:
-#          extra_plugins: |
-#            @semantic-release/exec
-#            @semantic-release/changelog
-#            @semantic-release/git
-#          branch: master
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
