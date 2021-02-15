@@ -2129,6 +2129,10 @@ public class MainInstaller : MonoInstaller
 
 `ScriptableObjectInstaller` works the same as `MonoInstaller` in this regard.
 
+## Composite Installers
+Extenject allows you to compose your installers into tree structures. The so called *composite design pattern*. Where the `CompositeMonoInstaller` and `CompositeScripableInstaller` are the *nodes* where you can attach the child installers - the `leaves` - to.
+Composite Installers have their own documentation [here](Documentation/CompositeInstaller.md).
+
 ## Using Zenject Outside Unity Or For DLLs
 
 If you are building some code as DLLs and then including them in Unity, you can still add bindings for those classes inside your installers, with the only limitation being that you have to use constructor injection.  If you want to use the other inject approaches such as member injection or method injection, then you can do that too, however in that case you will need to add a reference for your project to `Zenject-Usage.dll` which can be found in the `Zenject\Source\Usage` directory.  This DLL also includes the standard interfaces such as `ITickable,` `IInitializable,` etc. so you can use those as well.
