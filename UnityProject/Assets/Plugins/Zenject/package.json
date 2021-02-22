@@ -4,5 +4,17 @@
 	"displayName": "Extenject",
 	"version": "0.0.1",
 	"description": "Dependency Injection Framework for Unity3D",
-	"dependencies": {}
+	"dependencies": {},
+	"samples": [
+		{
+			"displayName": "SampleGame1 (Beginner)",
+			"description": "Asteroids",
+			"path": "Samples~/SampleGame1 (Beginner)"
+		},
+		{
+			"displayName": "SampleGame2 (Advanced)",
+			"description": "Space Fighter",
+			"path": "Samples~/SampleGame2 (Advanced)"
+		}
+	]
 }
