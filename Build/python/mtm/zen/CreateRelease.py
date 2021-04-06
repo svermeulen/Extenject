@@ -145,8 +145,8 @@ class Runner:
             self._sys.removeFile('[ZenTempDir]/Source/Zenject.csproj')
 
             if not includeSample:
-                self._sys.deleteDirectory('[ZenTempDir]/OptionalExtras/SampleGame1 (Beginner)')
-                self._sys.deleteDirectory('[ZenTempDir]/OptionalExtras/SampleGame2 (Advanced)')
+                self._sys.deleteDirectory('[ZenTempDir]/Samples~/SampleGame1 (Beginner)')
+                self._sys.deleteDirectory('[ZenTempDir]/Samples~/SampleGame2 (Advanced)')
 
             self._createUnityPackage('[PackageTempDir]', outputPath)
         finally:

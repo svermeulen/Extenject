@@ -203,7 +203,7 @@ The Zenject documentation is split up into the following sections.  It is split 
 
 Another great starting point is to watch [this youtube series on zenject](https://www.youtube.com/watch?v=IS2YUIb_w_M&list=PLKERDLXpXl_jNJPY2czQcfPXW4BJaGZc_) created by Infallible Code.
 
-You might also benefit from playing with the provided sample projects (which you can find by opening `Zenject/OptionalExtras/SampleGame1` or `Zenject/OptionalExtras/SampleGame2`).
+You might also benefit from playing with the provided sample projects (which you can find by opening `Zenject/Samples~/SampleGame1` or `Zenject/Samples~/SampleGame2`).
 
 If you are a DI veteran, then it might be worth taking a look at the [cheatsheet](#cheat-sheet) at the bottom of this page, which should give you an idea of the syntax, which might be all you need to get started.
 

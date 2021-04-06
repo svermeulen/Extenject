@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Asteroids.unity
+    path: Assets/Plugins/Zenject/Samples~/SampleGame1 (Beginner)/Asteroids.unity
     guid: 1fbbab4d6f8dcbd4eb46075a8f4a68e4
   - enabled: 1
-    path: Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Scenes/SpaceFighter.unity
+    path: Assets/Plugins/Zenject/Samples~/SampleGame2 (Advanced)/Scenes/SpaceFighter.unity
     guid: aea20ff1b07af644f9638d9c740ec0e0
   - enabled: 1
     path: Assets/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestSceneContextEvents/TestSceneContextEvents.unity
