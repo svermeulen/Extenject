@@ -149,7 +149,7 @@ namespace Zenject
 
         IEnumerable<DiContainer> GetParentContainers()
         {
-            var parentContractNames = ParentContractNames;
+            var parentContractNames = ParentContractNames.ToList();
 
             if (parentContractNames.IsEmpty())
             {
@@ -174,17 +174,27 @@ namespace Zenject
                 .Except(gameObject.scene)
                 .SelectMany(scene => scene.GetRootGameObjects())
                 .SelectMany(root => root.GetComponentsInChildren<SceneContext>())
-                .Where(sceneContext => sceneContext.ContractNames.Where(x => parentContractNames.Contains(x)).Any())
+                .Where(sceneContext => sceneContext.ContractNames.Any(x => parentContractNames.Contains(x)))
                 .Select(x => x.Container)
                 .ToList();
 
             if (!parentContainers.Any())
             {
-                throw Assert.CreateException(
-                    "SceneContext on object {0} of scene {1} requires at least one of contracts '{2}', but none of the loaded SceneContexts implements that contract.",
-                    gameObject.name,
-                    gameObject.scene.name,
-                    parentContractNames.Join(", "));
+                var parentObjectContainers = FindObjectsOfType<GameObjectContext>()
+                    .Select(obj => obj.GetComponent<GameObjectContext>())
+                    .Where(context => context.ContractNames.Any(x => parentContractNames.Contains(x)))
+                    .Select(obj => obj.Container).ToList();
+
+                if (!parentObjectContainers.Any())
+                {
+                    throw Assert.CreateException(
+                        "SceneContext on object {0} of scene {1} requires at least one of contracts '{2}', but none of the loaded SceneContexts nor GameObjectContexts implements that contract.",
+                        gameObject.name,
+                        gameObject.scene.name,
+                        parentContractNames.Join(", "));
+                }
+
+                parentContainers.AddRange(parentObjectContainers);
             }
 
             return parentContainers;

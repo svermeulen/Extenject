@@ -18,6 +18,10 @@ namespace Zenject
         public event Action PreResolve;
         public event Action PostResolve;
 
+        [Tooltip("Optional contract names for this GameObjectContext, allowing contexts in subsequently loaded scenes to depend on it and be parented to it")]
+        [SerializeField]
+        List<string> _contractNames = new List<string>();
+
         [SerializeField]
         [Tooltip("Note that this field is optional and can be ignored in most cases.  This is really only needed if you want to control the 'Script Execution Order' of your subcontainer.  In this case, define a new class that derives from MonoKernel, add it to this game object, then drag it into this field.  Then you can set a value for 'Script Execution Order' for this new class and this will control when all ITickable/IInitializable classes bound within this subcontainer get called.")]
         [FormerlySerializedAs("_facade")]
@@ -39,6 +43,8 @@ namespace Zenject
         {
             return new[] { gameObject };
         }
+
+        public IEnumerable<string> ContractNames => _contractNames;
 
         [Inject]
         public void Construct(
