@@ -258,7 +258,7 @@ namespace Zenject
                     }
                 }
 
-                if (binding.Context == this)
+                if (binding.Context == this || binding.ParentContext == this)
                 {
                     InstallZenjectBinding(binding);
                 }
