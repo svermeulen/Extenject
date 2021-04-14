@@ -93,8 +93,8 @@ namespace Zenject.ReflectionBaking
             {
                 var writerParams = new WriterParameters()
                 {
-                    // Is this necessary?
-                    //WriteSymbols = true
+                    // Required for other tools which using Mono.Cecil for IL modification
+                    WriteSymbols = true
                 };
 
                 module.Write(assemblyFullPath, writerParams);
