@@ -127,7 +127,7 @@ This project is open source.
 
 For general troubleshooting / support, please post to [stack overflow](https://stackoverflow.com/questions/ask) using the tag 'zenject', or post in the [zenject google group](https://groups.google.com/forum/#!forum/zenject/)
 
-Or, if you have found a bug, you are also welcome to create an issue on the [github page]https://github.com/modesttree/Zenject), or a pull request if you have a fix / extension.  There is also a [gitter chat](https://gitter.im/Zenject/Lobby?source=orgpage) that you can join for real time discussion. 
+Or, if you have found a bug, you are also welcome to create an issue on the [github page](https://github.com/modesttree/Zenject), or a pull request if you have a fix / extension.  There is also a [gitter chat](https://gitter.im/Zenject/Lobby?source=orgpage) that you can join for real time discussion. 
 
 ## Features
 
